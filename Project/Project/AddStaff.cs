@@ -10,17 +10,21 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class AddStaff : Form
     {
-        public Form1()
+        public AddStaff()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
-            AddStaff addS = new AddStaff();
-            addS.ShowDialog();
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
