@@ -10,17 +10,26 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class AddDepartment : Form
     {
-        public Form1()
+        public AddDepartment()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
-            AddDepartment addS = new AddDepartment();
-            addS.ShowDialog();
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
