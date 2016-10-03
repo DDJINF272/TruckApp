@@ -9,5 +9,8 @@ namespace Project
     class Globals
     {
         public static string DBConn = "Data Source=localhost;Initial Catalog=TruckApp;Integrated Security=True";
+
+        
+
     }
 }
