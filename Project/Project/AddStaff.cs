@@ -47,5 +47,19 @@ namespace Project
             txtSumSuburb.Text            = txtAddressSuburb.Text;
 
         }
+
+        private void AddStaff_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'truckAppDataSet.DriversLiscenceCodes' table. You can move, or remove it, as needed.
+            this.driversLiscenceCodesTableAdapter.Fill(this.truckAppDataSet.DriversLiscenceCodes);
+            // TODO: This line of code loads data into the 'truckAppDataSet.StaffDepartments' table. You can move, or remove it, as needed.
+            this.staffDepartmentsTableAdapter.Fill(this.truckAppDataSet.StaffDepartments);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
