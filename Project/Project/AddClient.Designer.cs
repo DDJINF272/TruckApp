@@ -28,666 +28,584 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtSumBusinessName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtSumCellphone = new System.Windows.Forms.TextBox();
+            this.txtSumLandline = new System.Windows.Forms.TextBox();
+            this.txtSumLastname = new System.Windows.Forms.TextBox();
+            this.txtSumFirstname = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnSaveClient = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtSumProvince = new System.Windows.Forms.TextBox();
+            this.txtSumCity = new System.Windows.Forms.TextBox();
+            this.txtSumSuburb = new System.Windows.Forms.TextBox();
+            this.txtSumStreetNum = new System.Windows.Forms.TextBox();
+            this.txtSumStreet = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabClientInfo = new System.Windows.Forms.TabPage();
-            this.tbxCellphone = new System.Windows.Forms.TextBox();
-            this.tbxLandline = new System.Windows.Forms.TextBox();
-            this.tbxBusiness = new System.Windows.Forms.TextBox();
-            this.tbxLastName = new System.Windows.Forms.TextBox();
-            this.tbxFirstName = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtBusinessName = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCellphone = new System.Windows.Forms.TextBox();
+            this.txtLandline = new System.Windows.Forms.TextBox();
+            this.txtLastname = new System.Windows.Forms.TextBox();
+            this.txtFirstname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAddressProvince = new System.Windows.Forms.TextBox();
+            this.txtCityAddress = new System.Windows.Forms.TextBox();
+            this.txtAddressSuburb = new System.Windows.Forms.TextBox();
+            this.txtStreetNumber = new System.Windows.Forms.TextBox();
+            this.txtStreetName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tabClientAdress = new System.Windows.Forms.TabPage();
-            this.tbxAdrCity = new System.Windows.Forms.TextBox();
-            this.tbxAdrCode = new System.Windows.Forms.TextBox();
-            this.tbxAdrArea = new System.Windows.Forms.TextBox();
-            this.tbxAdrNumber = new System.Windows.Forms.TextBox();
-            this.tbxStreetName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnDeleteClient = new System.Windows.Forms.Button();
-            this.btnUpdateClient = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbxClientID = new System.Windows.Forms.ComboBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label24 = new System.Windows.Forms.Label();
-            this.btnRegisterClient = new System.Windows.Forms.Button();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tbxNewCellphone = new System.Windows.Forms.TextBox();
-            this.tbxNewLandline = new System.Windows.Forms.TextBox();
-            this.tbxNewBusiness = new System.Windows.Forms.TextBox();
-            this.tbxNewLastName = new System.Windows.Forms.TextBox();
-            this.tbxNewFirstName = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tbxNewAdrCity = new System.Windows.Forms.TextBox();
-            this.tbxNewAdrCode = new System.Windows.Forms.TextBox();
-            this.tbxNewAdrArea = new System.Windows.Forms.TextBox();
-            this.tbxNewAdrNumber = new System.Windows.Forms.TextBox();
-            this.tbxNewStreetName = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabClientInfo.SuspendLayout();
-            this.tabClientAdress.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabControl3.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabPage3
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(509, 335);
-            this.tabControl1.TabIndex = 0;
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.btnSaveClient);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(558, 305);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Client Details Summery";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // groupBox3
             // 
-            this.tabPage1.Controls.Add(this.tabControl2);
-            this.tabPage1.Controls.Add(this.btnDeleteClient);
-            this.tabPage1.Controls.Add(this.btnUpdateClient);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.cbxClientID);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(501, 309);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Existing Client Info";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.txtSumBusinessName);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.txtSumCellphone);
+            this.groupBox3.Controls.Add(this.txtSumLandline);
+            this.groupBox3.Controls.Add(this.txtSumLastname);
+            this.groupBox3.Controls.Add(this.txtSumFirstname);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Enabled = false;
+            this.groupBox3.Location = new System.Drawing.Point(279, 41);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(270, 184);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Personal Information";
             // 
-            // tabControl2
+            // txtSumBusinessName
             // 
-            this.tabControl2.Controls.Add(this.tabClientInfo);
-            this.tabControl2.Controls.Add(this.tabClientAdress);
-            this.tabControl2.Location = new System.Drawing.Point(9, 77);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(475, 226);
-            this.tabControl2.TabIndex = 4;
-            // 
-            // tabClientInfo
-            // 
-            this.tabClientInfo.Controls.Add(this.tbxCellphone);
-            this.tabClientInfo.Controls.Add(this.tbxLandline);
-            this.tabClientInfo.Controls.Add(this.tbxBusiness);
-            this.tabClientInfo.Controls.Add(this.tbxLastName);
-            this.tabClientInfo.Controls.Add(this.tbxFirstName);
-            this.tabClientInfo.Controls.Add(this.label7);
-            this.tabClientInfo.Controls.Add(this.label6);
-            this.tabClientInfo.Controls.Add(this.label5);
-            this.tabClientInfo.Controls.Add(this.label4);
-            this.tabClientInfo.Controls.Add(this.label3);
-            this.tabClientInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabClientInfo.Name = "tabClientInfo";
-            this.tabClientInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClientInfo.Size = new System.Drawing.Size(467, 200);
-            this.tabClientInfo.TabIndex = 0;
-            this.tabClientInfo.Text = "Client Name and Contact Info:";
-            this.tabClientInfo.UseVisualStyleBackColor = true;
-            // 
-            // tbxCellphone
-            // 
-            this.tbxCellphone.Location = new System.Drawing.Point(128, 129);
-            this.tbxCellphone.Name = "tbxCellphone";
-            this.tbxCellphone.Size = new System.Drawing.Size(189, 20);
-            this.tbxCellphone.TabIndex = 17;
-            // 
-            // tbxLandline
-            // 
-            this.tbxLandline.Location = new System.Drawing.Point(128, 103);
-            this.tbxLandline.Name = "tbxLandline";
-            this.tbxLandline.Size = new System.Drawing.Size(189, 20);
-            this.tbxLandline.TabIndex = 16;
-            // 
-            // tbxBusiness
-            // 
-            this.tbxBusiness.Location = new System.Drawing.Point(128, 77);
-            this.tbxBusiness.Name = "tbxBusiness";
-            this.tbxBusiness.Size = new System.Drawing.Size(189, 20);
-            this.tbxBusiness.TabIndex = 15;
-            // 
-            // tbxLastName
-            // 
-            this.tbxLastName.Location = new System.Drawing.Point(128, 51);
-            this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(189, 20);
-            this.tbxLastName.TabIndex = 14;
-            // 
-            // tbxFirstName
-            // 
-            this.tbxFirstName.Location = new System.Drawing.Point(128, 25);
-            this.tbxFirstName.Name = "tbxFirstName";
-            this.tbxFirstName.Size = new System.Drawing.Size(189, 20);
-            this.tbxFirstName.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 129);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Client Cellphone:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 103);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Client Landline:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 77);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Name of business:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Last Name:";
+            this.txtSumBusinessName.Location = new System.Drawing.Point(110, 127);
+            this.txtSumBusinessName.Name = "txtSumBusinessName";
+            this.txtSumBusinessName.Size = new System.Drawing.Size(145, 20);
+            this.txtSumBusinessName.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 25);
+            this.label3.Location = new System.Drawing.Point(11, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "First Name:";
-            // 
-            // tabClientAdress
-            // 
-            this.tabClientAdress.Controls.Add(this.tbxAdrCity);
-            this.tabClientAdress.Controls.Add(this.tbxAdrCode);
-            this.tabClientAdress.Controls.Add(this.tbxAdrArea);
-            this.tabClientAdress.Controls.Add(this.tbxAdrNumber);
-            this.tabClientAdress.Controls.Add(this.tbxStreetName);
-            this.tabClientAdress.Controls.Add(this.label8);
-            this.tabClientAdress.Controls.Add(this.label9);
-            this.tabClientAdress.Controls.Add(this.label10);
-            this.tabClientAdress.Controls.Add(this.label11);
-            this.tabClientAdress.Controls.Add(this.label12);
-            this.tabClientAdress.Location = new System.Drawing.Point(4, 22);
-            this.tabClientAdress.Name = "tabClientAdress";
-            this.tabClientAdress.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClientAdress.Size = new System.Drawing.Size(467, 200);
-            this.tabClientAdress.TabIndex = 1;
-            this.tabClientAdress.Text = "Client Adress Info:";
-            this.tabClientAdress.UseVisualStyleBackColor = true;
-            // 
-            // tbxAdrCity
-            // 
-            this.tbxAdrCity.Location = new System.Drawing.Point(129, 138);
-            this.tbxAdrCity.Name = "tbxAdrCity";
-            this.tbxAdrCity.Size = new System.Drawing.Size(189, 20);
-            this.tbxAdrCity.TabIndex = 26;
-            // 
-            // tbxAdrCode
-            // 
-            this.tbxAdrCode.Location = new System.Drawing.Point(129, 112);
-            this.tbxAdrCode.Name = "tbxAdrCode";
-            this.tbxAdrCode.Size = new System.Drawing.Size(189, 20);
-            this.tbxAdrCode.TabIndex = 25;
-            // 
-            // tbxAdrArea
-            // 
-            this.tbxAdrArea.Location = new System.Drawing.Point(129, 86);
-            this.tbxAdrArea.Name = "tbxAdrArea";
-            this.tbxAdrArea.Size = new System.Drawing.Size(189, 20);
-            this.tbxAdrArea.TabIndex = 24;
-            // 
-            // tbxAdrNumber
-            // 
-            this.tbxAdrNumber.Location = new System.Drawing.Point(129, 60);
-            this.tbxAdrNumber.Name = "tbxAdrNumber";
-            this.tbxAdrNumber.Size = new System.Drawing.Size(189, 20);
-            this.tbxAdrNumber.TabIndex = 23;
-            // 
-            // tbxStreetName
-            // 
-            this.tbxStreetName.Location = new System.Drawing.Point(129, 34);
-            this.tbxStreetName.Name = "tbxStreetName";
-            this.tbxStreetName.Size = new System.Drawing.Size(189, 20);
-            this.tbxStreetName.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Adress City:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 112);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Adresss Area Code:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 86);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Adress Area:";
+            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Landline Number :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 60);
+            this.label11.Location = new System.Drawing.Point(18, 130);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Adress Number:";
+            this.label11.Size = new System.Drawing.Size(86, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Business Name :";
+            // 
+            // txtSumCellphone
+            // 
+            this.txtSumCellphone.Location = new System.Drawing.Point(110, 101);
+            this.txtSumCellphone.Name = "txtSumCellphone";
+            this.txtSumCellphone.Size = new System.Drawing.Size(145, 20);
+            this.txtSumCellphone.TabIndex = 13;
+            // 
+            // txtSumLandline
+            // 
+            this.txtSumLandline.Location = new System.Drawing.Point(110, 75);
+            this.txtSumLandline.Name = "txtSumLandline";
+            this.txtSumLandline.Size = new System.Drawing.Size(145, 20);
+            this.txtSumLandline.TabIndex = 12;
+            // 
+            // txtSumLastname
+            // 
+            this.txtSumLastname.Location = new System.Drawing.Point(110, 49);
+            this.txtSumLastname.Name = "txtSumLastname";
+            this.txtSumLastname.Size = new System.Drawing.Size(145, 20);
+            this.txtSumLastname.TabIndex = 11;
+            // 
+            // txtSumFirstname
+            // 
+            this.txtSumFirstname.Location = new System.Drawing.Point(110, 23);
+            this.txtSumFirstname.Name = "txtSumFirstname";
+            this.txtSumFirstname.Size = new System.Drawing.Size(145, 20);
+            this.txtSumFirstname.TabIndex = 10;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 34);
+            this.label12.Location = new System.Drawing.Point(46, 26);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 13);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Adress Street Name:";
-            // 
-            // btnDeleteClient
-            // 
-            this.btnDeleteClient.Location = new System.Drawing.Point(299, 48);
-            this.btnDeleteClient.Name = "btnDeleteClient";
-            this.btnDeleteClient.Size = new System.Drawing.Size(185, 23);
-            this.btnDeleteClient.TabIndex = 3;
-            this.btnDeleteClient.Text = "Delete Client Info";
-            this.btnDeleteClient.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateClient
-            // 
-            this.btnUpdateClient.Location = new System.Drawing.Point(299, 19);
-            this.btnUpdateClient.Name = "btnUpdateClient";
-            this.btnUpdateClient.Size = new System.Drawing.Size(185, 23);
-            this.btnUpdateClient.TabIndex = 2;
-            this.btnUpdateClient.Text = "Update Client Info";
-            this.btnUpdateClient.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Select client ID:";
-            // 
-            // cbxClientID
-            // 
-            this.cbxClientID.FormattingEnabled = true;
-            this.cbxClientID.Location = new System.Drawing.Point(94, 19);
-            this.cbxClientID.Name = "cbxClientID";
-            this.cbxClientID.Size = new System.Drawing.Size(165, 21);
-            this.cbxClientID.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.btnRegisterClient);
-            this.tabPage2.Controls.Add(this.tabControl3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(501, 309);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "New Client Registration";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 13);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(173, 13);
-            this.label24.TabIndex = 7;
-            this.label24.Text = "Please fill in all details on both tabs:";
-            // 
-            // btnRegisterClient
-            // 
-            this.btnRegisterClient.Location = new System.Drawing.Point(334, 270);
-            this.btnRegisterClient.Name = "btnRegisterClient";
-            this.btnRegisterClient.Size = new System.Drawing.Size(143, 23);
-            this.btnRegisterClient.TabIndex = 6;
-            this.btnRegisterClient.Text = "Register Client";
-            this.btnRegisterClient.UseVisualStyleBackColor = true;
-            // 
-            // tabControl3
-            // 
-            this.tabControl3.Controls.Add(this.tabPage5);
-            this.tabControl3.Controls.Add(this.tabPage6);
-            this.tabControl3.Location = new System.Drawing.Point(6, 38);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(475, 226);
-            this.tabControl3.TabIndex = 5;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.tbxNewCellphone);
-            this.tabPage5.Controls.Add(this.tbxNewLandline);
-            this.tabPage5.Controls.Add(this.tbxNewBusiness);
-            this.tabPage5.Controls.Add(this.tbxNewLastName);
-            this.tabPage5.Controls.Add(this.tbxNewFirstName);
-            this.tabPage5.Controls.Add(this.label13);
-            this.tabPage5.Controls.Add(this.label14);
-            this.tabPage5.Controls.Add(this.label15);
-            this.tabPage5.Controls.Add(this.label16);
-            this.tabPage5.Controls.Add(this.label17);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(467, 200);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "Client Name and Contact Info:";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tbxNewCellphone
-            // 
-            this.tbxNewCellphone.Location = new System.Drawing.Point(128, 124);
-            this.tbxNewCellphone.Name = "tbxNewCellphone";
-            this.tbxNewCellphone.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewCellphone.TabIndex = 17;
-            // 
-            // tbxNewLandline
-            // 
-            this.tbxNewLandline.Location = new System.Drawing.Point(128, 98);
-            this.tbxNewLandline.Name = "tbxNewLandline";
-            this.tbxNewLandline.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewLandline.TabIndex = 16;
-            // 
-            // tbxNewBusiness
-            // 
-            this.tbxNewBusiness.Location = new System.Drawing.Point(128, 72);
-            this.tbxNewBusiness.Name = "tbxNewBusiness";
-            this.tbxNewBusiness.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewBusiness.TabIndex = 15;
-            // 
-            // tbxNewLastName
-            // 
-            this.tbxNewLastName.Location = new System.Drawing.Point(128, 46);
-            this.tbxNewLastName.Name = "tbxNewLastName";
-            this.tbxNewLastName.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewLastName.TabIndex = 14;
-            // 
-            // tbxNewFirstName
-            // 
-            this.tbxNewFirstName.Location = new System.Drawing.Point(128, 20);
-            this.tbxNewFirstName.Name = "tbxNewFirstName";
-            this.tbxNewFirstName.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewFirstName.TabIndex = 13;
+            this.label12.Size = new System.Drawing.Size(58, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Firstname :";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 124);
+            this.label13.Location = new System.Drawing.Point(45, 52);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 13);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Client Cellphone:";
+            this.label13.Size = new System.Drawing.Size(59, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Lastname :";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 98);
+            this.label14.Location = new System.Drawing.Point(4, 104);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Client Landline:";
+            this.label14.Size = new System.Drawing.Size(100, 13);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Cellphone Number :";
             // 
-            // label15
+            // btnSaveClient
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 72);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 13);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Name of business:";
+            this.btnSaveClient.Location = new System.Drawing.Point(3, 255);
+            this.btnSaveClient.Name = "btnSaveClient";
+            this.btnSaveClient.Size = new System.Drawing.Size(549, 23);
+            this.btnSaveClient.TabIndex = 11;
+            this.btnSaveClient.Text = "Save Client Details";
+            this.btnSaveClient.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // groupBox5
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(5, 46);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 13);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Last Name:";
+            this.groupBox5.Controls.Add(this.txtSumProvince);
+            this.groupBox5.Controls.Add(this.txtSumCity);
+            this.groupBox5.Controls.Add(this.txtSumSuburb);
+            this.groupBox5.Controls.Add(this.txtSumStreetNum);
+            this.groupBox5.Controls.Add(this.txtSumStreet);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Controls.Add(this.label26);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Enabled = false;
+            this.groupBox5.Location = new System.Drawing.Point(6, 41);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(267, 184);
+            this.groupBox5.TabIndex = 10;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Business Address ";
             // 
-            // label17
+            // txtSumProvince
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 20);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 13);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "First Name:";
+            this.txtSumProvince.Location = new System.Drawing.Point(69, 123);
+            this.txtSumProvince.Name = "txtSumProvince";
+            this.txtSumProvince.ReadOnly = true;
+            this.txtSumProvince.Size = new System.Drawing.Size(171, 20);
+            this.txtSumProvince.TabIndex = 13;
             // 
-            // tabPage6
+            // txtSumCity
             // 
-            this.tabPage6.Controls.Add(this.tbxNewAdrCity);
-            this.tabPage6.Controls.Add(this.tbxNewAdrCode);
-            this.tabPage6.Controls.Add(this.tbxNewAdrArea);
-            this.tabPage6.Controls.Add(this.tbxNewAdrNumber);
-            this.tabPage6.Controls.Add(this.tbxNewStreetName);
-            this.tabPage6.Controls.Add(this.label19);
-            this.tabPage6.Controls.Add(this.label20);
-            this.tabPage6.Controls.Add(this.label21);
-            this.tabPage6.Controls.Add(this.label22);
-            this.tabPage6.Controls.Add(this.label23);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(467, 200);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Client Adress Info:";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.txtSumCity.Location = new System.Drawing.Point(69, 97);
+            this.txtSumCity.Name = "txtSumCity";
+            this.txtSumCity.ReadOnly = true;
+            this.txtSumCity.Size = new System.Drawing.Size(171, 20);
+            this.txtSumCity.TabIndex = 12;
             // 
-            // tbxNewAdrCity
+            // txtSumSuburb
             // 
-            this.tbxNewAdrCity.Location = new System.Drawing.Point(129, 138);
-            this.tbxNewAdrCity.Name = "tbxNewAdrCity";
-            this.tbxNewAdrCity.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewAdrCity.TabIndex = 26;
+            this.txtSumSuburb.Location = new System.Drawing.Point(69, 71);
+            this.txtSumSuburb.Name = "txtSumSuburb";
+            this.txtSumSuburb.ReadOnly = true;
+            this.txtSumSuburb.Size = new System.Drawing.Size(171, 20);
+            this.txtSumSuburb.TabIndex = 11;
             // 
-            // tbxNewAdrCode
+            // txtSumStreetNum
             // 
-            this.tbxNewAdrCode.Location = new System.Drawing.Point(129, 112);
-            this.tbxNewAdrCode.Name = "tbxNewAdrCode";
-            this.tbxNewAdrCode.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewAdrCode.TabIndex = 25;
+            this.txtSumStreetNum.Location = new System.Drawing.Point(69, 45);
+            this.txtSumStreetNum.Name = "txtSumStreetNum";
+            this.txtSumStreetNum.ReadOnly = true;
+            this.txtSumStreetNum.Size = new System.Drawing.Size(171, 20);
+            this.txtSumStreetNum.TabIndex = 10;
             // 
-            // tbxNewAdrArea
+            // txtSumStreet
             // 
-            this.tbxNewAdrArea.Location = new System.Drawing.Point(129, 86);
-            this.tbxNewAdrArea.Name = "tbxNewAdrArea";
-            this.tbxNewAdrArea.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewAdrArea.TabIndex = 24;
-            // 
-            // tbxNewAdrNumber
-            // 
-            this.tbxNewAdrNumber.Location = new System.Drawing.Point(129, 60);
-            this.tbxNewAdrNumber.Name = "tbxNewAdrNumber";
-            this.tbxNewAdrNumber.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewAdrNumber.TabIndex = 23;
-            // 
-            // tbxNewStreetName
-            // 
-            this.tbxNewStreetName.Location = new System.Drawing.Point(129, 34);
-            this.tbxNewStreetName.Name = "tbxNewStreetName";
-            this.tbxNewStreetName.Size = new System.Drawing.Size(189, 20);
-            this.tbxNewStreetName.TabIndex = 22;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(7, 138);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 13);
-            this.label19.TabIndex = 21;
-            this.label19.Text = "Adress City:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(7, 112);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(100, 13);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Adresss Area Code:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 86);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(67, 13);
-            this.label21.TabIndex = 19;
-            this.label21.Text = "Adress Area:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(7, 60);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(82, 13);
-            this.label22.TabIndex = 18;
-            this.label22.Text = "Adress Number:";
+            this.txtSumStreet.Location = new System.Drawing.Point(69, 19);
+            this.txtSumStreet.Name = "txtSumStreet";
+            this.txtSumStreet.ReadOnly = true;
+            this.txtSumStreet.Size = new System.Drawing.Size(171, 20);
+            this.txtSumStreet.TabIndex = 9;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 34);
+            this.label23.Location = new System.Drawing.Point(10, 126);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(104, 13);
-            this.label23.TabIndex = 17;
-            this.label23.Text = "Adress Street Name:";
+            this.label23.Size = new System.Drawing.Size(55, 13);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "Province :";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(33, 100);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(30, 13);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "City :";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(16, 74);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(47, 13);
+            this.label25.TabIndex = 6;
+            this.label25.Text = "Suburb :";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(15, 48);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(50, 13);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "Number :";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(22, 22);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(41, 13);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Street :";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(558, 305);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Client Details";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtBusinessName);
+            this.groupBox2.Controls.Add(this.label33);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtCellphone);
+            this.groupBox2.Controls.Add(this.txtLandline);
+            this.groupBox2.Controls.Add(this.txtLastname);
+            this.groupBox2.Controls.Add(this.txtFirstname);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(6, 58);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(261, 184);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Personal Information";
+            // 
+            // txtBusinessName
+            // 
+            this.txtBusinessName.Location = new System.Drawing.Point(110, 127);
+            this.txtBusinessName.Name = "txtBusinessName";
+            this.txtBusinessName.Size = new System.Drawing.Size(145, 20);
+            this.txtBusinessName.TabIndex = 19;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(11, 78);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(93, 13);
+            this.label33.TabIndex = 18;
+            this.label33.Text = "Landline Number :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 130);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Business Name :";
+            // 
+            // txtCellphone
+            // 
+            this.txtCellphone.Location = new System.Drawing.Point(110, 101);
+            this.txtCellphone.Name = "txtCellphone";
+            this.txtCellphone.Size = new System.Drawing.Size(145, 20);
+            this.txtCellphone.TabIndex = 13;
+            // 
+            // txtLandline
+            // 
+            this.txtLandline.Location = new System.Drawing.Point(110, 75);
+            this.txtLandline.Name = "txtLandline";
+            this.txtLandline.Size = new System.Drawing.Size(145, 20);
+            this.txtLandline.TabIndex = 12;
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.Location = new System.Drawing.Point(110, 49);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(145, 20);
+            this.txtLastname.TabIndex = 11;
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.Location = new System.Drawing.Point(110, 23);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(145, 20);
+            this.txtFirstname.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Firstname :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(45, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Lastname :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Cellphone Number :";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtAddressProvince);
+            this.groupBox1.Controls.Add(this.txtCityAddress);
+            this.groupBox1.Controls.Add(this.txtAddressSuburb);
+            this.groupBox1.Controls.Add(this.txtStreetNumber);
+            this.groupBox1.Controls.Add(this.txtStreetName);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(286, 58);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(261, 184);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Business Address ";
+            // 
+            // txtAddressProvince
+            // 
+            this.txtAddressProvince.Location = new System.Drawing.Point(69, 127);
+            this.txtAddressProvince.Name = "txtAddressProvince";
+            this.txtAddressProvince.Size = new System.Drawing.Size(171, 20);
+            this.txtAddressProvince.TabIndex = 13;
+            // 
+            // txtCityAddress
+            // 
+            this.txtCityAddress.Location = new System.Drawing.Point(69, 101);
+            this.txtCityAddress.Name = "txtCityAddress";
+            this.txtCityAddress.Size = new System.Drawing.Size(171, 20);
+            this.txtCityAddress.TabIndex = 12;
+            // 
+            // txtAddressSuburb
+            // 
+            this.txtAddressSuburb.Location = new System.Drawing.Point(69, 75);
+            this.txtAddressSuburb.Name = "txtAddressSuburb";
+            this.txtAddressSuburb.Size = new System.Drawing.Size(171, 20);
+            this.txtAddressSuburb.TabIndex = 11;
+            // 
+            // txtStreetNumber
+            // 
+            this.txtStreetNumber.Location = new System.Drawing.Point(69, 49);
+            this.txtStreetNumber.Name = "txtStreetNumber";
+            this.txtStreetNumber.Size = new System.Drawing.Size(171, 20);
+            this.txtStreetNumber.TabIndex = 10;
+            // 
+            // txtStreetName
+            // 
+            this.txtStreetName.Location = new System.Drawing.Point(69, 23);
+            this.txtStreetName.Name = "txtStreetName";
+            this.txtStreetName.Size = new System.Drawing.Size(171, 20);
+            this.txtStreetName.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(10, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Province :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(33, 104);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "City :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Suburb :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 52);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Number :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Street :";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(0, 2);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(566, 331);
+            this.tabControl1.TabIndex = 1;
+            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // AddClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 359);
+            this.ClientSize = new System.Drawing.Size(565, 330);
             this.Controls.Add(this.tabControl1);
             this.Name = "AddClient";
-            this.Text = "Manage Clients ";
-            this.tabControl1.ResumeLayout(false);
+            this.Text = "New Client";
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
-            this.tabClientInfo.ResumeLayout(false);
-            this.tabClientInfo.PerformLayout();
-            this.tabClientAdress.ResumeLayout(false);
-            this.tabClientAdress.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabControl3.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtSumBusinessName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtSumCellphone;
+        private System.Windows.Forms.TextBox txtSumLandline;
+        private System.Windows.Forms.TextBox txtSumLastname;
+        private System.Windows.Forms.TextBox txtSumFirstname;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnSaveClient;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox txtSumProvince;
+        private System.Windows.Forms.TextBox txtSumCity;
+        private System.Windows.Forms.TextBox txtSumSuburb;
+        private System.Windows.Forms.TextBox txtSumStreetNum;
+        private System.Windows.Forms.TextBox txtSumStreet;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtBusinessName;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtCellphone;
+        private System.Windows.Forms.TextBox txtLandline;
+        private System.Windows.Forms.TextBox txtLastname;
+        private System.Windows.Forms.TextBox txtFirstname;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxClientID;
-        private System.Windows.Forms.Button btnDeleteClient;
-        private System.Windows.Forms.Button btnUpdateClient;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabClientInfo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtAddressProvince;
+        private System.Windows.Forms.TextBox txtCityAddress;
+        private System.Windows.Forms.TextBox txtAddressSuburb;
+        private System.Windows.Forms.TextBox txtStreetNumber;
+        private System.Windows.Forms.TextBox txtStreetName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TabPage tabClientAdress;
-        private System.Windows.Forms.TextBox tbxCellphone;
-        private System.Windows.Forms.TextBox tbxLandline;
-        private System.Windows.Forms.TextBox tbxBusiness;
-        private System.Windows.Forms.TextBox tbxLastName;
-        private System.Windows.Forms.TextBox tbxFirstName;
-        private System.Windows.Forms.TextBox tbxAdrCity;
-        private System.Windows.Forms.TextBox tbxAdrCode;
-        private System.Windows.Forms.TextBox tbxAdrArea;
-        private System.Windows.Forms.TextBox tbxAdrNumber;
-        private System.Windows.Forms.TextBox tbxStreetName;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnRegisterClient;
-        private System.Windows.Forms.TabControl tabControl3;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TextBox tbxNewCellphone;
-        private System.Windows.Forms.TextBox tbxNewLandline;
-        private System.Windows.Forms.TextBox tbxNewBusiness;
-        private System.Windows.Forms.TextBox tbxNewLastName;
-        private System.Windows.Forms.TextBox tbxNewFirstName;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TextBox tbxNewAdrCity;
-        private System.Windows.Forms.TextBox tbxNewAdrCode;
-        private System.Windows.Forms.TextBox tbxNewAdrArea;
-        private System.Windows.Forms.TextBox tbxNewAdrNumber;
-        private System.Windows.Forms.TextBox tbxNewStreetName;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }

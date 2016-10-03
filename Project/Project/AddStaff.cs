@@ -47,5 +47,16 @@ namespace Project
             txtSumSuburb.Text            = txtAddressSuburb.Text;
 
         }
+
+        private void AddStaff_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

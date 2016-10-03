@@ -30,89 +30,91 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTotalKilos = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCabType = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtCellphone = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtLastname = new System.Windows.Forms.TextBox();
-            this.txtFirstname = new System.Windows.Forms.TextBox();
+            this.txtLoadFreeWeight = new System.Windows.Forms.TextBox();
+            this.txtTruckMake = new System.Windows.Forms.TextBox();
+            this.txtTruckModel = new System.Windows.Forms.TextBox();
+            this.txtTruckType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTankSize = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtHorsePower = new System.Windows.Forms.TextBox();
+            this.txtBodyType = new System.Windows.Forms.TextBox();
+            this.txtLoadCapacity = new System.Windows.Forms.TextBox();
+            this.txtFuelPer100Km = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.dtpTireReplaced = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dtpNextService = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dtpLastSetvice = new System.Windows.Forms.DateTimePicker();
+            this.txtKilosLastService = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label17 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtpLiscenceRenewal = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
+            this.cbDriversCodeNeeded = new System.Windows.Forms.ComboBox();
+            this.txtRegistrationNumber = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cbSumDriversCodeNeeded = new System.Windows.Forms.ComboBox();
+            this.txtSumRegistrationNumber = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtSumTankSize = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtSumHorsePower = new System.Windows.Forms.TextBox();
+            this.txtSumBodyType = new System.Windows.Forms.TextBox();
+            this.txtSumLoadCapacity = new System.Windows.Forms.TextBox();
+            this.txtSumFuelPer100km = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtSumTotalKilos = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cbSumCabTipe = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtSumLoadFree = new System.Windows.Forms.TextBox();
+            this.txtSumTruckMake = new System.Windows.Forms.TextBox();
+            this.txtSumTruckModel = new System.Windows.Forms.TextBox();
+            this.txtSumTruckType = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -126,6 +128,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(566, 341);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
@@ -133,44 +136,21 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(558, 304);
+            this.tabPage1.Size = new System.Drawing.Size(558, 315);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Truck Description";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(558, 304);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Truck Capacity";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.groupBox4);
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(558, 304);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Registration and Management";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtTotalKilos);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbCabType);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtCellphone);
-            this.groupBox2.Controls.Add(this.txtID);
-            this.groupBox2.Controls.Add(this.txtLastname);
-            this.groupBox2.Controls.Add(this.txtFirstname);
+            this.groupBox2.Controls.Add(this.txtLoadFreeWeight);
+            this.groupBox2.Controls.Add(this.txtTruckMake);
+            this.groupBox2.Controls.Add(this.txtTruckModel);
+            this.groupBox2.Controls.Add(this.txtTruckType);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label4);
@@ -182,6 +162,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "General Information";
             // 
+            // txtTotalKilos
+            // 
+            this.txtTotalKilos.Location = new System.Drawing.Point(127, 153);
+            this.txtTotalKilos.Name = "txtTotalKilos";
+            this.txtTotalKilos.Size = new System.Drawing.Size(206, 20);
+            this.txtTotalKilos.TabIndex = 17;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -191,13 +178,13 @@
             this.label16.TabIndex = 16;
             this.label16.Text = "Total Kilometers  :";
             // 
-            // comboBox1
+            // cbCabType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(127, 101);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(206, 21);
-            this.comboBox1.TabIndex = 15;
+            this.cbCabType.FormattingEnabled = true;
+            this.cbCabType.Location = new System.Drawing.Point(127, 101);
+            this.cbCabType.Name = "cbCabType";
+            this.cbCabType.Size = new System.Drawing.Size(206, 21);
+            this.cbCabType.TabIndex = 15;
             // 
             // label10
             // 
@@ -208,33 +195,33 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "Load Free Weight :";
             // 
-            // txtCellphone
+            // txtLoadFreeWeight
             // 
-            this.txtCellphone.Location = new System.Drawing.Point(127, 127);
-            this.txtCellphone.Name = "txtCellphone";
-            this.txtCellphone.Size = new System.Drawing.Size(206, 20);
-            this.txtCellphone.TabIndex = 13;
+            this.txtLoadFreeWeight.Location = new System.Drawing.Point(127, 127);
+            this.txtLoadFreeWeight.Name = "txtLoadFreeWeight";
+            this.txtLoadFreeWeight.Size = new System.Drawing.Size(206, 20);
+            this.txtLoadFreeWeight.TabIndex = 13;
             // 
-            // txtID
+            // txtTruckMake
             // 
-            this.txtID.Location = new System.Drawing.Point(127, 75);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(206, 20);
-            this.txtID.TabIndex = 12;
+            this.txtTruckMake.Location = new System.Drawing.Point(127, 75);
+            this.txtTruckMake.Name = "txtTruckMake";
+            this.txtTruckMake.Size = new System.Drawing.Size(206, 20);
+            this.txtTruckMake.TabIndex = 12;
             // 
-            // txtLastname
+            // txtTruckModel
             // 
-            this.txtLastname.Location = new System.Drawing.Point(127, 49);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(206, 20);
-            this.txtLastname.TabIndex = 11;
+            this.txtTruckModel.Location = new System.Drawing.Point(127, 49);
+            this.txtTruckModel.Name = "txtTruckModel";
+            this.txtTruckModel.Size = new System.Drawing.Size(206, 20);
+            this.txtTruckModel.TabIndex = 11;
             // 
-            // txtFirstname
+            // txtTruckType
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(127, 23);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(206, 20);
-            this.txtFirstname.TabIndex = 10;
+            this.txtTruckType.Location = new System.Drawing.Point(127, 23);
+            this.txtTruckType.Name = "txtTruckType";
+            this.txtTruckType.Size = new System.Drawing.Size(206, 20);
+            this.txtTruckType.TabIndex = 10;
             // 
             // label1
             // 
@@ -273,21 +260,25 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Make :";
             // 
-            // textBox1
+            // tabPage2
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
-            this.textBox1.TabIndex = 17;
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(558, 315);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Truck Capacity";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtTankSize);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtHorsePower);
+            this.groupBox1.Controls.Add(this.txtBodyType);
+            this.groupBox1.Controls.Add(this.txtLoadCapacity);
+            this.groupBox1.Controls.Add(this.txtFuelPer100Km);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
@@ -300,12 +291,12 @@
             this.groupBox1.Text = "Freight Information";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox2
+            // txtTankSize
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 20);
-            this.textBox2.TabIndex = 17;
+            this.txtTankSize.Location = new System.Drawing.Point(144, 133);
+            this.txtTankSize.Name = "txtTankSize";
+            this.txtTankSize.Size = new System.Drawing.Size(206, 20);
+            this.txtTankSize.TabIndex = 17;
             // 
             // label6
             // 
@@ -316,33 +307,33 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Tank Size :";
             // 
-            // textBox3
+            // txtHorsePower
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(206, 20);
-            this.textBox3.TabIndex = 13;
+            this.txtHorsePower.Location = new System.Drawing.Point(144, 107);
+            this.txtHorsePower.Name = "txtHorsePower";
+            this.txtHorsePower.Size = new System.Drawing.Size(206, 20);
+            this.txtHorsePower.TabIndex = 13;
             // 
-            // textBox4
+            // txtBodyType
             // 
-            this.textBox4.Location = new System.Drawing.Point(144, 81);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(206, 20);
-            this.textBox4.TabIndex = 12;
+            this.txtBodyType.Location = new System.Drawing.Point(144, 81);
+            this.txtBodyType.Name = "txtBodyType";
+            this.txtBodyType.Size = new System.Drawing.Size(206, 20);
+            this.txtBodyType.TabIndex = 12;
             // 
-            // textBox5
+            // txtLoadCapacity
             // 
-            this.textBox5.Location = new System.Drawing.Point(144, 55);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(206, 20);
-            this.textBox5.TabIndex = 11;
+            this.txtLoadCapacity.Location = new System.Drawing.Point(144, 55);
+            this.txtLoadCapacity.Name = "txtLoadCapacity";
+            this.txtLoadCapacity.Size = new System.Drawing.Size(206, 20);
+            this.txtLoadCapacity.TabIndex = 11;
             // 
-            // textBox6
+            // txtFuelPer100Km
             // 
-            this.textBox6.Location = new System.Drawing.Point(144, 29);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(206, 20);
-            this.textBox6.TabIndex = 10;
+            this.txtFuelPer100Km.Location = new System.Drawing.Point(144, 29);
+            this.txtFuelPer100Km.Name = "txtFuelPer100Km";
+            this.txtFuelPer100Km.Size = new System.Drawing.Size(206, 20);
+            this.txtFuelPer100Km.TabIndex = 10;
             // 
             // label7
             // 
@@ -380,52 +371,26 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "Body Type :";
             // 
-            // groupBox3
+            // tabPage3
             // 
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Location = new System.Drawing.Point(6, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(546, 107);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Registration and Licensing";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(157, 25);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(206, 20);
-            this.textBox11.TabIndex = 10;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(42, 28);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Registration Number :";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(36, 54);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 13);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Dirvers Code Needed :";
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(558, 315);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Registration and Management";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dateTimePicker3);
+            this.groupBox4.Controls.Add(this.dtpTireReplaced);
             this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.dateTimePicker2);
+            this.groupBox4.Controls.Add(this.dtpNextService);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.dateTimePicker1);
-            this.groupBox4.Controls.Add(this.textBox12);
+            this.groupBox4.Controls.Add(this.dtpLastSetvice);
+            this.groupBox4.Controls.Add(this.txtKilosLastService);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Location = new System.Drawing.Point(6, 119);
@@ -435,12 +400,51 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Truck Maintenance";
             // 
-            // textBox12
+            // dtpTireReplaced
             // 
-            this.textBox12.Location = new System.Drawing.Point(157, 19);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(206, 20);
-            this.textBox12.TabIndex = 10;
+            this.dtpTireReplaced.Location = new System.Drawing.Point(157, 98);
+            this.dtpTireReplaced.Name = "dtpTireReplaced";
+            this.dtpTireReplaced.Size = new System.Drawing.Size(206, 20);
+            this.dtpTireReplaced.TabIndex = 20;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(43, 104);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(108, 13);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Tires Last Replaced :";
+            // 
+            // dtpNextService
+            // 
+            this.dtpNextService.Location = new System.Drawing.Point(157, 72);
+            this.dtpNextService.Name = "dtpNextService";
+            this.dtpNextService.Size = new System.Drawing.Size(206, 20);
+            this.dtpNextService.TabIndex = 18;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(51, 78);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Next Service Date :";
+            // 
+            // dtpLastSetvice
+            // 
+            this.dtpLastSetvice.Location = new System.Drawing.Point(157, 45);
+            this.dtpLastSetvice.Name = "dtpLastSetvice";
+            this.dtpLastSetvice.Size = new System.Drawing.Size(206, 20);
+            this.dtpLastSetvice.TabIndex = 16;
+            // 
+            // txtKilosLastService
+            // 
+            this.txtKilosLastService.Location = new System.Drawing.Point(157, 19);
+            this.txtKilosLastService.Name = "txtKilosLastService";
+            this.txtKilosLastService.Size = new System.Drawing.Size(206, 20);
+            this.txtKilosLastService.TabIndex = 10;
             // 
             // label5
             // 
@@ -460,52 +464,69 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Last Service Date :";
             // 
-            // comboBox2
+            // groupBox3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(157, 51);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(206, 21);
-            this.comboBox2.TabIndex = 16;
+            this.groupBox3.Controls.Add(this.dtpLiscenceRenewal);
+            this.groupBox3.Controls.Add(this.label31);
+            this.groupBox3.Controls.Add(this.cbDriversCodeNeeded);
+            this.groupBox3.Controls.Add(this.txtRegistrationNumber);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(546, 107);
+            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Registration and Licensing";
             // 
-            // dateTimePicker1
+            // dtpLiscenceRenewal
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(157, 45);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(206, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtpLiscenceRenewal.Location = new System.Drawing.Point(157, 78);
+            this.dtpLiscenceRenewal.Name = "dtpLiscenceRenewal";
+            this.dtpLiscenceRenewal.Size = new System.Drawing.Size(206, 20);
+            this.dtpLiscenceRenewal.TabIndex = 19;
             // 
-            // dateTimePicker2
+            // label31
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(157, 72);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(206, 20);
-            this.dateTimePicker2.TabIndex = 18;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(31, 78);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(120, 13);
+            this.label31.TabIndex = 17;
+            this.label31.Text = "Registaration Renewal :";
             // 
-            // label15
+            // cbDriversCodeNeeded
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(51, 78);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 13);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Next Service Date :";
+            this.cbDriversCodeNeeded.FormattingEnabled = true;
+            this.cbDriversCodeNeeded.Location = new System.Drawing.Point(157, 51);
+            this.cbDriversCodeNeeded.Name = "cbDriversCodeNeeded";
+            this.cbDriversCodeNeeded.Size = new System.Drawing.Size(206, 21);
+            this.cbDriversCodeNeeded.TabIndex = 16;
             // 
-            // dateTimePicker3
+            // txtRegistrationNumber
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(157, 98);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(206, 20);
-            this.dateTimePicker3.TabIndex = 20;
+            this.txtRegistrationNumber.Location = new System.Drawing.Point(157, 25);
+            this.txtRegistrationNumber.Name = "txtRegistrationNumber";
+            this.txtRegistrationNumber.Size = new System.Drawing.Size(206, 20);
+            this.txtRegistrationNumber.TabIndex = 10;
             // 
-            // label17
+            // label13
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(43, 104);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(108, 13);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "Tires Last Replaced :";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(42, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Registration Number :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(36, 54);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(115, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Dirvers Code Needed :";
             // 
             // tabPage4
             // 
@@ -521,133 +542,70 @@
             this.tabPage4.Text = "Summery";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // button1
             // 
-            this.groupBox5.Controls.Add(this.textBox7);
-            this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.comboBox3);
-            this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.textBox8);
-            this.groupBox5.Controls.Add(this.textBox9);
-            this.groupBox5.Controls.Add(this.textBox10);
-            this.groupBox5.Controls.Add(this.textBox13);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Enabled = false;
-            this.groupBox5.Location = new System.Drawing.Point(3, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(546, 100);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "General Information";
+            this.button1.Location = new System.Drawing.Point(3, 285);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(552, 27);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Add Vehicle";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // groupBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(362, 65);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 20);
-            this.textBox7.TabIndex = 17;
+            this.groupBox7.Controls.Add(this.cbSumDriversCodeNeeded);
+            this.groupBox7.Controls.Add(this.txtSumRegistrationNumber);
+            this.groupBox7.Controls.Add(this.label29);
+            this.groupBox7.Controls.Add(this.label30);
+            this.groupBox7.Enabled = false;
+            this.groupBox7.Location = new System.Drawing.Point(6, 228);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(546, 53);
+            this.groupBox7.TabIndex = 10;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Registration and Licensing";
             // 
-            // label18
+            // cbSumDriversCodeNeeded
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(265, 68);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(91, 13);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "Total Kilometers  :";
+            this.cbSumDriversCodeNeeded.FormattingEnabled = true;
+            this.cbSumDriversCodeNeeded.Location = new System.Drawing.Point(391, 24);
+            this.cbSumDriversCodeNeeded.Name = "cbSumDriversCodeNeeded";
+            this.cbSumDriversCodeNeeded.Size = new System.Drawing.Size(149, 21);
+            this.cbSumDriversCodeNeeded.TabIndex = 16;
             // 
-            // comboBox3
+            // txtSumRegistrationNumber
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(362, 13);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(173, 21);
-            this.comboBox3.TabIndex = 15;
+            this.txtSumRegistrationNumber.Location = new System.Drawing.Point(113, 27);
+            this.txtSumRegistrationNumber.Name = "txtSumRegistrationNumber";
+            this.txtSumRegistrationNumber.Size = new System.Drawing.Size(149, 20);
+            this.txtSumRegistrationNumber.TabIndex = 10;
             // 
-            // label19
+            // label29
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(258, 42);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(98, 13);
-            this.label19.TabIndex = 14;
-            this.label19.Text = "Load Free Weight :";
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 27);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(109, 13);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Registration Number :";
             // 
-            // textBox8
+            // label30
             // 
-            this.textBox8.Location = new System.Drawing.Point(362, 39);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(173, 20);
-            this.textBox8.TabIndex = 13;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(62, 65);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(173, 20);
-            this.textBox9.TabIndex = 12;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(62, 39);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(173, 20);
-            this.textBox10.TabIndex = 11;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(62, 13);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(173, 20);
-            this.textBox13.TabIndex = 10;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(19, 16);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 13);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Type :";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(14, 42);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(42, 13);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Model :";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(300, 16);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 13);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "Cab Tipe :";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(16, 68);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(40, 13);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Make :";
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(270, 27);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(115, 13);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Dirvers Code Needed :";
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox14);
+            this.groupBox6.Controls.Add(this.txtSumTankSize);
             this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Controls.Add(this.textBox15);
-            this.groupBox6.Controls.Add(this.textBox16);
-            this.groupBox6.Controls.Add(this.textBox17);
-            this.groupBox6.Controls.Add(this.textBox18);
+            this.groupBox6.Controls.Add(this.txtSumHorsePower);
+            this.groupBox6.Controls.Add(this.txtSumBodyType);
+            this.groupBox6.Controls.Add(this.txtSumLoadCapacity);
+            this.groupBox6.Controls.Add(this.txtSumFuelPer100km);
             this.groupBox6.Controls.Add(this.label25);
             this.groupBox6.Controls.Add(this.label26);
             this.groupBox6.Controls.Add(this.label27);
@@ -660,12 +618,12 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Freight Information";
             // 
-            // textBox14
+            // txtSumTankSize
             // 
-            this.textBox14.Location = new System.Drawing.Point(363, 51);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(173, 20);
-            this.textBox14.TabIndex = 17;
+            this.txtSumTankSize.Location = new System.Drawing.Point(363, 51);
+            this.txtSumTankSize.Name = "txtSumTankSize";
+            this.txtSumTankSize.Size = new System.Drawing.Size(173, 20);
+            this.txtSumTankSize.TabIndex = 17;
             // 
             // label24
             // 
@@ -676,33 +634,33 @@
             this.label24.TabIndex = 14;
             this.label24.Text = "Tank Size :";
             // 
-            // textBox15
+            // txtSumHorsePower
             // 
-            this.textBox15.Location = new System.Drawing.Point(363, 25);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(173, 20);
-            this.textBox15.TabIndex = 13;
+            this.txtSumHorsePower.Location = new System.Drawing.Point(363, 25);
+            this.txtSumHorsePower.Name = "txtSumHorsePower";
+            this.txtSumHorsePower.Size = new System.Drawing.Size(173, 20);
+            this.txtSumHorsePower.TabIndex = 13;
             // 
-            // textBox16
+            // txtSumBodyType
             // 
-            this.textBox16.Location = new System.Drawing.Point(92, 51);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(173, 20);
-            this.textBox16.TabIndex = 12;
+            this.txtSumBodyType.Location = new System.Drawing.Point(92, 51);
+            this.txtSumBodyType.Name = "txtSumBodyType";
+            this.txtSumBodyType.Size = new System.Drawing.Size(173, 20);
+            this.txtSumBodyType.TabIndex = 12;
             // 
-            // textBox17
+            // txtSumLoadCapacity
             // 
-            this.textBox17.Location = new System.Drawing.Point(92, 25);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(173, 20);
-            this.textBox17.TabIndex = 11;
+            this.txtSumLoadCapacity.Location = new System.Drawing.Point(92, 25);
+            this.txtSumLoadCapacity.Name = "txtSumLoadCapacity";
+            this.txtSumLoadCapacity.Size = new System.Drawing.Size(173, 20);
+            this.txtSumLoadCapacity.TabIndex = 11;
             // 
-            // textBox18
+            // txtSumFuelPer100km
             // 
-            this.textBox18.Location = new System.Drawing.Point(363, 80);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(173, 20);
-            this.textBox18.TabIndex = 10;
+            this.txtSumFuelPer100km.Location = new System.Drawing.Point(363, 80);
+            this.txtSumFuelPer100km.Name = "txtSumFuelPer100km";
+            this.txtSumFuelPer100km.Size = new System.Drawing.Size(173, 20);
+            this.txtSumFuelPer100km.TabIndex = 10;
             // 
             // label25
             // 
@@ -740,61 +698,124 @@
             this.label28.TabIndex = 2;
             this.label28.Text = "Body Type :";
             // 
-            // groupBox7
+            // groupBox5
             // 
-            this.groupBox7.Controls.Add(this.comboBox4);
-            this.groupBox7.Controls.Add(this.textBox19);
-            this.groupBox7.Controls.Add(this.label29);
-            this.groupBox7.Controls.Add(this.label30);
-            this.groupBox7.Enabled = false;
-            this.groupBox7.Location = new System.Drawing.Point(6, 228);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(546, 53);
-            this.groupBox7.TabIndex = 10;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Registration and Licensing";
+            this.groupBox5.Controls.Add(this.txtSumTotalKilos);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.cbSumCabTipe);
+            this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.txtSumLoadFree);
+            this.groupBox5.Controls.Add(this.txtSumTruckMake);
+            this.groupBox5.Controls.Add(this.txtSumTruckModel);
+            this.groupBox5.Controls.Add(this.txtSumTruckType);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Enabled = false;
+            this.groupBox5.Location = new System.Drawing.Point(3, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(546, 100);
+            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "General Information";
             // 
-            // comboBox4
+            // txtSumTotalKilos
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(391, 24);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(149, 21);
-            this.comboBox4.TabIndex = 16;
+            this.txtSumTotalKilos.Location = new System.Drawing.Point(362, 65);
+            this.txtSumTotalKilos.Name = "txtSumTotalKilos";
+            this.txtSumTotalKilos.Size = new System.Drawing.Size(173, 20);
+            this.txtSumTotalKilos.TabIndex = 17;
             // 
-            // textBox19
+            // label18
             // 
-            this.textBox19.Location = new System.Drawing.Point(113, 27);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(149, 20);
-            this.textBox19.TabIndex = 10;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(265, 68);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(91, 13);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "Total Kilometers  :";
             // 
-            // label29
+            // cbSumCabTipe
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 27);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(109, 13);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Registration Number :";
+            this.cbSumCabTipe.FormattingEnabled = true;
+            this.cbSumCabTipe.Location = new System.Drawing.Point(362, 13);
+            this.cbSumCabTipe.Name = "cbSumCabTipe";
+            this.cbSumCabTipe.Size = new System.Drawing.Size(173, 21);
+            this.cbSumCabTipe.TabIndex = 15;
             // 
-            // label30
+            // label19
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(270, 27);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(115, 13);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "Dirvers Code Needed :";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(258, 42);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(98, 13);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Load Free Weight :";
             // 
-            // button1
+            // txtSumLoadFree
             // 
-            this.button1.Location = new System.Drawing.Point(3, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(552, 27);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Add Vehicle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtSumLoadFree.Location = new System.Drawing.Point(362, 39);
+            this.txtSumLoadFree.Name = "txtSumLoadFree";
+            this.txtSumLoadFree.Size = new System.Drawing.Size(173, 20);
+            this.txtSumLoadFree.TabIndex = 13;
+            // 
+            // txtSumTruckMake
+            // 
+            this.txtSumTruckMake.Location = new System.Drawing.Point(62, 65);
+            this.txtSumTruckMake.Name = "txtSumTruckMake";
+            this.txtSumTruckMake.Size = new System.Drawing.Size(173, 20);
+            this.txtSumTruckMake.TabIndex = 12;
+            // 
+            // txtSumTruckModel
+            // 
+            this.txtSumTruckModel.Location = new System.Drawing.Point(62, 39);
+            this.txtSumTruckModel.Name = "txtSumTruckModel";
+            this.txtSumTruckModel.Size = new System.Drawing.Size(173, 20);
+            this.txtSumTruckModel.TabIndex = 11;
+            // 
+            // txtSumTruckType
+            // 
+            this.txtSumTruckType.Location = new System.Drawing.Point(62, 13);
+            this.txtSumTruckType.Name = "txtSumTruckType";
+            this.txtSumTruckType.Size = new System.Drawing.Size(173, 20);
+            this.txtSumTruckType.TabIndex = 10;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(19, 16);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 13);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Type :";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(14, 42);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(42, 13);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Model :";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(300, 16);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(56, 13);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "Cab Tipe :";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(16, 68);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(40, 13);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Make :";
             // 
             // Trucks
             // 
@@ -806,23 +827,23 @@
             this.Text = "Trucks";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -835,72 +856,74 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCabType;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCellphone;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtLastname;
-        private System.Windows.Forms.TextBox txtFirstname;
+        private System.Windows.Forms.TextBox txtLoadFreeWeight;
+        private System.Windows.Forms.TextBox txtTruckMake;
+        private System.Windows.Forms.TextBox txtTruckModel;
+        private System.Windows.Forms.TextBox txtTruckType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotalKilos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTankSize;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtHorsePower;
+        private System.Windows.Forms.TextBox txtBodyType;
+        private System.Windows.Forms.TextBox txtLoadCapacity;
+        private System.Windows.Forms.TextBox txtFuelPer100Km;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtKilosLastService;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.ComboBox cbDriversCodeNeeded;
+        private System.Windows.Forms.TextBox txtRegistrationNumber;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpNextService;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpLastSetvice;
+        private System.Windows.Forms.DateTimePicker dtpTireReplaced;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.ComboBox cbSumDriversCodeNeeded;
+        private System.Windows.Forms.TextBox txtSumRegistrationNumber;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtSumTankSize;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtSumHorsePower;
+        private System.Windows.Forms.TextBox txtSumBodyType;
+        private System.Windows.Forms.TextBox txtSumLoadCapacity;
+        private System.Windows.Forms.TextBox txtSumFuelPer100km;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtSumTotalKilos;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbSumCabTipe;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtSumLoadFree;
+        private System.Windows.Forms.TextBox txtSumTruckMake;
+        private System.Windows.Forms.TextBox txtSumTruckModel;
+        private System.Windows.Forms.TextBox txtSumTruckType;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DateTimePicker dtpLiscenceRenewal;
+        private System.Windows.Forms.Label label31;
     }
 }

@@ -26,7 +26,7 @@ namespace Project.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DR-PC;Initial Catalog=TruckApp;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=TruckApp;Integrated Security=True")]
         public string TruckAppConnectionString {
             get {
                 return ((string)(this["TruckAppConnectionString"]));
