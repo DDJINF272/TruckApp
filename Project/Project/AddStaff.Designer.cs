@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -37,8 +38,12 @@
             this.label37 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.staffDepartmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.truckAppDataSet = new Project.TruckAppDataSet();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.driversLiscenceCodesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.truckAppDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.txtCellphone = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -108,10 +113,17 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.staffDepartmentsTableAdapter = new Project.TruckAppDataSetTableAdapters.StaffDepartmentsTableAdapter();
+            this.driversLiscenceCodesTableAdapter = new Project.TruckAppDataSetTableAdapters.DriversLiscenceCodesTableAdapter();
+            this.staffTableAdapter1 = new Project.TruckAppDataSetTableAdapters.StaffTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.staffDepartmentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.truckAppDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driversLiscenceCodesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.truckAppDataSetBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -216,12 +228,24 @@
             // 
             // cmbDepartment
             // 
+            this.cmbDepartment.DataSource = this.staffDepartmentsBindingSource;
+            this.cmbDepartment.DisplayMember = "department_name";
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Location = new System.Drawing.Point(110, 151);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(145, 21);
             this.cmbDepartment.TabIndex = 17;
             this.cmbDepartment.ValueMember = "department_id";
+            // 
+            // staffDepartmentsBindingSource
+            // 
+            this.staffDepartmentsBindingSource.DataMember = "StaffDepartments";
+            this.staffDepartmentsBindingSource.DataSource = this.truckAppDataSet;
+            // 
+            // truckAppDataSet
+            // 
+            this.truckAppDataSet.DataSetName = "TruckAppDataSet";
+            this.truckAppDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label16
             // 
@@ -234,12 +258,24 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.driversLiscenceCodesBindingSource;
+            this.comboBox1.DisplayMember = "code_type";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(110, 123);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(145, 21);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.ValueMember = "licence_code_id";
+            // 
+            // driversLiscenceCodesBindingSource
+            // 
+            this.driversLiscenceCodesBindingSource.DataMember = "DriversLiscenceCodes";
+            this.driversLiscenceCodesBindingSource.DataSource = this.truckAppDataSetBindingSource;
+            // 
+            // truckAppDataSetBindingSource
+            // 
+            this.truckAppDataSetBindingSource.DataSource = this.truckAppDataSet;
+            this.truckAppDataSetBindingSource.Position = 0;
             // 
             // label10
             // 
@@ -879,6 +915,18 @@
             this.label22.TabIndex = 2;
             this.label22.Text = "ID Number :";
             // 
+            // staffDepartmentsTableAdapter
+            // 
+            this.staffDepartmentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // driversLiscenceCodesTableAdapter
+            // 
+            this.driversLiscenceCodesTableAdapter.ClearBeforeFill = true;
+            // 
+            // staffTableAdapter1
+            // 
+            this.staffTableAdapter1.ClearBeforeFill = true;
+            // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -894,6 +942,10 @@
             this.groupBox7.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.staffDepartmentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.truckAppDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driversLiscenceCodesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.truckAppDataSetBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -992,6 +1044,12 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-      
+        private System.Windows.Forms.BindingSource truckAppDataSetBindingSource;
+        private TruckAppDataSet truckAppDataSet;
+        private System.Windows.Forms.BindingSource staffDepartmentsBindingSource;
+        private TruckAppDataSetTableAdapters.StaffDepartmentsTableAdapter staffDepartmentsTableAdapter;
+        private System.Windows.Forms.BindingSource driversLiscenceCodesBindingSource;
+        private TruckAppDataSetTableAdapters.DriversLiscenceCodesTableAdapter driversLiscenceCodesTableAdapter;
+        private TruckAppDataSetTableAdapters.StaffTableAdapter staffTableAdapter1;
     }
 }

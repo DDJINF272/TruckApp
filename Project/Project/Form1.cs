@@ -42,19 +42,14 @@ namespace Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            AddClient ac = new AddClient();
+            ac.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             UserLogin login = new UserLogin();
             login.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Bookings book = new Bookings();
-            book.ShowDialog();
         }
     }
 }
