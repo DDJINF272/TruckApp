@@ -72,11 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TruckAppDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TruckAppDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Trucks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,17 +120,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TruckAppDataSet.xsc">
-      <DependentUpon>TruckAppDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TruckAppDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TruckAppDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TruckAppDataSet.xss">
-      <DependentUpon>TruckAppDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
