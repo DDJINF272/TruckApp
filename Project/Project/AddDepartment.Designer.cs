@@ -30,22 +30,22 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnUpdateDepatment = new System.Windows.Forms.Button();
+            this.btnRemoveDepartment = new System.Windows.Forms.Button();
+            this.cmbDepartmentSelect = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDepartmentDescription = new System.Windows.Forms.TextBox();
             this.txtDepartmentName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtDepartmentDescription = new System.Windows.Forms.TextBox();
-            this.cmbDepartmentSelect = new System.Windows.Forms.ComboBox();
-            this.btnRemoveDepartment = new System.Windows.Forms.Button();
-            this.btnUpdateDepatment = new System.Windows.Forms.Button();
+            this.btnAddDepartment = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtAddDepartmentDescription = new System.Windows.Forms.TextBox();
             this.txtAddDepartmentName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAddDepartment = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -79,6 +79,35 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btnUpdateDepatment
+            // 
+            this.btnUpdateDepatment.Location = new System.Drawing.Point(343, 15);
+            this.btnUpdateDepatment.Name = "btnUpdateDepatment";
+            this.btnUpdateDepatment.Size = new System.Drawing.Size(205, 27);
+            this.btnUpdateDepatment.TabIndex = 4;
+            this.btnUpdateDepatment.Text = "Update Department";
+            this.btnUpdateDepatment.UseVisualStyleBackColor = true;
+            this.btnUpdateDepatment.Click += new System.EventHandler(this.btnUpdateDepatment_Click);
+            // 
+            // btnRemoveDepartment
+            // 
+            this.btnRemoveDepartment.Location = new System.Drawing.Point(343, 48);
+            this.btnRemoveDepartment.Name = "btnRemoveDepartment";
+            this.btnRemoveDepartment.Size = new System.Drawing.Size(205, 27);
+            this.btnRemoveDepartment.TabIndex = 3;
+            this.btnRemoveDepartment.Text = "Remove Department";
+            this.btnRemoveDepartment.UseVisualStyleBackColor = true;
+            this.btnRemoveDepartment.Click += new System.EventHandler(this.btnRemoveDepartment_Click);
+            // 
+            // cmbDepartmentSelect
+            // 
+            this.cmbDepartmentSelect.FormattingEnabled = true;
+            this.cmbDepartmentSelect.Location = new System.Drawing.Point(125, 17);
+            this.cmbDepartmentSelect.Name = "cmbDepartmentSelect";
+            this.cmbDepartmentSelect.Size = new System.Drawing.Size(202, 21);
+            this.cmbDepartmentSelect.TabIndex = 2;
+            this.cmbDepartmentSelect.SelectedIndexChanged += new System.EventHandler(this.cmbDepartmentSelect_SelectedIndexChanged);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtDepartmentDescription);
@@ -91,6 +120,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selected Department Details";
+            // 
+            // txtDepartmentDescription
+            // 
+            this.txtDepartmentDescription.Location = new System.Drawing.Point(128, 57);
+            this.txtDepartmentDescription.Multiline = true;
+            this.txtDepartmentDescription.Name = "txtDepartmentDescription";
+            this.txtDepartmentDescription.Size = new System.Drawing.Size(414, 121);
+            this.txtDepartmentDescription.TabIndex = 4;
             // 
             // txtDepartmentName
             // 
@@ -140,39 +177,15 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // txtDepartmentDescription
+            // btnAddDepartment
             // 
-            this.txtDepartmentDescription.Location = new System.Drawing.Point(128, 57);
-            this.txtDepartmentDescription.Multiline = true;
-            this.txtDepartmentDescription.Name = "txtDepartmentDescription";
-            this.txtDepartmentDescription.Size = new System.Drawing.Size(414, 121);
-            this.txtDepartmentDescription.TabIndex = 4;
-            // 
-            // cmbDepartmentSelect
-            // 
-            this.cmbDepartmentSelect.FormattingEnabled = true;
-            this.cmbDepartmentSelect.Location = new System.Drawing.Point(125, 17);
-            this.cmbDepartmentSelect.Name = "cmbDepartmentSelect";
-            this.cmbDepartmentSelect.Size = new System.Drawing.Size(202, 21);
-            this.cmbDepartmentSelect.TabIndex = 2;
-            // 
-            // btnRemoveDepartment
-            // 
-            this.btnRemoveDepartment.Location = new System.Drawing.Point(343, 48);
-            this.btnRemoveDepartment.Name = "btnRemoveDepartment";
-            this.btnRemoveDepartment.Size = new System.Drawing.Size(205, 27);
-            this.btnRemoveDepartment.TabIndex = 3;
-            this.btnRemoveDepartment.Text = "Remove Department";
-            this.btnRemoveDepartment.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateDepatment
-            // 
-            this.btnUpdateDepatment.Location = new System.Drawing.Point(343, 15);
-            this.btnUpdateDepatment.Name = "btnUpdateDepatment";
-            this.btnUpdateDepatment.Size = new System.Drawing.Size(205, 27);
-            this.btnUpdateDepatment.TabIndex = 4;
-            this.btnUpdateDepatment.Text = "Update Department";
-            this.btnUpdateDepatment.UseVisualStyleBackColor = true;
+            this.btnAddDepartment.Location = new System.Drawing.Point(355, 228);
+            this.btnAddDepartment.Name = "btnAddDepartment";
+            this.btnAddDepartment.Size = new System.Drawing.Size(199, 27);
+            this.btnAddDepartment.TabIndex = 5;
+            this.btnAddDepartment.Text = "Add Department";
+            this.btnAddDepartment.UseVisualStyleBackColor = true;
+            this.btnAddDepartment.Click += new System.EventHandler(this.btnAddDepartment_Click);
             // 
             // groupBox2
             // 
@@ -220,15 +233,6 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Department Description :";
             // 
-            // btnAddDepartment
-            // 
-            this.btnAddDepartment.Location = new System.Drawing.Point(355, 228);
-            this.btnAddDepartment.Name = "btnAddDepartment";
-            this.btnAddDepartment.Size = new System.Drawing.Size(199, 27);
-            this.btnAddDepartment.TabIndex = 5;
-            this.btnAddDepartment.Text = "Add Department";
-            this.btnAddDepartment.UseVisualStyleBackColor = true;
-            // 
             // AddDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +241,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "AddDepartment";
             this.Text = "Manage Departments";
+            this.Load += new System.EventHandler(this.AddDepartment_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
