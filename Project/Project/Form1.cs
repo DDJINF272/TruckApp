@@ -51,5 +51,11 @@ namespace Project
             UserLogin login = new UserLogin();
             login.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Bookings book = new Bookings();
+            book.ShowDialog();
+        }
     }
 }
