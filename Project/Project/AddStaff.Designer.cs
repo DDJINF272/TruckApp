@@ -30,7 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.gbxLogin = new System.Windows.Forms.GroupBox();
             this.s = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -108,9 +108,18 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.manageStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editStaffMemeberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeStaffMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staffUtilitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newDriversCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbSelectStaff = new System.Windows.Forms.ComboBox();
+            this.lblStaffMember = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox7.SuspendLayout();
+            this.gbxLogin.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -119,6 +128,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -126,39 +136,41 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(2, 2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(566, 331);
+            this.tabControl1.Size = new System.Drawing.Size(566, 347);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox7);
+            this.tabPage1.Controls.Add(this.cmbSelectStaff);
+            this.tabPage1.Controls.Add(this.lblStaffMember);
+            this.tabPage1.Controls.Add(this.gbxLogin);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(558, 305);
+            this.tabPage1.Size = new System.Drawing.Size(558, 321);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Member Details";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // groupBox7
+            // gbxLogin
             // 
-            this.groupBox7.Controls.Add(this.s);
-            this.groupBox7.Controls.Add(this.txtUsername);
-            this.groupBox7.Controls.Add(this.label36);
-            this.groupBox7.Controls.Add(this.label37);
-            this.groupBox7.Location = new System.Drawing.Point(6, 207);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(541, 92);
-            this.groupBox7.TabIndex = 14;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Login Details";
+            this.gbxLogin.Controls.Add(this.s);
+            this.gbxLogin.Controls.Add(this.txtUsername);
+            this.gbxLogin.Controls.Add(this.label36);
+            this.gbxLogin.Controls.Add(this.label37);
+            this.gbxLogin.Location = new System.Drawing.Point(6, 225);
+            this.gbxLogin.Name = "gbxLogin";
+            this.gbxLogin.Size = new System.Drawing.Size(541, 92);
+            this.gbxLogin.TabIndex = 14;
+            this.gbxLogin.TabStop = false;
+            this.gbxLogin.Text = "Login Details";
             // 
             // s
             // 
@@ -167,7 +179,6 @@
             this.s.PasswordChar = '*';
             this.s.Size = new System.Drawing.Size(171, 20);
             this.s.TabIndex = 10;
-
             // 
             // txtUsername
             // 
@@ -208,7 +219,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(6, 17);
+            this.groupBox2.Location = new System.Drawing.Point(6, 35);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(261, 184);
             this.groupBox2.TabIndex = 6;
@@ -329,7 +340,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(286, 17);
+            this.groupBox1.Location = new System.Drawing.Point(286, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(261, 184);
             this.groupBox1.TabIndex = 5;
@@ -422,7 +433,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(558, 305);
+            this.tabPage2.Size = new System.Drawing.Size(558, 321);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Banking Details";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -535,7 +546,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(558, 305);
+            this.tabPage3.Size = new System.Drawing.Size(558, 321);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Staff Member Summery";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -882,19 +893,100 @@
             this.label22.TabIndex = 2;
             this.label22.Text = "ID Number :";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageStaffToolStripMenuItem,
+            this.staffUtilitiesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(565, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // manageStaffToolStripMenuItem
+            // 
+            this.manageStaffToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editStaffMemeberToolStripMenuItem,
+            this.removeStaffMemberToolStripMenuItem});
+            this.manageStaffToolStripMenuItem.Name = "manageStaffToolStripMenuItem";
+            this.manageStaffToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.manageStaffToolStripMenuItem.Text = "Manage Staff";
+            // 
+            // editStaffMemeberToolStripMenuItem
+            // 
+            this.editStaffMemeberToolStripMenuItem.Name = "editStaffMemeberToolStripMenuItem";
+            this.editStaffMemeberToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.editStaffMemeberToolStripMenuItem.Text = "Update Staff Memeber ";
+            this.editStaffMemeberToolStripMenuItem.Click += new System.EventHandler(this.editStaffMemeberToolStripMenuItem_Click);
+            // 
+            // removeStaffMemberToolStripMenuItem
+            // 
+            this.removeStaffMemberToolStripMenuItem.Name = "removeStaffMemberToolStripMenuItem";
+            this.removeStaffMemberToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.removeStaffMemberToolStripMenuItem.Text = "Remove Staff Member";
+            this.removeStaffMemberToolStripMenuItem.Click += new System.EventHandler(this.removeStaffMemberToolStripMenuItem_Click);
+            // 
+            // staffUtilitiesToolStripMenuItem
+            // 
+            this.staffUtilitiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newDriversCodeToolStripMenuItem,
+            this.newDepartmentToolStripMenuItem});
+            this.staffUtilitiesToolStripMenuItem.Name = "staffUtilitiesToolStripMenuItem";
+            this.staffUtilitiesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.staffUtilitiesToolStripMenuItem.Text = "Staff Utilities";
+            // 
+            // newDriversCodeToolStripMenuItem
+            // 
+            this.newDriversCodeToolStripMenuItem.Name = "newDriversCodeToolStripMenuItem";
+            this.newDriversCodeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.newDriversCodeToolStripMenuItem.Text = "New Drivers Code";
+            // 
+            // newDepartmentToolStripMenuItem
+            // 
+            this.newDepartmentToolStripMenuItem.Name = "newDepartmentToolStripMenuItem";
+            this.newDepartmentToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.newDepartmentToolStripMenuItem.Text = "New Department";
+            this.newDepartmentToolStripMenuItem.Click += new System.EventHandler(this.newDepartmentToolStripMenuItem_Click);
+            // 
+            // cmbSelectStaff
+            // 
+            this.cmbSelectStaff.DisplayMember = "licence_code_id";
+            this.cmbSelectStaff.FormattingEnabled = true;
+            this.cmbSelectStaff.Location = new System.Drawing.Point(406, 0);
+            this.cmbSelectStaff.Name = "cmbSelectStaff";
+            this.cmbSelectStaff.Size = new System.Drawing.Size(145, 21);
+            this.cmbSelectStaff.TabIndex = 17;
+            this.cmbSelectStaff.ValueMember = "licence_code_id";
+            this.cmbSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cmbSelectStaff_SelectedIndexChanged);
+            // 
+            // lblStaffMember
+            // 
+            this.lblStaffMember.AutoSize = true;
+            this.lblStaffMember.Location = new System.Drawing.Point(291, 3);
+            this.lblStaffMember.Name = "lblStaffMember";
+            this.lblStaffMember.Size = new System.Drawing.Size(109, 13);
+            this.lblStaffMember.TabIndex = 16;
+            this.lblStaffMember.Text = "Select Staff Member :";
+            // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 330);
+            this.ClientSize = new System.Drawing.Size(565, 372);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddStaff";
             this.Text = "New Staff Member";
             this.Load += new System.EventHandler(this.AddStaff_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
+            this.tabPage1.PerformLayout();
+            this.gbxLogin.ResumeLayout(false);
+            this.gbxLogin.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -909,7 +1001,10 @@
             this.groupBox6.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -990,11 +1085,19 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox gbxLogin;
         private System.Windows.Forms.TextBox s;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-      
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem manageStaffToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editStaffMemeberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeStaffMemberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staffUtilitiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newDriversCodeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newDepartmentToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbSelectStaff;
+        private System.Windows.Forms.Label lblStaffMember;
     }
 }
