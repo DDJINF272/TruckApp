@@ -136,6 +136,7 @@
             this.btnAddGoodsBooking.TabIndex = 11;
             this.btnAddGoodsBooking.Text = "Add Goods Booking";
             this.btnAddGoodsBooking.UseVisualStyleBackColor = true;
+            this.btnAddGoodsBooking.Click += new System.EventHandler(this.btnAddGoodsBooking_Click);
             // 
             // btnDeleteGoodsBooking
             // 
@@ -145,6 +146,7 @@
             this.btnDeleteGoodsBooking.TabIndex = 10;
             this.btnDeleteGoodsBooking.Text = "Delete Goods Booking";
             this.btnDeleteGoodsBooking.UseVisualStyleBackColor = true;
+            this.btnDeleteGoodsBooking.Click += new System.EventHandler(this.btnDeleteGoodsBooking_Click);
             // 
             // btnUpdateGoodsBooking
             // 
@@ -154,6 +156,7 @@
             this.btnUpdateGoodsBooking.TabIndex = 9;
             this.btnUpdateGoodsBooking.Text = "Update Goods Booking";
             this.btnUpdateGoodsBooking.UseVisualStyleBackColor = true;
+            this.btnUpdateGoodsBooking.Click += new System.EventHandler(this.btnUpdateGoodsBooking_Click);
             // 
             // rtbGoodsDesciption
             // 
@@ -183,11 +186,12 @@
             // 
             this.cbxGoodsID.FormattingEnabled = true;
             this.cbxGoodsID.Items.AddRange(new object[] {
-            "*New Goods ID*"});
+            "New..."});
             this.cbxGoodsID.Location = new System.Drawing.Point(106, 42);
             this.cbxGoodsID.Name = "cbxGoodsID";
             this.cbxGoodsID.Size = new System.Drawing.Size(165, 21);
             this.cbxGoodsID.TabIndex = 5;
+            this.cbxGoodsID.SelectedIndexChanged += new System.EventHandler(this.cbxGoodsID_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -676,6 +680,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Bookings";
             this.Text = " Manage Bookings";
+            this.Load += new System.EventHandler(this.Bookings_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
