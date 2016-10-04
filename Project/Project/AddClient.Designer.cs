@@ -76,6 +76,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnDeleteClient = new System.Windows.Forms.Button();
+            this.btnUpdateClient = new System.Windows.Forms.Button();
             this.tabSummary.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -87,13 +92,15 @@
             // 
             // tabSummary
             // 
+            this.tabSummary.Controls.Add(this.btnDeleteClient);
             this.tabSummary.Controls.Add(this.groupBox3);
             this.tabSummary.Controls.Add(this.btnSaveClient);
+            this.tabSummary.Controls.Add(this.btnUpdateClient);
             this.tabSummary.Controls.Add(this.groupBox5);
             this.tabSummary.Location = new System.Drawing.Point(4, 22);
             this.tabSummary.Name = "tabSummary";
             this.tabSummary.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSummary.Size = new System.Drawing.Size(558, 305);
+            this.tabSummary.Size = new System.Drawing.Size(558, 317);
             this.tabSummary.TabIndex = 2;
             this.tabSummary.Text = "Client Details Summary";
             this.tabSummary.UseVisualStyleBackColor = true;
@@ -200,11 +207,11 @@
             // 
             // btnSaveClient
             // 
-            this.btnSaveClient.Location = new System.Drawing.Point(3, 255);
+            this.btnSaveClient.Location = new System.Drawing.Point(6, 246);
             this.btnSaveClient.Name = "btnSaveClient";
-            this.btnSaveClient.Size = new System.Drawing.Size(549, 23);
+            this.btnSaveClient.Size = new System.Drawing.Size(543, 23);
             this.btnSaveClient.TabIndex = 11;
-            this.btnSaveClient.Text = "Save Client Details";
+            this.btnSaveClient.Text = "Add Client Details";
             this.btnSaveClient.UseVisualStyleBackColor = true;
             this.btnSaveClient.Click += new System.EventHandler(this.btnSaveClient_Click);
             // 
@@ -315,12 +322,15 @@
             // 
             // tabDetails
             // 
+            this.tabDetails.Controls.Add(this.label16);
+            this.tabDetails.Controls.Add(this.comboBox1);
+            this.tabDetails.Controls.Add(this.label15);
             this.tabDetails.Controls.Add(this.groupBox2);
             this.tabDetails.Controls.Add(this.groupBox1);
             this.tabDetails.Location = new System.Drawing.Point(4, 22);
             this.tabDetails.Name = "tabDetails";
             this.tabDetails.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDetails.Size = new System.Drawing.Size(558, 305);
+            this.tabDetails.Size = new System.Drawing.Size(558, 317);
             this.tabDetails.TabIndex = 0;
             this.tabDetails.Text = "Client Details";
             this.tabDetails.UseVisualStyleBackColor = true;
@@ -531,15 +541,61 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(566, 331);
+            this.tabControl1.Size = new System.Drawing.Size(566, 343);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(10, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(82, 13);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Select client ID:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(98, 21);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(169, 21);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(273, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(172, 13);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "(Select in case of update or delete)";
+            // 
+            // btnDeleteClient
+            // 
+            this.btnDeleteClient.Location = new System.Drawing.Point(286, 275);
+            this.btnDeleteClient.Name = "btnDeleteClient";
+            this.btnDeleteClient.Size = new System.Drawing.Size(261, 23);
+            this.btnDeleteClient.TabIndex = 13;
+            this.btnDeleteClient.Text = "Delete Client Info";
+            this.btnDeleteClient.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateClient
+            // 
+            this.btnUpdateClient.Location = new System.Drawing.Point(6, 275);
+            this.btnUpdateClient.Name = "btnUpdateClient";
+            this.btnUpdateClient.Size = new System.Drawing.Size(261, 23);
+            this.btnUpdateClient.TabIndex = 12;
+            this.btnUpdateClient.Text = "Update Client Info";
+            this.btnUpdateClient.UseVisualStyleBackColor = true;
+            this.btnUpdateClient.Click += new System.EventHandler(this.btnUpdateClient_Click);
             // 
             // AddClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 330);
+            this.ClientSize = new System.Drawing.Size(565, 351);
             this.Controls.Add(this.tabControl1);
             this.Name = "AddClient";
             this.Text = "New Client";
@@ -549,6 +605,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabDetails.ResumeLayout(false);
+            this.tabDetails.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -608,5 +665,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnDeleteClient;
+        private System.Windows.Forms.Button btnUpdateClient;
     }
 }

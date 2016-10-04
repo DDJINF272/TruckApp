@@ -128,5 +128,15 @@ namespace Project
                 MessageBox.Show("Error: " + error.Message);
             }
         }
+
+        private void btnUpdateClient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
