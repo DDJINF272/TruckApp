@@ -50,21 +50,38 @@ namespace Project
                 MessageBox.Show("Error: " + error.Message);
             }
 
+           
+
+
+
+            //----------------------------------------------------------------------------------------//
+            //                           Populate the Truck Booking                                    //
+            string fetchDelID = "SELECT * FROM BookingTruck";
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = fetchDelID;
+
+                conn.Open();
+                reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    cbxDeliveryID.Items.Add(reader["booking_id"]);
+                }
+
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
             cmd.Parameters.Add("@goods_id", SqlDbType.Int);
-
-
-
-            //Truck ID
-            //Staff ID
-
-
-            //Client ID
-
-
-            //Staff ID
-
-
-
         }
 
         private void cbxGoodsID_SelectedIndexChanged(object sender, EventArgs e)
@@ -204,6 +221,51 @@ namespace Project
             {
                 conn.Close();
                 this.Close();
+            }
+        }
+
+        private void cbxDeliveryID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbxDeliveryID.SelectedItem.ToString() != "New...")
+            {
+                
+                int idWanted = (Int32)cbxDeliveryID.SelectedItem;
+                MessageBox.Show(idWanted.ToString());
+                cmd.Parameters.AddWithValue("@delvID", idWanted);
+
+                string readData = "SELECT * FROM BookingTruck WHERE booking_id = @delvID";
+                try
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = readData;
+
+                    conn.Open();
+                    reader = cmd.ExecuteReader();
+
+                    cbxBookingTruckID.SelectedItem = reader["truck_id"];
+                    cbxBookingStaffID.SelectedItem = reader["staff_id"];
+                    cbxBookingDriverID.SelectedItem = reader["driver_id"];
+                    cbxBookingClientID.SelectedItem = reader["client_id"];
+                    tbxBookingDateMade.Text = reader["booking_date_made"].ToString();
+                    cbxBookingGoodsID.SelectedItem = reader["goods_id"];
+                    tbxDeliveryDistance.Text = reader["delivery_distance"].ToString();
+                    rtbBookingNotes.Text = reader["booking_notes"].ToString();
+                    tbxDepartureDate.Text = reader["booking_departure_date"].ToString();
+                    tbxDepartureStreetName.Text = reader["departure_street_name"].ToString();
+                    tbxDepartureAdrNumber.Text = reader["departure_street_number"].ToString();
+                    tbxDepartureAdrArea.Text = reader["departure_street_area"].ToString();
+                    tbxDepartureCity.Text = reader["departure_city"].ToString();
+
+                }
+                catch(Exception error)
+                {
+                    MessageBox.Show("Error: " + error.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
             }
         }
     }

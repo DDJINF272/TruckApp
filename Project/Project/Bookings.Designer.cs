@@ -658,10 +658,13 @@
             // cbxDeliveryID
             // 
             this.cbxDeliveryID.FormattingEnabled = true;
+            this.cbxDeliveryID.Items.AddRange(new object[] {
+            "New..."});
             this.cbxDeliveryID.Location = new System.Drawing.Point(106, 46);
             this.cbxDeliveryID.Name = "cbxDeliveryID";
             this.cbxDeliveryID.Size = new System.Drawing.Size(165, 21);
             this.cbxDeliveryID.TabIndex = 12;
+            this.cbxDeliveryID.SelectedIndexChanged += new System.EventHandler(this.cbxDeliveryID_SelectedIndexChanged);
             // 
             // label6
             // 
