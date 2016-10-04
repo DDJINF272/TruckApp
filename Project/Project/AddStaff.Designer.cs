@@ -38,7 +38,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbLiscence = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCellphone = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -167,6 +167,7 @@
             this.s.PasswordChar = '*';
             this.s.Size = new System.Drawing.Size(171, 20);
             this.s.TabIndex = 10;
+
             // 
             // txtUsername
             // 
@@ -197,7 +198,7 @@
             // 
             this.groupBox2.Controls.Add(this.cmbDepartment);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmbLiscence);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtCellphone);
             this.groupBox2.Controls.Add(this.txtID);
@@ -216,6 +217,7 @@
             // 
             // cmbDepartment
             // 
+            this.cmbDepartment.DisplayMember = "department_id";
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Location = new System.Drawing.Point(110, 151);
             this.cmbDepartment.Name = "cmbDepartment";
@@ -232,14 +234,15 @@
             this.label16.TabIndex = 16;
             this.label16.Text = "Department  :";
             // 
-            // comboBox1
+            // cmbLiscence
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 123);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.ValueMember = "licence_code_id";
+            this.cmbLiscence.DisplayMember = "licence_code_id";
+            this.cmbLiscence.FormattingEnabled = true;
+            this.cmbLiscence.Location = new System.Drawing.Point(110, 123);
+            this.cmbLiscence.Name = "cmbLiscence";
+            this.cmbLiscence.Size = new System.Drawing.Size(145, 21);
+            this.cmbLiscence.TabIndex = 15;
+            this.cmbLiscence.ValueMember = "licence_code_id";
             // 
             // label10
             // 
@@ -935,7 +938,7 @@
         private System.Windows.Forms.TextBox txtAddressSuburb;
         private System.Windows.Forms.TextBox txtStreetNumber;
         private System.Windows.Forms.TextBox txtStreetName;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbLiscence;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.Label label16;
