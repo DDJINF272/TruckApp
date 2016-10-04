@@ -19,7 +19,8 @@ namespace Project
         SqlCommand cmd = new SqlCommand();
         SqlDataReader reader;
         SqlDataAdapter adapter = new SqlDataAdapter();
-        
+        string truckIDUpdate, truckSleepingID;
+        string truckMaintenanceTypeID, LiscenceCodeId;
 
         string type, model, make, cabType, LFW, TotKilo, FU100, LC, BT, HP, TS,regNum,DriverCodeNeeded,KmLastService;
         DateTime DateLastService, DateNextService, TyresLastReplaced;
@@ -64,9 +65,9 @@ namespace Project
         {
 
             cmd.Parameters.Add("@code", SqlDbType.VarChar);
-           
+
             //Get DriverLicense ID
-            int licID = -1, sleepID = -1,maintenanceid = -1,truckid = -1;
+            int licID = -1, sleepID = -1, maintenanceid = -1;
             string licenceID = "SELECT licence_code_id FROM DriversLiscenceCodes WHERE code_type = @code";
 
             try
@@ -91,7 +92,6 @@ namespace Project
 
                 try
                 {
-
                     cmd.Connection = conn;
                     cmd.CommandText = sleeptypeID;
                     cmd.Parameters["@sleepcode"].Value = cabType;
@@ -107,21 +107,15 @@ namespace Project
 
                     conn.Close();
 
-
                     //1st -> Maintenance
                     //Insert
                     cmd.Parameters.Add("@last_service", SqlDbType.Int);
                     cmd.Parameters.Add("@dateLastServiced", SqlDbType.Date);
                     cmd.Parameters.Add("@dateTiresRenewed", SqlDbType.Date);
 
-
-
-
                     cmd.Parameters["@last_service"].Value = KmLastService;
                     cmd.Parameters["@dateLastServiced"].Value = datePLastService.Value.Date;
                     cmd.Parameters["@dateTiresRenewed"].Value = datePTyreLastReplaced.Value.Date;
-
-
 
                     string insertMain = "INSERT INTO TruckMaintenance (kilos_serviced,date_last_service,date_tires_renewed) VALUES(@last_service,@dateLastServiced,@dateTiresRenewed) SELECT CAST(SCOPE_IDENTITY() AS int)";
 
@@ -133,11 +127,10 @@ namespace Project
                         maintenanceid = (Int32)cmd.ExecuteScalar();
                         conn.Close();
 
-
-
                         //Insert data into the different tables
                         //2nd -> Trucks
                         cmd.Parameters.Add("@truck_registration", SqlDbType.VarChar);
+                       
                         cmd.Parameters.Add("@body_type_trailer", SqlDbType.VarChar);
                         cmd.Parameters.Add("@truck_mode", SqlDbType.VarChar);
                         cmd.Parameters.Add("@truck_type", SqlDbType.VarChar);
@@ -192,40 +185,27 @@ namespace Project
                         conn.Close();
                     }
 
-
-
-
-
-
-
-
                 }
                 catch (Exception error)
                 {
                     MessageBox.Show("Error: " + error.Message);
                     conn.Close();
                 }
-
-
-                
-                
+   
             }
             catch(Exception error)
             {
                 MessageBox.Show("Error: " + error.Message);
 
                 conn.Close();
-            }
-
-
-            
-            
+            }  
         }
 
         private void Trucks_Load(object sender, EventArgs e)
         {
-            
-            
+            addCabs();
+            populateLiscences();
+            hideControls();
         }
 
         private void txtFU100_Leave(object sender, EventArgs e)
@@ -252,10 +232,57 @@ namespace Project
             txtSumHP.Text = HP;
         }
 
+        private void updateTruckDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showControls();
+            populateComboTrucks();
+        }
+
+        private void removeTruckToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showControls();
+            populateComboTrucks();
+
+            Departments staff = (Departments)cmbSelectTruck.SelectedItem;
+            if (staff == null)
+            {
+                MessageBox.Show("Please Select a Truck.");
+            }
+            else
+            {
+                string populateFields = "DELETE FROM Trucks WHERE truck_id = @truck_id";
+
+                try
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = populateFields;
+                    Departments var = (Departments)cmbSelectTruck.SelectedItem;
+                    cmd.Parameters["@truck_id"].Value = var.value;
+                    conn.Open();
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Truck Successfully Removerd.");
+                    conn.Close();
+                    this.Close();
+                }
+                catch (Exception error)
+                {
+
+                    MessageBox.Show("Error: " + error.Message);
+                }
+            }
+        }
+
         private void txtTS_Leave(object sender, EventArgs e)
         {
             TS = txtTS.Text;
             txtSumTS.Text = TS;
+        }
+
+        private void cmbSelectTruck_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            populateSelectedTruckFields();
+            displayUpdateComboFields();
         }
 
         private void txtType_Leave(object sender, EventArgs e)
@@ -314,31 +341,14 @@ namespace Project
 
         private void tabControl1_Enter(object sender, EventArgs e)
         {
-            string trucktype = "SELECT * FROM TruckSleepTypes";
 
-            try
-            {
-                cmd.Connection = conn;
-                cmd.CommandText = trucktype;
-                conn.Open();
+            
 
-                reader = cmd.ExecuteReader();
+        }
 
-                while(reader.Read())
-                {
-                    cmbCabType.Items.Add(reader["type_name"]);
-                }
-
-
-                conn.Close();
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show("Error: " + error.Message);
-                conn.Close();
-            }
-
-
+        // FUNCTION TO PRPULAYE THE DRIVERS LISCENCES 
+        private void populateLiscences()
+        {
             string licenseType = "SELECT * FROM DriversLiscenceCodes";
 
             try
@@ -349,18 +359,184 @@ namespace Project
 
                 reader = cmd.ExecuteReader();
 
-                while(reader.Read())
+                while (reader.Read())
                 {
                     cmbDriverCodes.Items.Add(reader["code_type"]);
                 }
 
                 conn.Close();
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show("Error: " + error.Message);
                 conn.Close();
             }
         }
+
+        // FUNCTION USED TO POPULATE THE CAB TYPES
+        private void addCabs()
+        {
+            string trucktype = "SELECT * FROM TruckSleepTypes";
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = trucktype;
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cmbCabType.Items.Add(reader["type_name"]);
+                }
+
+
+                conn.Close();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+                conn.Close();
+            }
+        }
+
+        // Function to show and hide the controls for Editing a Truck
+        private void showControls()
+        {
+            lblTruckSelect.Show();
+            cmbSelectTruck.Show();
+        }
+
+        private void hideControls()
+        {
+            lblTruckSelect.Hide();
+            cmbSelectTruck.Hide();
+
+        }
+
+        // FUNCTION USED TO POPULATE THE TRUCKS COMBO BOX
+        private void populateComboTrucks()
+        {
+            string getTrucks = "SELECT truck_id,truck_registration,mode_type  FROM Trucks";
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = getTrucks;
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cmbSelectTruck.Items.Add(new Departments { name = reader["mode_type"].ToString() + " (" + reader["truck_registration"].ToString() + ")", value = reader["truck_id"].ToString() });
+                }
+
+
+                reader.Close();
+                conn.Close();
+            }
+            catch (Exception error)
+            {
+
+                MessageBox.Show("Error: " + error.Message);
+            }
+        }
+
+        // THIS FUNCTION WILL POPULATE ALL THE TEXT FIELDS
+        private void populateSelectedTruckFields()
+        {
+            cmd.Parameters.Add("@truck_id", SqlDbType.VarChar);
+            string populateFields = "SELECT * FROM Trucks WHERE truck_id = @truck_id";
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = populateFields;
+                Departments var = (Departments)cmbSelectTruck.SelectedItem;
+                cmd.Parameters["@truck_id"].Value = var.value;
+                truckIDUpdate = var.value;
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txtRegistrationNumber.Text = reader["truck_registration"].ToString();
+                    txtLFW.Text = reader["truck_weight"].ToString();
+                    txtLC.Text = reader["truck_capacity"].ToString();
+                  
+                    txtTotKilo.Text = reader["truck_kilos"].ToString();
+                    txtBT.Text = reader["body_type_trailer"].ToString();
+                    txtType.Text = reader["truck_type"].ToString();
+                   // txtModel.Text = reader["mode_type"].ToString();
+                    txtMake.Text = reader["mode_type"].ToString();
+                    txtHP.Text = reader["horse_power"].ToString();
+                    txtTS.Text = reader["fuel_tank_litre"].ToString();
+                    txtFU100.Text = reader["fuel_usage_kilo"].ToString();
+
+
+                    truckSleepingID = reader["sleeping_type_id"].ToString();
+                    truckMaintenanceTypeID = reader["maintenance_id"].ToString();
+                    LiscenceCodeId = reader["licence_code_id"].ToString();
+                    //
+
+                }
+                
+                reader.Close();
+                conn.Close();
+
+
+            }
+            catch (Exception error)
+            {
+
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+        }
+
+        private void displayUpdateComboFields()
+        {
+            cmbCabType.SelectedIndex = Convert.ToInt32(truckSleepingID);
+            cmbDriverCodes.SelectedIndex = Convert.ToInt32(LiscenceCodeId);
+
+            cmd.Parameters.Add("@maintenance", SqlDbType.Int);
+            string populateFields = "SELECT * FROM TruckMaintenance WHERE maintenance_id = @maintenance";
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = populateFields;
+                cmd.Parameters["@maintenance"].Value = truckMaintenanceTypeID;
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // ADD THE DATES INTO THIS 
+                    txtKiloAfterService.Text  = reader["kilos_serviced"].ToString();
+                }
+
+                reader.Close();
+                conn.Close();
+
+
+            }
+            catch (Exception error)
+            {
+
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+
+        }
+        
+
+
+
+
     }
 }

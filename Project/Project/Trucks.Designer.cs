@@ -101,6 +101,12 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.manageTrucksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateTruckDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeTruckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbSelectTruck = new System.Windows.Forms.ComboBox();
+            this.lblTruckSelect = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -113,6 +119,7 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -121,7 +128,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(0, 1);
+            this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(566, 341);
@@ -130,6 +137,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cmbSelectTruck);
+            this.tabPage1.Controls.Add(this.lblTruckSelect);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -240,7 +249,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 52);
+            this.label2.Location = new System.Drawing.Point(79, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 1;
@@ -258,7 +267,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 78);
+            this.label3.Location = new System.Drawing.Point(79, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 2;
@@ -815,17 +824,72 @@
             this.label23.TabIndex = 2;
             this.label23.Text = "Make :";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageTrucksToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(565, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // manageTrucksToolStripMenuItem
+            // 
+            this.manageTrucksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateTruckDetailsToolStripMenuItem,
+            this.removeTruckToolStripMenuItem});
+            this.manageTrucksToolStripMenuItem.Name = "manageTrucksToolStripMenuItem";
+            this.manageTrucksToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.manageTrucksToolStripMenuItem.Text = "Manage Trucks";
+            // 
+            // updateTruckDetailsToolStripMenuItem
+            // 
+            this.updateTruckDetailsToolStripMenuItem.Name = "updateTruckDetailsToolStripMenuItem";
+            this.updateTruckDetailsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.updateTruckDetailsToolStripMenuItem.Text = "Update Truck Details";
+            this.updateTruckDetailsToolStripMenuItem.Click += new System.EventHandler(this.updateTruckDetailsToolStripMenuItem_Click);
+            // 
+            // removeTruckToolStripMenuItem
+            // 
+            this.removeTruckToolStripMenuItem.Name = "removeTruckToolStripMenuItem";
+            this.removeTruckToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.removeTruckToolStripMenuItem.Text = "Remove Truck";
+            this.removeTruckToolStripMenuItem.Click += new System.EventHandler(this.removeTruckToolStripMenuItem_Click);
+            // 
+            // cmbSelectTruck
+            // 
+            this.cmbSelectTruck.DisplayMember = "licence_code_id";
+            this.cmbSelectTruck.FormattingEnabled = true;
+            this.cmbSelectTruck.Location = new System.Drawing.Point(404, 9);
+            this.cmbSelectTruck.Name = "cmbSelectTruck";
+            this.cmbSelectTruck.Size = new System.Drawing.Size(145, 21);
+            this.cmbSelectTruck.TabIndex = 19;
+            this.cmbSelectTruck.ValueMember = "licence_code_id";
+            this.cmbSelectTruck.SelectedIndexChanged += new System.EventHandler(this.cmbSelectTruck_SelectedIndexChanged);
+            // 
+            // lblTruckSelect
+            // 
+            this.lblTruckSelect.AutoSize = true;
+            this.lblTruckSelect.Location = new System.Drawing.Point(324, 12);
+            this.lblTruckSelect.Name = "lblTruckSelect";
+            this.lblTruckSelect.Size = new System.Drawing.Size(74, 13);
+            this.lblTruckSelect.TabIndex = 18;
+            this.lblTruckSelect.Text = "Select Truck :";
+            // 
             // Trucks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 339);
+            this.ClientSize = new System.Drawing.Size(565, 366);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "Trucks";
             this.Text = "Trucks";
             this.Load += new System.EventHandler(this.Trucks_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -843,7 +907,10 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -922,5 +989,11 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem manageTrucksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateTruckDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeTruckToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbSelectTruck;
+        private System.Windows.Forms.Label lblTruckSelect;
     }
 }

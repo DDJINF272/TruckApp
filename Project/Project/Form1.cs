@@ -42,7 +42,8 @@ namespace Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            AddClient client = new AddClient();
+            client.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
