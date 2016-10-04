@@ -30,44 +30,38 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbxGoodsID = new System.Windows.Forms.ComboBox();
-            this.tbxGoodsType = new System.Windows.Forms.TextBox();
-            this.rtbGoodsDesciption = new System.Windows.Forms.RichTextBox();
+            this.btnAddGoodsBooking = new System.Windows.Forms.Button();
             this.btnDeleteGoodsBooking = new System.Windows.Forms.Button();
             this.btnUpdateGoodsBooking = new System.Windows.Forms.Button();
-            this.btnAddGoodsBooking = new System.Windows.Forms.Button();
-            this.btnDeleteDeliveryBooking = new System.Windows.Forms.Button();
-            this.btnUpdateDeliveryBooking = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbxDeliveryID = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.rtbGoodsDesciption = new System.Windows.Forms.RichTextBox();
+            this.tbxGoodsType = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxGoodsID = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAddDeliveryBooking = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabBookingParticipants = new System.Windows.Forms.TabPage();
+            this.cbxBookingDriverID = new System.Windows.Forms.ComboBox();
+            this.cbxBookingClientID = new System.Windows.Forms.ComboBox();
+            this.cbxBookingStaffID = new System.Windows.Forms.ComboBox();
+            this.cbxBookingTruckID = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabBookingDetails = new System.Windows.Forms.TabPage();
+            this.cbxBookingGoodsID = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.rtbBookingNotes = new System.Windows.Forms.RichTextBox();
             this.tbxDeliveryDistance = new System.Windows.Forms.TextBox();
             this.tbxBookingDateMade = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.rtbBookingNotes = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.tabDeliveryDeparture = new System.Windows.Forms.TabPage();
-            this.btnAddDeliveryBooking = new System.Windows.Forms.Button();
-            this.tabDeliveryArrival = new System.Windows.Forms.TabPage();
-            this.cbxBookingTruckID = new System.Windows.Forms.ComboBox();
-            this.cbxBookingStaffID = new System.Windows.Forms.ComboBox();
-            this.cbxBookingClientID = new System.Windows.Forms.ComboBox();
-            this.cbxBookingDriverID = new System.Windows.Forms.ComboBox();
-            this.cbxBookingGoodsID = new System.Windows.Forms.ComboBox();
             this.tbxDepartureCity = new System.Windows.Forms.TextBox();
             this.tbxDepartureAdrArea = new System.Windows.Forms.TextBox();
             this.tbxDepartureAdrNumber = new System.Windows.Forms.TextBox();
@@ -78,6 +72,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.tabDeliveryArrival = new System.Windows.Forms.TabPage();
             this.tbxArrivalCity = new System.Windows.Forms.TextBox();
             this.tbxArrivalAdrArea = new System.Windows.Forms.TextBox();
             this.tbxArrivalAdrNumber = new System.Windows.Forms.TextBox();
@@ -88,6 +83,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.btnDeleteDeliveryBooking = new System.Windows.Forms.Button();
+            this.btnUpdateDeliveryBooking = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxDeliveryID = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -128,81 +128,14 @@
             this.tabPage1.Text = "Booking for Goods";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // btnAddGoodsBooking
             // 
-            this.tabPage2.Controls.Add(this.btnAddDeliveryBooking);
-            this.tabPage2.Controls.Add(this.tabControl2);
-            this.tabPage2.Controls.Add(this.btnDeleteDeliveryBooking);
-            this.tabPage2.Controls.Add(this.btnUpdateDeliveryBooking);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.cbxDeliveryID);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(492, 359);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Booking for Delivery";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Goods Description:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Goods Type:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(290, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Select an existing goods ID to update or delete the booking:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Select goods ID:";
-            // 
-            // cbxGoodsID
-            // 
-            this.cbxGoodsID.FormattingEnabled = true;
-            this.cbxGoodsID.Location = new System.Drawing.Point(106, 42);
-            this.cbxGoodsID.Name = "cbxGoodsID";
-            this.cbxGoodsID.Size = new System.Drawing.Size(165, 21);
-            this.cbxGoodsID.TabIndex = 5;
-            // 
-            // tbxGoodsType
-            // 
-            this.tbxGoodsType.Location = new System.Drawing.Point(106, 73);
-            this.tbxGoodsType.Name = "tbxGoodsType";
-            this.tbxGoodsType.Size = new System.Drawing.Size(165, 20);
-            this.tbxGoodsType.TabIndex = 7;
-            // 
-            // rtbGoodsDesciption
-            // 
-            this.rtbGoodsDesciption.Location = new System.Drawing.Point(109, 99);
-            this.rtbGoodsDesciption.Name = "rtbGoodsDesciption";
-            this.rtbGoodsDesciption.Size = new System.Drawing.Size(336, 139);
-            this.rtbGoodsDesciption.TabIndex = 8;
-            this.rtbGoodsDesciption.Text = "";
+            this.btnAddGoodsBooking.Location = new System.Drawing.Point(301, 330);
+            this.btnAddGoodsBooking.Name = "btnAddGoodsBooking";
+            this.btnAddGoodsBooking.Size = new System.Drawing.Size(185, 23);
+            this.btnAddGoodsBooking.TabIndex = 11;
+            this.btnAddGoodsBooking.Text = "Add Goods Booking";
+            this.btnAddGoodsBooking.UseVisualStyleBackColor = true;
             // 
             // btnDeleteGoodsBooking
             // 
@@ -222,58 +155,92 @@
             this.btnUpdateGoodsBooking.Text = "Update Goods Booking";
             this.btnUpdateGoodsBooking.UseVisualStyleBackColor = true;
             // 
-            // btnAddGoodsBooking
+            // rtbGoodsDesciption
             // 
-            this.btnAddGoodsBooking.Location = new System.Drawing.Point(301, 330);
-            this.btnAddGoodsBooking.Name = "btnAddGoodsBooking";
-            this.btnAddGoodsBooking.Size = new System.Drawing.Size(185, 23);
-            this.btnAddGoodsBooking.TabIndex = 11;
-            this.btnAddGoodsBooking.Text = "Add Goods Booking";
-            this.btnAddGoodsBooking.UseVisualStyleBackColor = true;
+            this.rtbGoodsDesciption.Location = new System.Drawing.Point(109, 99);
+            this.rtbGoodsDesciption.Name = "rtbGoodsDesciption";
+            this.rtbGoodsDesciption.Size = new System.Drawing.Size(336, 139);
+            this.rtbGoodsDesciption.TabIndex = 8;
+            this.rtbGoodsDesciption.Text = "";
             // 
-            // btnDeleteDeliveryBooking
+            // tbxGoodsType
             // 
-            this.btnDeleteDeliveryBooking.Location = new System.Drawing.Point(301, 45);
-            this.btnDeleteDeliveryBooking.Name = "btnDeleteDeliveryBooking";
-            this.btnDeleteDeliveryBooking.Size = new System.Drawing.Size(185, 23);
-            this.btnDeleteDeliveryBooking.TabIndex = 15;
-            this.btnDeleteDeliveryBooking.Text = "Delete Delivery Booking";
-            this.btnDeleteDeliveryBooking.UseVisualStyleBackColor = true;
+            this.tbxGoodsType.Location = new System.Drawing.Point(106, 73);
+            this.tbxGoodsType.Name = "tbxGoodsType";
+            this.tbxGoodsType.Size = new System.Drawing.Size(165, 20);
+            this.tbxGoodsType.TabIndex = 7;
             // 
-            // btnUpdateDeliveryBooking
+            // label4
             // 
-            this.btnUpdateDeliveryBooking.Location = new System.Drawing.Point(301, 16);
-            this.btnUpdateDeliveryBooking.Name = "btnUpdateDeliveryBooking";
-            this.btnUpdateDeliveryBooking.Size = new System.Drawing.Size(185, 23);
-            this.btnUpdateDeliveryBooking.TabIndex = 14;
-            this.btnUpdateDeliveryBooking.Text = "Update Delivery Booking";
-            this.btnUpdateDeliveryBooking.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Select goods ID:";
             // 
-            // label5
+            // cbxGoodsID
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Select delivery ID:";
+            this.cbxGoodsID.FormattingEnabled = true;
+            this.cbxGoodsID.Items.AddRange(new object[] {
+            "*New Goods ID*"});
+            this.cbxGoodsID.Location = new System.Drawing.Point(106, 42);
+            this.cbxGoodsID.Name = "cbxGoodsID";
+            this.cbxGoodsID.Size = new System.Drawing.Size(165, 21);
+            this.cbxGoodsID.TabIndex = 5;
             // 
-            // cbxDeliveryID
+            // label3
             // 
-            this.cbxDeliveryID.FormattingEnabled = true;
-            this.cbxDeliveryID.Location = new System.Drawing.Point(106, 46);
-            this.cbxDeliveryID.Name = "cbxDeliveryID";
-            this.cbxDeliveryID.Size = new System.Drawing.Size(165, 21);
-            this.cbxDeliveryID.TabIndex = 12;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(290, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Select an existing goods ID to update or delete the booking:";
             // 
-            // label6
+            // label2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(297, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Select an existing delivery ID to update or delete the booking:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Goods Description:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Goods Type:";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnAddDeliveryBooking);
+            this.tabPage2.Controls.Add(this.tabControl2);
+            this.tabPage2.Controls.Add(this.btnDeleteDeliveryBooking);
+            this.tabPage2.Controls.Add(this.btnUpdateDeliveryBooking);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.cbxDeliveryID);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(492, 359);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Booking for Delivery";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAddDeliveryBooking
+            // 
+            this.btnAddDeliveryBooking.Location = new System.Drawing.Point(297, 325);
+            this.btnAddDeliveryBooking.Name = "btnAddDeliveryBooking";
+            this.btnAddDeliveryBooking.Size = new System.Drawing.Size(185, 23);
+            this.btnAddDeliveryBooking.TabIndex = 17;
+            this.btnAddDeliveryBooking.Text = "Add Delivery Booking";
+            this.btnAddDeliveryBooking.UseVisualStyleBackColor = true;
             // 
             // tabControl2
             // 
@@ -304,6 +271,38 @@
             this.tabBookingParticipants.TabIndex = 0;
             this.tabBookingParticipants.Text = "Booking Participants:";
             this.tabBookingParticipants.UseVisualStyleBackColor = true;
+            // 
+            // cbxBookingDriverID
+            // 
+            this.cbxBookingDriverID.FormattingEnabled = true;
+            this.cbxBookingDriverID.Location = new System.Drawing.Point(93, 97);
+            this.cbxBookingDriverID.Name = "cbxBookingDriverID";
+            this.cbxBookingDriverID.Size = new System.Drawing.Size(197, 21);
+            this.cbxBookingDriverID.TabIndex = 38;
+            // 
+            // cbxBookingClientID
+            // 
+            this.cbxBookingClientID.FormattingEnabled = true;
+            this.cbxBookingClientID.Location = new System.Drawing.Point(93, 70);
+            this.cbxBookingClientID.Name = "cbxBookingClientID";
+            this.cbxBookingClientID.Size = new System.Drawing.Size(197, 21);
+            this.cbxBookingClientID.TabIndex = 37;
+            // 
+            // cbxBookingStaffID
+            // 
+            this.cbxBookingStaffID.FormattingEnabled = true;
+            this.cbxBookingStaffID.Location = new System.Drawing.Point(93, 43);
+            this.cbxBookingStaffID.Name = "cbxBookingStaffID";
+            this.cbxBookingStaffID.Size = new System.Drawing.Size(197, 21);
+            this.cbxBookingStaffID.TabIndex = 36;
+            // 
+            // cbxBookingTruckID
+            // 
+            this.cbxBookingTruckID.FormattingEnabled = true;
+            this.cbxBookingTruckID.Location = new System.Drawing.Point(93, 16);
+            this.cbxBookingTruckID.Name = "cbxBookingTruckID";
+            this.cbxBookingTruckID.Size = new System.Drawing.Size(197, 21);
+            this.cbxBookingTruckID.TabIndex = 35;
             // 
             // label8
             // 
@@ -359,6 +358,31 @@
             this.tabBookingDetails.Text = "Booking Details:";
             this.tabBookingDetails.UseVisualStyleBackColor = true;
             // 
+            // cbxBookingGoodsID
+            // 
+            this.cbxBookingGoodsID.FormattingEnabled = true;
+            this.cbxBookingGoodsID.Location = new System.Drawing.Point(129, 44);
+            this.cbxBookingGoodsID.Name = "cbxBookingGoodsID";
+            this.cbxBookingGoodsID.Size = new System.Drawing.Size(189, 21);
+            this.cbxBookingGoodsID.TabIndex = 41;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 44);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Goods ID:";
+            // 
+            // rtbBookingNotes
+            // 
+            this.rtbBookingNotes.Location = new System.Drawing.Point(129, 104);
+            this.rtbBookingNotes.Name = "rtbBookingNotes";
+            this.rtbBookingNotes.Size = new System.Drawing.Size(301, 101);
+            this.rtbBookingNotes.TabIndex = 39;
+            this.rtbBookingNotes.Text = "";
+            // 
             // tbxDeliveryDistance
             // 
             this.tbxDeliveryDistance.Location = new System.Drawing.Point(129, 74);
@@ -400,23 +424,6 @@
             this.label17.TabIndex = 30;
             this.label17.Text = "Booking Date Made:";
             // 
-            // rtbBookingNotes
-            // 
-            this.rtbBookingNotes.Location = new System.Drawing.Point(129, 104);
-            this.rtbBookingNotes.Name = "rtbBookingNotes";
-            this.rtbBookingNotes.Size = new System.Drawing.Size(301, 101);
-            this.rtbBookingNotes.TabIndex = 39;
-            this.rtbBookingNotes.Text = "";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 44);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "Goods ID:";
-            // 
             // tabDeliveryDeparture
             // 
             this.tabDeliveryDeparture.Controls.Add(this.tbxDepartureCity);
@@ -436,75 +443,6 @@
             this.tabDeliveryDeparture.TabIndex = 2;
             this.tabDeliveryDeparture.Text = "Delivery Departure:";
             this.tabDeliveryDeparture.UseVisualStyleBackColor = true;
-            // 
-            // btnAddDeliveryBooking
-            // 
-            this.btnAddDeliveryBooking.Location = new System.Drawing.Point(297, 325);
-            this.btnAddDeliveryBooking.Name = "btnAddDeliveryBooking";
-            this.btnAddDeliveryBooking.Size = new System.Drawing.Size(185, 23);
-            this.btnAddDeliveryBooking.TabIndex = 17;
-            this.btnAddDeliveryBooking.Text = "Add Delivery Booking";
-            this.btnAddDeliveryBooking.UseVisualStyleBackColor = true;
-            // 
-            // tabDeliveryArrival
-            // 
-            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalCity);
-            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalAdrArea);
-            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalAdrNumber);
-            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalStreetName);
-            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalDate);
-            this.tabDeliveryArrival.Controls.Add(this.label7);
-            this.tabDeliveryArrival.Controls.Add(this.label21);
-            this.tabDeliveryArrival.Controls.Add(this.label22);
-            this.tabDeliveryArrival.Controls.Add(this.label23);
-            this.tabDeliveryArrival.Controls.Add(this.label24);
-            this.tabDeliveryArrival.Location = new System.Drawing.Point(4, 22);
-            this.tabDeliveryArrival.Name = "tabDeliveryArrival";
-            this.tabDeliveryArrival.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDeliveryArrival.Size = new System.Drawing.Size(469, 220);
-            this.tabDeliveryArrival.TabIndex = 3;
-            this.tabDeliveryArrival.Text = "Delivery Arrival:";
-            this.tabDeliveryArrival.UseVisualStyleBackColor = true;
-            // 
-            // cbxBookingTruckID
-            // 
-            this.cbxBookingTruckID.FormattingEnabled = true;
-            this.cbxBookingTruckID.Location = new System.Drawing.Point(93, 16);
-            this.cbxBookingTruckID.Name = "cbxBookingTruckID";
-            this.cbxBookingTruckID.Size = new System.Drawing.Size(197, 21);
-            this.cbxBookingTruckID.TabIndex = 35;
-            // 
-            // cbxBookingStaffID
-            // 
-            this.cbxBookingStaffID.FormattingEnabled = true;
-            this.cbxBookingStaffID.Location = new System.Drawing.Point(93, 43);
-            this.cbxBookingStaffID.Name = "cbxBookingStaffID";
-            this.cbxBookingStaffID.Size = new System.Drawing.Size(197, 21);
-            this.cbxBookingStaffID.TabIndex = 36;
-            // 
-            // cbxBookingClientID
-            // 
-            this.cbxBookingClientID.FormattingEnabled = true;
-            this.cbxBookingClientID.Location = new System.Drawing.Point(93, 70);
-            this.cbxBookingClientID.Name = "cbxBookingClientID";
-            this.cbxBookingClientID.Size = new System.Drawing.Size(197, 21);
-            this.cbxBookingClientID.TabIndex = 37;
-            // 
-            // cbxBookingDriverID
-            // 
-            this.cbxBookingDriverID.FormattingEnabled = true;
-            this.cbxBookingDriverID.Location = new System.Drawing.Point(93, 97);
-            this.cbxBookingDriverID.Name = "cbxBookingDriverID";
-            this.cbxBookingDriverID.Size = new System.Drawing.Size(197, 21);
-            this.cbxBookingDriverID.TabIndex = 38;
-            // 
-            // cbxBookingGoodsID
-            // 
-            this.cbxBookingGoodsID.FormattingEnabled = true;
-            this.cbxBookingGoodsID.Location = new System.Drawing.Point(129, 44);
-            this.cbxBookingGoodsID.Name = "cbxBookingGoodsID";
-            this.cbxBookingGoodsID.Size = new System.Drawing.Size(189, 21);
-            this.cbxBookingGoodsID.TabIndex = 41;
             // 
             // tbxDepartureCity
             // 
@@ -586,6 +524,26 @@
             this.label20.TabIndex = 18;
             this.label20.Text = "Departure Date:";
             // 
+            // tabDeliveryArrival
+            // 
+            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalCity);
+            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalAdrArea);
+            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalAdrNumber);
+            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalStreetName);
+            this.tabDeliveryArrival.Controls.Add(this.tbxArrivalDate);
+            this.tabDeliveryArrival.Controls.Add(this.label7);
+            this.tabDeliveryArrival.Controls.Add(this.label21);
+            this.tabDeliveryArrival.Controls.Add(this.label22);
+            this.tabDeliveryArrival.Controls.Add(this.label23);
+            this.tabDeliveryArrival.Controls.Add(this.label24);
+            this.tabDeliveryArrival.Location = new System.Drawing.Point(4, 22);
+            this.tabDeliveryArrival.Name = "tabDeliveryArrival";
+            this.tabDeliveryArrival.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDeliveryArrival.Size = new System.Drawing.Size(469, 220);
+            this.tabDeliveryArrival.TabIndex = 3;
+            this.tabDeliveryArrival.Text = "Delivery Arrival:";
+            this.tabDeliveryArrival.UseVisualStyleBackColor = true;
+            // 
             // tbxArrivalCity
             // 
             this.tbxArrivalCity.Location = new System.Drawing.Point(140, 116);
@@ -665,6 +623,50 @@
             this.label24.Size = new System.Drawing.Size(65, 13);
             this.label24.TabIndex = 29;
             this.label24.Text = "Arrival Date:";
+            // 
+            // btnDeleteDeliveryBooking
+            // 
+            this.btnDeleteDeliveryBooking.Location = new System.Drawing.Point(301, 45);
+            this.btnDeleteDeliveryBooking.Name = "btnDeleteDeliveryBooking";
+            this.btnDeleteDeliveryBooking.Size = new System.Drawing.Size(185, 23);
+            this.btnDeleteDeliveryBooking.TabIndex = 15;
+            this.btnDeleteDeliveryBooking.Text = "Delete Delivery Booking";
+            this.btnDeleteDeliveryBooking.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateDeliveryBooking
+            // 
+            this.btnUpdateDeliveryBooking.Location = new System.Drawing.Point(301, 16);
+            this.btnUpdateDeliveryBooking.Name = "btnUpdateDeliveryBooking";
+            this.btnUpdateDeliveryBooking.Size = new System.Drawing.Size(185, 23);
+            this.btnUpdateDeliveryBooking.TabIndex = 14;
+            this.btnUpdateDeliveryBooking.Text = "Update Delivery Booking";
+            this.btnUpdateDeliveryBooking.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Select delivery ID:";
+            // 
+            // cbxDeliveryID
+            // 
+            this.cbxDeliveryID.FormattingEnabled = true;
+            this.cbxDeliveryID.Location = new System.Drawing.Point(106, 46);
+            this.cbxDeliveryID.Name = "cbxDeliveryID";
+            this.cbxDeliveryID.Size = new System.Drawing.Size(165, 21);
+            this.cbxDeliveryID.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(297, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Select an existing delivery ID to update or delete the booking:";
             // 
             // Bookings
             // 

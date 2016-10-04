@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabSummary = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtSumBusinessName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabDetails = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtBusinessName = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -76,27 +76,27 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3.SuspendLayout();
+            this.tabSummary.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabDetails.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabPage3
+            // tabSummary
             // 
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Controls.Add(this.btnSaveClient);
-            this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(558, 305);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Client Details Summery";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabSummary.Controls.Add(this.groupBox3);
+            this.tabSummary.Controls.Add(this.btnSaveClient);
+            this.tabSummary.Controls.Add(this.groupBox5);
+            this.tabSummary.Location = new System.Drawing.Point(4, 22);
+            this.tabSummary.Name = "tabSummary";
+            this.tabSummary.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSummary.Size = new System.Drawing.Size(558, 305);
+            this.tabSummary.TabIndex = 2;
+            this.tabSummary.Text = "Client Details Summary";
+            this.tabSummary.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -206,6 +206,7 @@
             this.btnSaveClient.TabIndex = 11;
             this.btnSaveClient.Text = "Save Client Details";
             this.btnSaveClient.UseVisualStyleBackColor = true;
+            this.btnSaveClient.Click += new System.EventHandler(this.btnSaveClient_Click);
             // 
             // groupBox5
             // 
@@ -312,18 +313,18 @@
             this.label27.TabIndex = 4;
             this.label27.Text = "Street :";
             // 
-            // tabPage1
+            // tabDetails
             // 
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(558, 305);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Client Details";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tabDetails.Controls.Add(this.groupBox2);
+            this.tabDetails.Controls.Add(this.groupBox1);
+            this.tabDetails.Location = new System.Drawing.Point(4, 22);
+            this.tabDetails.Name = "tabDetails";
+            this.tabDetails.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDetails.Size = new System.Drawing.Size(558, 305);
+            this.tabDetails.TabIndex = 0;
+            this.tabDetails.Text = "Client Details";
+            this.tabDetails.UseVisualStyleBackColor = true;
+            this.tabDetails.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // groupBox2
             // 
@@ -525,8 +526,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabDetails);
+            this.tabControl1.Controls.Add(this.tabSummary);
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -542,12 +543,12 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "AddClient";
             this.Text = "New Client";
-            this.tabPage3.ResumeLayout(false);
+            this.tabSummary.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.tabDetails.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -559,7 +560,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabSummary;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtSumBusinessName;
         private System.Windows.Forms.Label label3;
@@ -583,7 +584,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabDetails;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtBusinessName;
         private System.Windows.Forms.Label label33;
