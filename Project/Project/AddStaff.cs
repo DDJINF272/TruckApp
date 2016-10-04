@@ -9,6 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
+/*TODO 
+ * -------------------------------
+ * -> Remove Bank Details Properly
+ *     -> Remove TruckDriver Properly
+ *     -> Remove Staff Login Properly
+ *     - Darren
+ * -------------------------------
+ *     */
 namespace Project
 {
 
@@ -111,6 +120,7 @@ namespace Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int staffid = -1;
             if(userUpdateStatus == false)
             {
                 string checkforDuplicates = "SELECT id_number FROM Staff WHERE id_number = @id_number";
@@ -155,7 +165,7 @@ namespace Project
 
                         try
                         {
-                            string insertDept = "INSERT INTO Staff (firstname,lastname,id_number,cellphone_number,street_number,street_name,street_area,address_province,address_city,department_id,licence_code_id,banking_id,login_id) VALUES(@firstname,@lastname,@id_number,@cellphone_number,@street_number,@street_name,@street_area,@address_province,@address_city,@department_id,@licence_code_id,@banking_id,@login_id)";
+                            string insertDept = "INSERT INTO Staff (firstname,lastname,id_number,cellphone_number,street_number,street_name,street_area,address_province,address_city,department_id,licence_code_id,banking_id,login_id) VALUES(@firstname,@lastname,@id_number,@cellphone_number,@street_number,@street_name,@street_area,@address_province,@address_city,@department_id,@licence_code_id,@banking_id,@login_id) SELECT CAST(SCOPE_IDENTITY() AS int)";
                             cmd.Connection = conn;
                             cmd.CommandText = insertDept;
 
@@ -178,10 +188,36 @@ namespace Project
                             cmd.Parameters["@banking_id"].Value = bankID;
                             cmd.Parameters["@login_id"].Value = loginID;
                             conn.Open();
-                            cmd.ExecuteNonQuery();
+                            staffid = (Int32)cmd.ExecuteScalar();
                             MessageBox.Show("Successfully Added The New Staff Member");
                             reader.Close();
                             conn.Close();
+
+                            //If staff if driver, we add to the TruckDrivers
+                            if(cmbDepartment.SelectedItem.ToString() == "Logistics")
+                            {
+                                cmd.Parameters.Add("@staff_idadd", SqlDbType.Int);
+
+                                string addDriver = "INSERT INTO TruckDrivers (staff_id) VALUES(@staff_idadd)";
+                                try
+                                {
+                                    cmd.Connection = conn;
+                                    cmd.Parameters["@staff_idadd"].Value = staffid;
+                                    cmd.CommandText = addDriver;
+                                    conn.Open();
+                                    cmd.ExecuteNonQuery();
+                                    
+                                   
+                                }
+                                catch(Exception error)
+                                {
+                                    MessageBox.Show("Error: " + error.Message);
+                                }
+                                finally
+                                {
+                                    conn.Close();
+                                }
+                            }
                             this.Close();
 
                         }
@@ -597,6 +633,7 @@ namespace Project
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Staff Member Successfully Removerd.");
                         conn.Close();
+
                         this.Close();
                     }
                     catch (Exception error)
