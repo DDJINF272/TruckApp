@@ -51,6 +51,20 @@ namespace Project
             }
 
             cmd.Parameters.Add("@goods_id", SqlDbType.Int);
+
+
+
+            //Truck ID
+            //Staff ID
+
+
+            //Client ID
+
+
+            //Staff ID
+
+
+
         }
 
         private void cbxGoodsID_SelectedIndexChanged(object sender, EventArgs e)
