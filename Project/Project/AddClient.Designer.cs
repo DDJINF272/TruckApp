@@ -543,6 +543,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "AddClient";
             this.Text = "New Client";
+            this.Load += new System.EventHandler(this.AddClient_Load);
             this.tabSummary.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

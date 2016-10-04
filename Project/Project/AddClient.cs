@@ -128,5 +128,10 @@ namespace Project
                 MessageBox.Show("Error: " + error.Message);
             }
         }
+
+        private void AddClient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
