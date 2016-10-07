@@ -30,17 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cmbSelectTruck = new System.Windows.Forms.ComboBox();
+            this.lblTruckSelect = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTotKilo = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbCabType = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtLFW = new System.Windows.Forms.TextBox();
-            this.txtMake = new System.Windows.Forms.TextBox();
-            this.txtModel = new System.Windows.Forms.TextBox();
             this.txtType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -105,8 +104,7 @@
             this.manageTrucksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateTruckDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeTruckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmbSelectTruck = new System.Windows.Forms.ComboBox();
-            this.lblTruckSelect = new System.Windows.Forms.Label();
+            this.txtMake = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -148,6 +146,26 @@
             this.tabPage1.Text = "Truck Description";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // cmbSelectTruck
+            // 
+            this.cmbSelectTruck.DisplayMember = "licence_code_id";
+            this.cmbSelectTruck.FormattingEnabled = true;
+            this.cmbSelectTruck.Location = new System.Drawing.Point(404, 9);
+            this.cmbSelectTruck.Name = "cmbSelectTruck";
+            this.cmbSelectTruck.Size = new System.Drawing.Size(145, 21);
+            this.cmbSelectTruck.TabIndex = 19;
+            this.cmbSelectTruck.ValueMember = "licence_code_id";
+            this.cmbSelectTruck.SelectedIndexChanged += new System.EventHandler(this.cmbSelectTruck_SelectedIndexChanged);
+            // 
+            // lblTruckSelect
+            // 
+            this.lblTruckSelect.AutoSize = true;
+            this.lblTruckSelect.Location = new System.Drawing.Point(324, 12);
+            this.lblTruckSelect.Name = "lblTruckSelect";
+            this.lblTruckSelect.Size = new System.Drawing.Size(74, 13);
+            this.lblTruckSelect.TabIndex = 18;
+            this.lblTruckSelect.Text = "Select Truck :";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtTotKilo);
@@ -156,10 +174,8 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtLFW);
             this.groupBox2.Controls.Add(this.txtMake);
-            this.groupBox2.Controls.Add(this.txtModel);
             this.groupBox2.Controls.Add(this.txtType);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(6, 55);
@@ -171,7 +187,7 @@
             // 
             // txtTotKilo
             // 
-            this.txtTotKilo.Location = new System.Drawing.Point(127, 153);
+            this.txtTotKilo.Location = new System.Drawing.Point(127, 127);
             this.txtTotKilo.Name = "txtTotKilo";
             this.txtTotKilo.Size = new System.Drawing.Size(206, 20);
             this.txtTotKilo.TabIndex = 17;
@@ -180,7 +196,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 156);
+            this.label16.Location = new System.Drawing.Point(30, 130);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(91, 13);
             this.label16.TabIndex = 16;
@@ -189,7 +205,7 @@
             // cmbCabType
             // 
             this.cmbCabType.FormattingEnabled = true;
-            this.cmbCabType.Location = new System.Drawing.Point(127, 101);
+            this.cmbCabType.Location = new System.Drawing.Point(127, 75);
             this.cmbCabType.Name = "cmbCabType";
             this.cmbCabType.Size = new System.Drawing.Size(206, 21);
             this.cmbCabType.TabIndex = 15;
@@ -198,7 +214,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 130);
+            this.label10.Location = new System.Drawing.Point(23, 104);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 13);
             this.label10.TabIndex = 14;
@@ -206,27 +222,11 @@
             // 
             // txtLFW
             // 
-            this.txtLFW.Location = new System.Drawing.Point(127, 127);
+            this.txtLFW.Location = new System.Drawing.Point(127, 101);
             this.txtLFW.Name = "txtLFW";
             this.txtLFW.Size = new System.Drawing.Size(206, 20);
             this.txtLFW.TabIndex = 13;
             this.txtLFW.Leave += new System.EventHandler(this.txtLFW_Leave);
-            // 
-            // txtMake
-            // 
-            this.txtMake.Location = new System.Drawing.Point(127, 75);
-            this.txtMake.Name = "txtMake";
-            this.txtMake.Size = new System.Drawing.Size(206, 20);
-            this.txtMake.TabIndex = 12;
-            this.txtMake.Leave += new System.EventHandler(this.txtMake_Leave);
-            // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(127, 49);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(206, 20);
-            this.txtModel.TabIndex = 11;
-            this.txtModel.Leave += new System.EventHandler(this.txtModel_Leave);
             // 
             // txtType
             // 
@@ -246,19 +246,10 @@
             this.label1.Text = "Type :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Model :";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 104);
+            this.label4.Location = new System.Drawing.Point(65, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 3;
@@ -857,30 +848,19 @@
             this.removeTruckToolStripMenuItem.Text = "Remove Truck";
             this.removeTruckToolStripMenuItem.Click += new System.EventHandler(this.removeTruckToolStripMenuItem_Click);
             // 
-            // cmbSelectTruck
+            // txtMake
             // 
-            this.cmbSelectTruck.DisplayMember = "licence_code_id";
-            this.cmbSelectTruck.FormattingEnabled = true;
-            this.cmbSelectTruck.Location = new System.Drawing.Point(404, 9);
-            this.cmbSelectTruck.Name = "cmbSelectTruck";
-            this.cmbSelectTruck.Size = new System.Drawing.Size(145, 21);
-            this.cmbSelectTruck.TabIndex = 19;
-            this.cmbSelectTruck.ValueMember = "licence_code_id";
-            this.cmbSelectTruck.SelectedIndexChanged += new System.EventHandler(this.cmbSelectTruck_SelectedIndexChanged);
-            // 
-            // lblTruckSelect
-            // 
-            this.lblTruckSelect.AutoSize = true;
-            this.lblTruckSelect.Location = new System.Drawing.Point(324, 12);
-            this.lblTruckSelect.Name = "lblTruckSelect";
-            this.lblTruckSelect.Size = new System.Drawing.Size(74, 13);
-            this.lblTruckSelect.TabIndex = 18;
-            this.lblTruckSelect.Text = "Select Truck :";
+            this.txtMake.Location = new System.Drawing.Point(127, 49);
+            this.txtMake.Name = "txtMake";
+            this.txtMake.Size = new System.Drawing.Size(206, 20);
+            this.txtMake.TabIndex = 11;
+            this.txtMake.Leave += new System.EventHandler(this.txtModel_Leave);
             // 
             // Trucks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(565, 366);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
@@ -925,11 +905,8 @@
         private System.Windows.Forms.ComboBox cmbCabType;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtLFW;
-        private System.Windows.Forms.TextBox txtMake;
-        private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTotKilo;
@@ -995,5 +972,6 @@
         private System.Windows.Forms.ToolStripMenuItem removeTruckToolStripMenuItem;
         private System.Windows.Forms.ComboBox cmbSelectTruck;
         private System.Windows.Forms.Label lblTruckSelect;
+        private System.Windows.Forms.TextBox txtMake;
     }
 }
