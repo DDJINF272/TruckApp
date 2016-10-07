@@ -245,6 +245,7 @@
             this.btnAddDeliveryBooking.TabIndex = 17;
             this.btnAddDeliveryBooking.Text = "Add Delivery Booking";
             this.btnAddDeliveryBooking.UseVisualStyleBackColor = true;
+            this.btnAddDeliveryBooking.Click += new System.EventHandler(this.btnAddDeliveryBooking_Click);
             // 
             // tabControl2
             // 
@@ -636,6 +637,7 @@
             this.btnDeleteDeliveryBooking.TabIndex = 15;
             this.btnDeleteDeliveryBooking.Text = "Delete Delivery Booking";
             this.btnDeleteDeliveryBooking.UseVisualStyleBackColor = true;
+            this.btnDeleteDeliveryBooking.Click += new System.EventHandler(this.btnDeleteDeliveryBooking_Click);
             // 
             // btnUpdateDeliveryBooking
             // 
@@ -645,6 +647,7 @@
             this.btnUpdateDeliveryBooking.TabIndex = 14;
             this.btnUpdateDeliveryBooking.Text = "Update Delivery Booking";
             this.btnUpdateDeliveryBooking.UseVisualStyleBackColor = true;
+            this.btnUpdateDeliveryBooking.Click += new System.EventHandler(this.btnUpdateDeliveryBooking_Click);
             // 
             // label5
             // 
