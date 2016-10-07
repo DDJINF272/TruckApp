@@ -70,7 +70,31 @@
     <Compile Include="Bookings.Designer.cs">
       <DependentUpon>Bookings.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientLogon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientLogon.Designer.cs">
+      <DependentUpon>ClientLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientRegistration.Designer.cs">
+      <DependentUpon>clientRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientRegistrationContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientRegistrationContent.Designer.cs">
+      <DependentUpon>clientRegistrationContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Departments.cs" />
+    <Compile Include="firstContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="firstContact.Designer.cs">
+      <DependentUpon>firstContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +127,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bookings.resx">
       <DependentUpon>Bookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientLogon.resx">
+      <DependentUpon>ClientLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientRegistration.resx">
+      <DependentUpon>clientRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientRegistrationContent.resx">
+      <DependentUpon>clientRegistrationContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="firstContact.resx">
+      <DependentUpon>firstContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
