@@ -293,7 +293,7 @@ namespace Project
 
         private void txtModel_Leave(object sender, EventArgs e)
         {
-            model = txtModel.Text;
+            model = txtMake.Text;
             txtSumModel.Text = model;
         }
 
