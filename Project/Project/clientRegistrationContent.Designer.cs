@@ -68,19 +68,22 @@
             this.txtbxStreetNumber = new System.Windows.Forms.TextBox();
             this.txtbxStreetName = new System.Windows.Forms.TextBox();
             this.tabPhase3 = new System.Windows.Forms.TabPage();
-            this.tabPhase4 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtbxUsername = new System.Windows.Forms.TextBox();
-            this.txtbxPassword = new System.Windows.Forms.TextBox();
-            this.txtbxEmail = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.btnPhase4 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtbxEmail = new System.Windows.Forms.TextBox();
+            this.txtbxPassword = new System.Windows.Forms.TextBox();
+            this.txtbxUsername = new System.Windows.Forms.TextBox();
+            this.tabPhase4 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnChooseFile = new System.Windows.Forms.Button();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPhase1.SuspendLayout();
@@ -88,9 +91,10 @@
             this.tabPhase2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPhase3.SuspendLayout();
-            this.tabPhase4.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tabPhase4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -269,7 +273,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(196, 16);
+            this.label1.Location = new System.Drawing.Point(245, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 16);
             this.label1.TabIndex = 10;
@@ -498,15 +502,6 @@
             this.tabPhase3.TabIndex = 2;
             this.tabPhase3.UseVisualStyleBackColor = true;
             // 
-            // tabPhase4
-            // 
-            this.tabPhase4.Controls.Add(this.panel5);
-            this.tabPhase4.Location = new System.Drawing.Point(4, 22);
-            this.tabPhase4.Name = "tabPhase4";
-            this.tabPhase4.Size = new System.Drawing.Size(853, 458);
-            this.tabPhase4.TabIndex = 3;
-            this.tabPhase4.UseVisualStyleBackColor = true;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -523,70 +518,12 @@
             this.panel4.Size = new System.Drawing.Size(730, 445);
             this.panel4.TabIndex = 0;
             // 
-            // txtbxUsername
-            // 
-            this.txtbxUsername.Location = new System.Drawing.Point(179, 99);
-            this.txtbxUsername.Name = "txtbxUsername";
-            this.txtbxUsername.Size = new System.Drawing.Size(240, 20);
-            this.txtbxUsername.TabIndex = 0;
-            // 
-            // txtbxPassword
-            // 
-            this.txtbxPassword.Location = new System.Drawing.Point(179, 175);
-            this.txtbxPassword.Name = "txtbxPassword";
-            this.txtbxPassword.Size = new System.Drawing.Size(240, 20);
-            this.txtbxPassword.TabIndex = 1;
-            // 
-            // txtbxEmail
-            // 
-            this.txtbxEmail.Location = new System.Drawing.Point(179, 244);
-            this.txtbxEmail.Name = "txtbxEmail";
-            this.txtbxEmail.Size = new System.Drawing.Size(240, 20);
-            this.txtbxEmail.TabIndex = 2;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(242, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 18);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Login Details";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(267, 144);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Password";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(267, 219);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 13);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Email Address";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(267, 72);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 13);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Username";
-            // 
             // btnPhase4
             // 
             this.btnPhase4.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnPhase4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhase4.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPhase4.Location = new System.Drawing.Point(179, 323);
+            this.btnPhase4.Location = new System.Drawing.Point(223, 337);
             this.btnPhase4.Name = "btnPhase4";
             this.btnPhase4.Size = new System.Drawing.Size(240, 32);
             this.btnPhase4.TabIndex = 13;
@@ -594,37 +531,129 @@
             this.btnPhase4.UseVisualStyleBackColor = false;
             this.btnPhase4.Click += new System.EventHandler(this.btnPhase4_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(311, 86);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 13);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Username";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(311, 233);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 13);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Email Address";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(311, 158);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Password";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(286, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 18);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Login Details";
+            // 
+            // txtbxEmail
+            // 
+            this.txtbxEmail.Location = new System.Drawing.Point(223, 258);
+            this.txtbxEmail.Name = "txtbxEmail";
+            this.txtbxEmail.Size = new System.Drawing.Size(240, 20);
+            this.txtbxEmail.TabIndex = 2;
+            // 
+            // txtbxPassword
+            // 
+            this.txtbxPassword.Location = new System.Drawing.Point(223, 189);
+            this.txtbxPassword.Name = "txtbxPassword";
+            this.txtbxPassword.Size = new System.Drawing.Size(240, 20);
+            this.txtbxPassword.TabIndex = 1;
+            // 
+            // txtbxUsername
+            // 
+            this.txtbxUsername.Location = new System.Drawing.Point(223, 113);
+            this.txtbxUsername.Name = "txtbxUsername";
+            this.txtbxUsername.Size = new System.Drawing.Size(240, 20);
+            this.txtbxUsername.TabIndex = 0;
+            // 
+            // tabPhase4
+            // 
+            this.tabPhase4.Controls.Add(this.panel5);
+            this.tabPhase4.Location = new System.Drawing.Point(4, 22);
+            this.tabPhase4.Name = "tabPhase4";
+            this.tabPhase4.Size = new System.Drawing.Size(853, 458);
+            this.tabPhase4.TabIndex = 3;
+            this.tabPhase4.UseVisualStyleBackColor = true;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.btnChooseFile);
+            this.panel5.Controls.Add(this.btnFinish);
             this.panel5.Controls.Add(this.label19);
             this.panel5.Location = new System.Drawing.Point(61, 7);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(730, 445);
             this.panel5.TabIndex = 1;
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(225, 252);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 32);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pictureBox1.Location = new System.Drawing.Point(252, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(180, 131);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnChooseFile
+            // 
+            this.btnChooseFile.Location = new System.Drawing.Point(225, 198);
+            this.btnChooseFile.Name = "btnChooseFile";
+            this.btnChooseFile.Size = new System.Drawing.Size(240, 23);
+            this.btnChooseFile.TabIndex = 14;
+            this.btnChooseFile.Text = "Choose Image";
+            this.btnChooseFile.UseVisualStyleBackColor = true;
+            this.btnChooseFile.Click += new System.EventHandler(this.btnChooseFile_Click);
+            // 
+            // btnFinish
+            // 
+            this.btnFinish.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinish.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnFinish.Location = new System.Drawing.Point(225, 252);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(240, 32);
+            this.btnFinish.TabIndex = 13;
+            this.btnFinish.Text = "Next";
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(242, 13);
+            this.label19.Location = new System.Drawing.Point(249, 12);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(183, 18);
             this.label19.TabIndex = 3;
             this.label19.Text = "Upload a profile picture";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // clientRegistrationContent
             // 
@@ -646,11 +675,12 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPhase3.ResumeLayout(false);
-            this.tabPhase4.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.tabPhase4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -708,7 +738,10 @@
         private System.Windows.Forms.TextBox txtbxPassword;
         private System.Windows.Forms.TextBox txtbxUsername;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFinish;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnChooseFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

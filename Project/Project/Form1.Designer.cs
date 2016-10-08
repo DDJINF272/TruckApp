@@ -40,17 +40,17 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -59,12 +59,12 @@
             this.tabPage4.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
             this.menuStrip3.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.menuStrip4.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.menuStrip5.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -196,6 +196,25 @@
             this.tabPage5.Text = "Manage Clients";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // menuStrip3
+            // 
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.menuStrip3.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip3.Name = "menuStrip3";
+            this.menuStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip3.Size = new System.Drawing.Size(644, 24);
+            this.menuStrip3.TabIndex = 10;
+            this.menuStrip3.Text = "menuStrip3";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(101, 20);
+            this.toolStripMenuItem2.Text = "Manage Clients";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.menuStrip4);
@@ -207,6 +226,25 @@
             this.tabPage6.Text = "Bookings";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // menuStrip4
+            // 
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3});
+            this.menuStrip4.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip4.Size = new System.Drawing.Size(644, 24);
+            this.menuStrip4.TabIndex = 10;
+            this.menuStrip4.Text = "menuStrip4";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(114, 20);
+            this.toolStripMenuItem3.Text = "Manage Bookings";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.menuStrip5);
@@ -217,6 +255,25 @@
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "Fleet Management";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip5
+            // 
+            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4});
+            this.menuStrip5.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip5.Name = "menuStrip5";
+            this.menuStrip5.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip5.Size = new System.Drawing.Size(644, 24);
+            this.menuStrip5.TabIndex = 11;
+            this.menuStrip5.Text = "menuStrip5";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(90, 20);
+            this.toolStripMenuItem4.Text = "Manage Fleet";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // tabPage8
             // 
@@ -250,63 +307,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // menuStrip3
-            // 
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2});
-            this.menuStrip3.Location = new System.Drawing.Point(3, 3);
-            this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip3.Size = new System.Drawing.Size(644, 24);
-            this.menuStrip3.TabIndex = 10;
-            this.menuStrip3.Text = "menuStrip3";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(101, 20);
-            this.toolStripMenuItem2.Text = "Manage Clients";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // menuStrip4
-            // 
-            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3});
-            this.menuStrip4.Location = new System.Drawing.Point(3, 3);
-            this.menuStrip4.Name = "menuStrip4";
-            this.menuStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip4.Size = new System.Drawing.Size(644, 24);
-            this.menuStrip4.TabIndex = 10;
-            this.menuStrip4.Text = "menuStrip4";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(114, 20);
-            this.toolStripMenuItem3.Text = "Manage Bookings";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // menuStrip5
-            // 
-            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4});
-            this.menuStrip5.Location = new System.Drawing.Point(3, 3);
-            this.menuStrip5.Name = "menuStrip5";
-            this.menuStrip5.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip5.Size = new System.Drawing.Size(644, 24);
-            this.menuStrip5.TabIndex = 11;
-            this.menuStrip5.Text = "menuStrip5";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(90, 20);
-            this.toolStripMenuItem4.Text = "Manage Fleet";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,17 +331,17 @@
             this.menuStrip2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.menuStrip4.ResumeLayout(false);
             this.menuStrip4.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.menuStrip5.ResumeLayout(false);
             this.menuStrip5.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

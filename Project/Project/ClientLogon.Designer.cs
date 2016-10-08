@@ -65,6 +65,7 @@
             this.btnClientLogon.TabIndex = 4;
             this.btnClientLogon.Text = "Login";
             this.btnClientLogon.UseVisualStyleBackColor = true;
+            this.btnClientLogon.Click += new System.EventHandler(this.btnClientLogon_Click);
             // 
             // txtClientPassword
             // 
