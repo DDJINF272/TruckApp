@@ -62,6 +62,11 @@ namespace Project
                 else
                 {
                     //Continue
+                    ClientForm client = new ClientForm();
+                    client.ClientNumber = clientlogon;
+                    client.ShowDialog();
+                    
+           
 
                 }
 
