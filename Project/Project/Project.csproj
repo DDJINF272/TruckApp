@@ -94,6 +94,7 @@
     <Compile Include="clientRegistrationContent.Designer.cs">
       <DependentUpon>clientRegistrationContent.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComboBoxItems.cs" />
     <Compile Include="Departments.cs" />
     <Compile Include="firstContact.cs">
       <SubType>Form</SubType>
