@@ -98,7 +98,9 @@ namespace Project
 
                 while (reader.Read())
                 {
+                    
                     cbxBookingTruckID.Items.Add(reader["truck_id"]);
+                   
                 }
 
             }
