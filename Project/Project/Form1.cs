@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace Project
 {
     public partial class Form1 : Form
     {
+
+        SqlConnection conn = new SqlConnection(Globals.DBConn);
+        SqlCommand cmd = new SqlCommand();
+        SqlDataReader reader;
+        SqlDataAdapter adapter = new SqlDataAdapter();
+
         public Form1()
         {
             InitializeComponent();
@@ -44,7 +52,7 @@ namespace Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            getDriversActiveData();
         }
         private void button6_Click_2(object sender, EventArgs e)
         {
@@ -101,6 +109,59 @@ namespace Project
         {
             Trucks addS = new Trucks();
             addS.ShowDialog();
+        }
+
+        private void getDriversActiveData()
+        {
+            string query = "SELECT firstname, lastname, cellphone_number FROM Staff WHERE department_id = @id";
+          
+            try
+            {
+
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@id", 3);
+                cmd.CommandText = query;
+                conn.Open();
+
+                
+                
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(adapter);
+
+                DataTable table = new DataTable();
+                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                adapter.SelectCommand = cmd;
+                adapter.Fill(table);
+                bindingSource1.DataSource = table;
+
+                dgvAvailableDrivers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+                
+              
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error:" + error.Message);
+            }
+          
+        }
+
+        private void groupBox10_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     
