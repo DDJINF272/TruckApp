@@ -99,7 +99,7 @@ namespace Project
                 while (reader.Read())
                 {
                     
-                    cbxBookingTruckID.Items.Add(reader["truck_id"]);
+                    cbxBookingTruckID.Items.Add(new ComboBoxItems { name = reader["truck_registration"].ToString(), value = reader["truck_id"].ToString() });
                    
                 }
 
@@ -129,7 +129,7 @@ namespace Project
 
                 while (reader.Read())
                 {
-                    cbxBookingStaffID.Items.Add(reader["staff_id"]);
+                    cbxBookingStaffID.Items.Add(new ComboBoxItems { name = reader["firstname"] + " " + reader["lastname"], value = reader["staff_id"].ToString() });
                 }
 
             }
@@ -157,7 +157,7 @@ namespace Project
 
                 while (reader.Read())
                 {
-                    cbxBookingClientID.Items.Add(reader["client_id"]);
+                    cbxBookingClientID.Items.Add(new ComboBoxItems { name = reader["client_firstname"] + " " + reader["client_lastname"], value = reader["client_id"].ToString() });
                 }
 
             }
@@ -170,6 +170,34 @@ namespace Project
                 conn.Close();
             }
 
+
+            
+            //----------------------------------------------------------------------------------------//
+            //                           Populate the Goods ID                                   //
+            string fetchGoodsID = "SELECT * FROM BookingGoods";
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = fetchGoodsID;
+
+                conn.Open();
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cbxBookingGoodsID.Items.Add(new ComboBoxItems { name = reader["goods_type"].ToString(), value = reader["goods_id"].ToString() });
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
 
             //----------------------------------------------------------------------------------------//
             //                           Populate the Driver ID                                    //
@@ -185,7 +213,36 @@ namespace Project
 
                 while (reader.Read())
                 {
-                    cbxBookingDriverID.Items.Add(reader["driver_id"]);
+                    string queryDriver = "SELECT * FROM Staff WHERE staff_id = @idstaff";
+                    SqlConnection connection = new SqlConnection(Globals.DBConn);
+                    SqlCommand command = new SqlCommand();
+                    SqlDataReader read;
+                    command.Parameters.AddWithValue("@idstaff", reader["staff_id"]);
+                    
+                    try
+                    {
+                        command.Connection = connection;
+                        command.CommandText = queryDriver;
+                        connection.Open();
+
+                        read = command.ExecuteReader();
+
+                        while(read.Read())
+                        {
+                            cbxBookingDriverID.Items.Add(new ComboBoxItems { name = read["firstname"] + " " + read["lastname"], value = reader["driver_id"].ToString() });
+                        }
+
+                    }
+                    catch(Exception error)
+                    {
+                        MessageBox.Show("Error: " + error.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                    
+                    
                 }
 
             }
@@ -199,36 +256,9 @@ namespace Project
             }
 
 
-            //----------------------------------------------------------------------------------------//
-            //                           Populate the Goods ID                                   //
-            string fetchGoodsID = "SELECT * FROM BookingGoods";
-
-            try
-            {
-                cmd.Connection = conn;
-                cmd.CommandText = fetchGoodsID;
-
-                conn.Open();
-                reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    cbxBookingGoodsID.Items.Add(reader["goods_id"]);
-                }
-
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Error: " + error.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
 
 
 
-            
         }
 
         private void cbxGoodsID_SelectedIndexChanged(object sender, EventArgs e)
@@ -373,6 +403,7 @@ namespace Project
 
         private void cbxDeliveryID_SelectedIndexChanged(object sender, EventArgs e)
         {
+            resetDeliveryTab();
             if (cbxDeliveryID.SelectedItem.ToString() != "New...")
             {
 
@@ -397,13 +428,13 @@ namespace Project
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        cbxBookingTruckID.SelectedItem = reader["truck_id"];
-                        cbxBookingStaffID.SelectedItem = reader["staff_id"];
-                        cbxBookingDriverID.SelectedItem = reader["driver_id"];
-                        cbxBookingClientID.SelectedItem = reader["client_id"];
-                        tbxBookingDateMade.Text = Convert.ToDateTime(reader["booking_date_made"]).ToString("yyyy-MM-dd");
-                        cbxBookingGoodsID.SelectedItem = reader["goods_id"];
+                        cbxBookingTruckID.SelectedText = getTruckRegistration((Int32)reader["truck_id"]);
+                        cbxBookingStaffID.SelectedText = getStaffName((Int32)reader["staff_id"]);
+                        cbxBookingDriverID.SelectedText = getDriverName((Int32)reader["driver_id"]);
+                        cbxBookingClientID.SelectedText = getClientName((Int32)reader["client_id"]);
+                        tbxBookingDateMade.Text = Convert.ToDateTime(reader["booking_date_made"]).ToString("yyyy-MM-dd"); 
                         tbxDeliveryDistance.Text = reader["delivery_distance"].ToString();
+                        cbxBookingGoodsID.SelectedText = getGoodsName((Int32)reader["goods_id"]);
                         rtbBookingNotes.Text = reader["booking_notes"].ToString();
                         tbxDepartureDate.Text = Convert.ToDateTime(reader["booking_departure_date"]).ToString("yyyy-MM-dd");
                         tbxDepartureStreetName.Text = reader["departure_street_name"].ToString();
@@ -429,6 +460,225 @@ namespace Project
                 }
 
             }
+        }
+        private string getDriverName(int id)
+        {
+            SqlConnection connection2 = new SqlConnection(Globals.DBConn);
+            SqlCommand command2 = new SqlCommand();
+            SqlDataReader reader2;
+            int staffid = -1;
+            string query = "SELECT * FROM TruckDrivers WHERE driver_id = @id";
+            command2.Parameters.AddWithValue("@id",id);
+ 
+            command2.Connection = connection2;
+            command2.CommandText = query;
+
+            try
+            {
+                connection2.Open();
+                reader2 = command2.ExecuteReader();
+
+                while(reader2.Read())
+                {
+                    staffid = (Int32)reader2["staff_id"];
+                }
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                connection2.Close();
+            }
+
+
+
+            //Next Query
+            string query2 = "SELECT * FROM Staff WHERE staff_id = @id";
+            command2.Parameters["@id"].Value = staffid;
+            command2.Connection = connection2;
+            command2.CommandText = query2;
+            string retName = "";
+            try
+            {
+                connection2.Open();
+                reader2 = command2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    retName = reader2["firstname"] + " " + reader2["lastname"];
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                connection2.Close();
+            }
+
+            
+            return retName;
+        }
+
+        private string getTruckRegistration(int id)
+        {
+            SqlConnection connection2 = new SqlConnection(Globals.DBConn);
+            SqlCommand command3 = new SqlCommand();
+            SqlDataReader reader2;
+            string retName = "";
+            string query = "SELECT * FROM Trucks WHERE truck_id = @id";
+            command3.Parameters.AddWithValue("@id", id);
+            command3.Connection = connection2;
+            command3.CommandText = query;
+
+            try
+            {
+                connection2.Open();
+                reader2 = command3.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    retName = reader2["truck_registration"].ToString();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                connection2.Close();
+            }
+
+            
+            return retName;
+        }
+
+        private string getGoodsName(int id)
+        {
+            SqlConnection connection2 = new SqlConnection(Globals.DBConn);
+            SqlCommand command6 = new SqlCommand();
+            SqlDataReader reader2;
+            string retName = "";
+            string query = "SELECT * FROM BookingGoods WHERE goods_id = @id";
+            command6.Parameters.AddWithValue("@id", id);
+            command6.Connection = connection2;
+            command6.CommandText = query;
+
+            try
+            {
+                connection2.Open();
+                reader2 = command6.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    retName = reader2["goods_type"].ToString();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                connection2.Close();
+            }
+
+           
+            return retName;
+        }
+
+        private string getStaffName(int id)
+        {
+            SqlConnection connection2 = new SqlConnection(Globals.DBConn);
+            SqlCommand command4 = new SqlCommand();
+            SqlDataReader reader2;
+            string retName = "";
+            string query = "SELECT * FROM Staff WHERE staff_id = @id";
+            command4.Parameters.AddWithValue("@id", id);
+            command4.Connection = connection2;
+            command4.CommandText = query;
+
+            try
+            {
+                connection2.Open();
+                reader2 = command4.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    retName = reader2["firstname"].ToString() + " " + reader2["lastname"];
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                connection2.Close();
+            }
+
+            
+            return retName;
+        }
+
+        private string getClientName(int id)
+        {
+            SqlConnection connection2 = new SqlConnection(Globals.DBConn);
+            SqlCommand command5 = new SqlCommand();
+            SqlDataReader reader2;
+            string retName = "";
+            string query = "SELECT * FROM Clients WHERE client_id = @id";
+            command5.Parameters.AddWithValue("@id", id);
+            command5.Connection = connection2;
+            command5.CommandText = query;
+
+            try
+            {
+                connection2.Open();
+                reader2 = command5.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    retName = reader2["client_firstname"].ToString() + " " + reader2["client_lastname"];
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                connection2.Close();
+            }
+
+            
+            return retName;
+        }
+
+        private void resetDeliveryTab()
+        {
+            cbxBookingTruckID.SelectedItem = "";
+            cbxBookingStaffID.SelectedItem = "";
+            cbxBookingDriverID.SelectedItem = "";
+            cbxBookingClientID.SelectedItem = "";
+            tbxBookingDateMade.Text = "";
+            cbxBookingGoodsID.SelectedItem = "";
+            tbxDeliveryDistance.Text = "";
+            rtbBookingNotes.Text = "";
+            tbxDepartureDate.Text = "";
+            tbxDepartureStreetName.Text = "";
+            tbxDepartureAdrNumber.Text = "";
+            tbxDepartureAdrArea.Text = "";
+            tbxDepartureCity.Text = "";
+            tbxArrivalDate.Text = "";
+            tbxArrivalStreetName.Text = "";
+            tbxArrivalAdrNumber.Text = "";
+            tbxArrivalAdrArea.Text = "";
+            tbxArrivalCity.Text = "";
         }
 
         private void btnAddDeliveryBooking_Click(object sender, EventArgs e)
@@ -464,11 +714,17 @@ namespace Project
                     else
                     {
                         //peform insert
-                        cmd.Parameters.AddWithValue("@truckb_id", cbxBookingTruckID.SelectedItem);
-                        cmd.Parameters.AddWithValue("@staffb_id", cbxBookingStaffID.SelectedItem);
-                        cmd.Parameters.AddWithValue("@clientb_id", cbxBookingClientID.SelectedItem);
-                        cmd.Parameters.AddWithValue("@goodb_id",cbxBookingGoodsID.SelectedItem);
-                        cmd.Parameters.AddWithValue("@driverb_id", cbxBookingDriverID.SelectedItem);
+                        ComboBoxItems truckidvar = (ComboBoxItems)cbxBookingTruckID.SelectedItem;
+                        ComboBoxItems staffidvar = (ComboBoxItems)cbxBookingStaffID.SelectedItem;
+                        ComboBoxItems clientidvar = (ComboBoxItems)cbxBookingClientID.SelectedItem;
+                        ComboBoxItems goodidvar = (ComboBoxItems)cbxBookingGoodsID.SelectedItem;
+                        ComboBoxItems driveridvar = (ComboBoxItems)cbxBookingDriverID.SelectedItem;
+                       
+                        cmd.Parameters.AddWithValue("@truckb_id", truckidvar.value);
+                        cmd.Parameters.AddWithValue("@staffb_id", staffidvar.value);
+                        cmd.Parameters.AddWithValue("@clientb_id", clientidvar.value);
+                        cmd.Parameters.AddWithValue("@goodb_id",goodidvar.value);
+                        cmd.Parameters.AddWithValue("@driverb_id", driveridvar.value);
                         cmd.Parameters.AddWithValue("@dateb_id",Convert.ToDateTime(tbxBookingDateMade.Text).Date);
                         cmd.Parameters.AddWithValue("@delivDistb_id", tbxDeliveryDistance.Text);
                         cmd.Parameters.AddWithValue("@Notesb_id", rtbBookingNotes.Text);
@@ -557,6 +813,7 @@ namespace Project
             }
             else
             {
+              
                 cmd.Parameters.AddWithValue("@deleteID", cbxDeliveryID.SelectedItem);
                 string delete = "DELETE FROM BookingTruck WHERE booking_id = @deleteID";
 
@@ -589,12 +846,17 @@ namespace Project
             }
             else
             {
-                cmd.Parameters.AddWithValue("@updateID", cbxDeliveryID.SelectedItem);
-                cmd.Parameters.AddWithValue("@truckb_id", cbxBookingTruckID.SelectedItem);
-                cmd.Parameters.AddWithValue("@staffb_id", cbxBookingStaffID.SelectedItem);
-                cmd.Parameters.AddWithValue("@clientb_id", cbxBookingClientID.SelectedItem);
-                cmd.Parameters.AddWithValue("@goodb_id", cbxBookingGoodsID.SelectedItem);
-                cmd.Parameters.AddWithValue("@driverb_id", cbxBookingDriverID.SelectedItem);
+                ComboBoxItems truckidvar = (ComboBoxItems)cbxBookingTruckID.SelectedItem;
+                ComboBoxItems staffidvar = (ComboBoxItems)cbxBookingStaffID.SelectedItem;
+                ComboBoxItems clientidvar = (ComboBoxItems)cbxBookingClientID.SelectedItem;
+                ComboBoxItems goodidvar = (ComboBoxItems)cbxBookingGoodsID.SelectedItem;
+                ComboBoxItems driveridvar = (ComboBoxItems)cbxBookingDriverID.SelectedItem;
+
+                cmd.Parameters.AddWithValue("@truckb_id", truckidvar.value);
+                cmd.Parameters.AddWithValue("@staffb_id", staffidvar.value);
+                cmd.Parameters.AddWithValue("@clientb_id", clientidvar.value);
+                cmd.Parameters.AddWithValue("@goodb_id", goodidvar.value);
+                cmd.Parameters.AddWithValue("@driverb_id", driveridvar.value);
                 cmd.Parameters.AddWithValue("@dateb_id", Convert.ToDateTime(tbxBookingDateMade.Text).Date);
                 cmd.Parameters.AddWithValue("@delivDistb_id", tbxDeliveryDistance.Text);
                 cmd.Parameters.AddWithValue("@Notesb_id", rtbBookingNotes.Text);
