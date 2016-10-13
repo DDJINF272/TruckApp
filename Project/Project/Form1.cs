@@ -12,8 +12,21 @@ using System.IO;
 
 namespace Project
 {
+
+
     public partial class Form1 : Form
     {
+
+        String getAllStaff = "SELECT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.id_number AS ID_Number, StaffDepartments.department_name AS Working_Department FROM Staff, StaffDepartments WHERE Staff.department_id = StaffDepartments.department_id";
+        String getAllDrivers = "SELECT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.cellphone_number AS Contact_Number FROM Staff, StaffDepartments WHERE Staff.department_id = StaffDepartments.department_id AND StaffDepartments.department_name = 'Driver'";
+        String getAllClients = "SELECT Clients.business_name AS Business_Name, Clients.client_firstname + ' ' + Clients.client_lastname AS Name, Clients.client_cellphone AS Contact_Number FROM Clients";
+        String getAllClientsWithBookings = "SELECT Clients.business_name AS Business_Name, Clients.client_firstname + ' ' + Clients.client_lastname AS Name, Clients.client_cellphone AS Contact_Number , BookingTruck.booking_arrival_date AS Booking_Arrival FROM Clients, BookingTruck WHERE Clients.client_id = BookingTruck.client_id";
+        String getAllVehicles = "SELECT Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, Trucks.truck_type AS Vehicle_Type, TruckSleepTypes.type_name AS Vehicle_Cab FROM Trucks, TruckSleepTypes WHERE Trucks.sleeping_type_id = TruckSleepTypes.sleeping_type_id";
+        String getAllVehicleServiceDates = "SELECT Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, TruckMaintenance.date_last_service AS Date_Serviced, TruckMaintenance.date_tires_renewed AS Tires_Serviced FROM Trucks, TruckMaintenance  WHERE Trucks.maintenance_id = TruckMaintenance.maintenance_id";
+        String getAllBookedVehicles = "SELECT Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, BookingTruck.booking_departure_date AS Departure_Date, BookingTruck.booking_arrival_date AS Arrival_Date FROM Trucks, BookingTruck WHERE Trucks.truck_id = BookingTruck.truck_id";
+
+
+
 
         SqlConnection conn = new SqlConnection(Globals.DBConn);
         SqlCommand cmd = new SqlCommand();
@@ -50,6 +63,7 @@ namespace Project
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
 
+        
         private void Form1_Load(object sender, EventArgs e)
         {
             getDriversActiveData();
@@ -131,7 +145,7 @@ namespace Project
                 table.Locale = System.Globalization.CultureInfo.InvariantCulture;
                 adapter.SelectCommand = cmd;
                 adapter.Fill(table);
-                bindingSource1.DataSource = table;
+                AvailableDriversBindingSource.DataSource = table;
 
                 dgvAvailableDrivers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
                 
