@@ -30,6 +30,11 @@ namespace Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnClientLogon_Click(object sender, EventArgs e)
+        {
             int clientlogon = -1;
             if (txtUsername.Text == "" || txtPassword.Text == "")
             {

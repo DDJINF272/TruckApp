@@ -30,8 +30,13 @@ namespace Project
 
         private void btnClientLogon_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnClientLogon_Click_1(object sender, EventArgs e)
+        {
             int clientlogon = -1;
-            if(txtClientName.Text == "" || txtClientPassword.Text == "")
+            if (txtClientName.Text == "" || txtClientPassword.Text == "")
             {
                 MessageBox.Show("Please enter the fields provided");
             }
@@ -50,12 +55,12 @@ namespace Project
 
                 reader = cmd.ExecuteReader();
 
-                while(reader.Read())
+                while (reader.Read())
                 {
                     clientlogon = (Int32)reader["clientLogin_id"];
                 }
 
-                if(clientlogon == -1)
+                if (clientlogon == -1)
                 {
                     MessageBox.Show("Incorrect details or user does not exist");
                 }
@@ -65,14 +70,14 @@ namespace Project
                     ClientForm client = new ClientForm();
                     client.ClientNumber = clientlogon;
                     client.ShowDialog();
-                    
-           
+
+
 
                 }
 
 
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show("Error: " + error.Message);
             }

@@ -343,6 +343,7 @@
             // 
             // tabDetails
             // 
+            this.tabDetails.BackColor = System.Drawing.Color.Gray;
             this.tabDetails.Controls.Add(this.label16);
             this.tabDetails.Controls.Add(this.cbxClientID);
             this.tabDetails.Controls.Add(this.label15);
@@ -354,7 +355,6 @@
             this.tabDetails.Size = new System.Drawing.Size(558, 317);
             this.tabDetails.TabIndex = 0;
             this.tabDetails.Text = "Client Details";
-            this.tabDetails.UseVisualStyleBackColor = true;
             this.tabDetails.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label16
@@ -598,6 +598,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(572, 381);
             this.Controls.Add(this.tabControl1);
             this.Name = "AddClient";

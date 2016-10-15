@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cmbSelectStaff = new System.Windows.Forms.ComboBox();
+            this.lblStaffMember = new System.Windows.Forms.Label();
             this.gbxLogin = new System.Windows.Forms.GroupBox();
             this.s = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -115,8 +117,6 @@
             this.staffUtilitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newDriversCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmbSelectStaff = new System.Windows.Forms.ComboBox();
-            this.lblStaffMember = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbxLogin.SuspendLayout();
@@ -145,6 +145,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Gray;
             this.tabPage1.Controls.Add(this.cmbSelectStaff);
             this.tabPage1.Controls.Add(this.lblStaffMember);
             this.tabPage1.Controls.Add(this.gbxLogin);
@@ -156,8 +157,27 @@
             this.tabPage1.Size = new System.Drawing.Size(558, 321);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Member Details";
-            this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // cmbSelectStaff
+            // 
+            this.cmbSelectStaff.DisplayMember = "licence_code_id";
+            this.cmbSelectStaff.FormattingEnabled = true;
+            this.cmbSelectStaff.Location = new System.Drawing.Point(407, 6);
+            this.cmbSelectStaff.Name = "cmbSelectStaff";
+            this.cmbSelectStaff.Size = new System.Drawing.Size(145, 21);
+            this.cmbSelectStaff.TabIndex = 17;
+            this.cmbSelectStaff.ValueMember = "licence_code_id";
+            this.cmbSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cmbSelectStaff_SelectedIndexChanged);
+            // 
+            // lblStaffMember
+            // 
+            this.lblStaffMember.AutoSize = true;
+            this.lblStaffMember.Location = new System.Drawing.Point(292, 9);
+            this.lblStaffMember.Name = "lblStaffMember";
+            this.lblStaffMember.Size = new System.Drawing.Size(109, 13);
+            this.lblStaffMember.TabIndex = 16;
+            this.lblStaffMember.Text = "Select Staff Member :";
             // 
             // gbxLogin
             // 
@@ -429,6 +449,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Gray;
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -436,7 +457,6 @@
             this.tabPage2.Size = new System.Drawing.Size(558, 321);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Banking Details";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -539,6 +559,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Gray;
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Controls.Add(this.groupBox6);
@@ -549,20 +570,22 @@
             this.tabPage3.Size = new System.Drawing.Size(558, 321);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Staff Member Summery";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(6, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(258, 23);
             this.button1.TabIndex = 11;
             this.button1.Text = "Save Staff Memeber";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.Gray;
             this.groupBox5.Controls.Add(this.txtSumProvince);
             this.groupBox5.Controls.Add(this.txtSumCity);
             this.groupBox5.Controls.Add(this.txtSumSuburb);
@@ -667,6 +690,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.BackColor = System.Drawing.Color.Gray;
             this.groupBox6.Controls.Add(this.txtSumBranchCode);
             this.groupBox6.Controls.Add(this.label28);
             this.groupBox6.Controls.Add(this.txtSumAccountNumber);
@@ -689,7 +713,7 @@
             this.txtSumBranchCode.Location = new System.Drawing.Point(96, 75);
             this.txtSumBranchCode.Name = "txtSumBranchCode";
             this.txtSumBranchCode.ReadOnly = true;
-            this.txtSumBranchCode.Size = new System.Drawing.Size(162, 20);
+            this.txtSumBranchCode.Size = new System.Drawing.Size(165, 20);
             this.txtSumBranchCode.TabIndex = 15;
             // 
             // label28
@@ -772,6 +796,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.Gray;
             this.groupBox4.Controls.Add(this.txtSumDepartment);
             this.groupBox4.Controls.Add(this.txtSumDrivers);
             this.groupBox4.Controls.Add(this.label17);
@@ -951,30 +976,11 @@
             this.newDepartmentToolStripMenuItem.Text = "New Department";
             this.newDepartmentToolStripMenuItem.Click += new System.EventHandler(this.newDepartmentToolStripMenuItem_Click);
             // 
-            // cmbSelectStaff
-            // 
-            this.cmbSelectStaff.DisplayMember = "licence_code_id";
-            this.cmbSelectStaff.FormattingEnabled = true;
-            this.cmbSelectStaff.Location = new System.Drawing.Point(406, 0);
-            this.cmbSelectStaff.Name = "cmbSelectStaff";
-            this.cmbSelectStaff.Size = new System.Drawing.Size(145, 21);
-            this.cmbSelectStaff.TabIndex = 17;
-            this.cmbSelectStaff.ValueMember = "licence_code_id";
-            this.cmbSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cmbSelectStaff_SelectedIndexChanged);
-            // 
-            // lblStaffMember
-            // 
-            this.lblStaffMember.AutoSize = true;
-            this.lblStaffMember.Location = new System.Drawing.Point(291, 3);
-            this.lblStaffMember.Name = "lblStaffMember";
-            this.lblStaffMember.Size = new System.Drawing.Size(109, 13);
-            this.lblStaffMember.TabIndex = 16;
-            this.lblStaffMember.Text = "Select Staff Member :";
-            // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(565, 372);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);

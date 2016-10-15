@@ -31,7 +31,6 @@
         private void InitializeComponent()
         {
             this.Login = new System.Windows.Forms.GroupBox();
-            this.btnClientLogon = new System.Windows.Forms.Button();
             this.txtClientPassword = new System.Windows.Forms.TextBox();
             this.txtClientName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnClientLogon = new System.Windows.Forms.Button();
             this.Login.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,16 +56,6 @@
             this.Login.TabIndex = 0;
             this.Login.TabStop = false;
             this.Login.Text = "Sign In : ";
-            // 
-            // btnClientLogon
-            // 
-            this.btnClientLogon.Location = new System.Drawing.Point(233, 78);
-            this.btnClientLogon.Name = "btnClientLogon";
-            this.btnClientLogon.Size = new System.Drawing.Size(104, 23);
-            this.btnClientLogon.TabIndex = 4;
-            this.btnClientLogon.Text = "Login";
-            this.btnClientLogon.UseVisualStyleBackColor = true;
-            this.btnClientLogon.Click += new System.EventHandler(this.btnClientLogon_Click);
             // 
             // txtClientPassword
             // 
@@ -105,12 +95,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 53);
+            this.label3.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(115, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(353, 33);
+            this.label3.Size = new System.Drawing.Size(337, 39);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Welcome Client, Please log in.";
+            this.label3.Text = "Welcome,  Please log in.";
             // 
             // label4
             // 
@@ -145,6 +135,19 @@
             this.linkLabel1.Text = "Sign";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // btnClientLogon
+            // 
+            this.btnClientLogon.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClientLogon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientLogon.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnClientLogon.Location = new System.Drawing.Point(244, 78);
+            this.btnClientLogon.Name = "btnClientLogon";
+            this.btnClientLogon.Size = new System.Drawing.Size(93, 27);
+            this.btnClientLogon.TabIndex = 12;
+            this.btnClientLogon.Text = "Login";
+            this.btnClientLogon.UseVisualStyleBackColor = false;
+            this.btnClientLogon.Click += new System.EventHandler(this.btnClientLogon_Click_1);
+            // 
             // ClientLogon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,19 +175,19 @@
         private System.Windows.Forms.TextBox txtClientName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnClientLogon;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnClientLogon;
         #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-       
-        }
+
+    }
 
         #endregion
     }

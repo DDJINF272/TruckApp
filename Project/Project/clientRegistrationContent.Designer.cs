@@ -282,20 +282,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 298);
+            this.label5.Location = new System.Drawing.Point(57, 298);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Business Name:";
+            this.label5.Text = "Business Name :";
             // 
             // Firstname
             // 
             this.Firstname.AutoSize = true;
-            this.Firstname.Location = new System.Drawing.Point(46, 76);
+            this.Firstname.Location = new System.Drawing.Point(85, 76);
             this.Firstname.Name = "Firstname";
-            this.Firstname.Size = new System.Drawing.Size(55, 13);
+            this.Firstname.Size = new System.Drawing.Size(58, 13);
             this.Firstname.TabIndex = 5;
-            this.Firstname.Text = "Firstname:";
+            this.Firstname.Text = "Firstname :";
             // 
             // txtbxBussName
             // 
@@ -307,11 +307,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 248);
+            this.label4.Location = new System.Drawing.Point(43, 248);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
+            this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Cellphone Number";
+            this.label4.Text = "Cellphone Number :";
             // 
             // txtbxFirstname
             // 
@@ -323,11 +323,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 194);
+            this.label3.Location = new System.Drawing.Point(50, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
+            this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Landline Number:";
+            this.label3.Text = "Landline Number :";
             // 
             // txtbxCellNum
             // 
@@ -339,11 +339,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 135);
+            this.label2.Location = new System.Drawing.Point(84, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Lastname:";
+            this.label2.Text = "Lastname :";
             // 
             // txtbxLastname
             // 
