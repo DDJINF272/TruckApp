@@ -30,6 +30,30 @@ namespace Project
         byte[] image;
         string fname, lname, busname, cellnum, addrStreet, addrNumber, addrArea, addrCity, email;
 
+        private void tabControl2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Brush _textBrush;
+            TabPage _tabPage = tabControl2.TabPages[e.Index];
+            Rectangle _tabBounds = tabControl2.GetTabRect(e.Index);
+            if (e.State == DrawItemState.Selected)
+            {
+                _textBrush = new SolidBrush(Color.Orange);
+                g.FillRectangle(Brushes.White, e.Bounds);
+            }
+            else
+            {
+                _textBrush = new System.Drawing.SolidBrush(e.ForeColor);
+                e.DrawBackground();
+            }
+
+            Font _tabFont = new Font("Arial", (float)15.0, FontStyle.Bold, GraphicsUnit.Pixel);
+            StringFormat _stringFlags = new StringFormat();
+            _stringFlags.Alignment = StringAlignment.Center;
+            _stringFlags.LineAlignment = StringAlignment.Center;
+            g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
+        }
+
         public int ClientNumber
         {
             get { return clientid; }
@@ -119,10 +143,39 @@ namespace Project
             lblCity.Text = addrCity;
             lblEmail.Text = email;
             lblCellNum.Text = cellnum;
+            lblWelcome.Text = "Welcome, " + fname + " " + lname;
 
+            //Load All Values into truck
 
+            string getTrucks = "SELECT * FROM BookingTruck WHERE client_id = @clientid AND booking_arrival_date > @currentDate" ;
+            string current = DateTime.Today.ToString("yyyy-MM-dd");
+            try
+            {
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@clientid", client);
+                cmd.Parameters.AddWithValue("@currentDate", current);
+                cmd.CommandText = getTrucks;
+                conn.Open();
 
-            
+                reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    //Populate panel
+                    MessageBox.Show(reader.ToString());
+                    
+
+                }
+
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
 
         }
 
