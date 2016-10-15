@@ -40,7 +40,10 @@
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCellNum = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
             this.lblStreetName = new System.Windows.Forms.Label();
@@ -53,9 +56,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.lblCellNum = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
@@ -64,10 +65,10 @@
             this.tabPage6.SuspendLayout();
             this.menuStrip4.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -82,7 +83,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.ProfilePicture);
             this.tabPage1.Controls.Add(this.monthCalendar1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -94,7 +94,7 @@
             // 
             // ProfilePicture
             // 
-            this.ProfilePicture.Location = new System.Drawing.Point(41, 40);
+            this.ProfilePicture.Location = new System.Drawing.Point(65, 30);
             this.ProfilePicture.Name = "ProfilePicture";
             this.ProfilePicture.Size = new System.Drawing.Size(156, 137);
             this.ProfilePicture.TabIndex = 7;
@@ -102,8 +102,8 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
-            this.monthCalendar1.Location = new System.Drawing.Point(9, 234);
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 5);
+            this.monthCalendar1.Location = new System.Drawing.Point(9, -18);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 6;
             // 
@@ -177,6 +177,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblWelcome);
+            this.tabPage3.Controls.Add(this.ProfilePicture);
             this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Controls.Add(this.menuStrip1);
@@ -187,6 +189,25 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Dashboard";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(6, 298);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(638, 279);
+            this.panel2.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(229, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Current Bookings Summary";
             // 
             // panel1
             // 
@@ -201,10 +222,19 @@
             this.panel1.Controls.Add(this.lblSurname);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(128, 48);
+            this.panel1.Location = new System.Drawing.Point(248, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(396, 211);
             this.panel1.TabIndex = 1;
+            // 
+            // lblCellNum
+            // 
+            this.lblCellNum.AutoSize = true;
+            this.lblCellNum.Location = new System.Drawing.Point(91, 134);
+            this.lblCellNum.Name = "lblCellNum";
+            this.lblCellNum.Size = new System.Drawing.Size(35, 13);
+            this.lblCellNum.TabIndex = 9;
+            this.lblCellNum.Text = "label2";
             // 
             // lblCity
             // 
@@ -322,34 +352,16 @@
             this.tabControl2.Size = new System.Drawing.Size(808, 647);
             this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl2.TabIndex = 10;
+            this.tabControl2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl2_DrawItem);
             // 
-            // lblCellNum
+            // lblWelcome
             // 
-            this.lblCellNum.AutoSize = true;
-            this.lblCellNum.Location = new System.Drawing.Point(91, 134);
-            this.lblCellNum.Name = "lblCellNum";
-            this.lblCellNum.Size = new System.Drawing.Size(35, 13);
-            this.lblCellNum.TabIndex = 9;
-            this.lblCellNum.Text = "label2";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(6, 298);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(638, 279);
-            this.panel2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(229, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Current Bookings Summary";
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Location = new System.Drawing.Point(62, 191);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(35, 13);
+            this.lblWelcome.TabIndex = 8;
+            this.lblWelcome.Text = "label3";
             // 
             // ClientForm
             // 
@@ -374,13 +386,13 @@
             this.menuStrip4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -415,5 +427,6 @@
         private System.Windows.Forms.Label lblCellNum;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }
