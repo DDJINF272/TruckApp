@@ -41,6 +41,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvBookedDrivers = new System.Windows.Forms.DataGridView();
+            this.BookedDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvAvailableDrivers = new System.Windows.Forms.DataGridView();
             this.AvailableDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,6 +49,7 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.dgvAllStaff = new System.Windows.Forms.DataGridView();
+            this.AllStaffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -80,12 +82,15 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.dgvMostRecentClients = new System.Windows.Forms.DataGridView();
+            this.MostRecentClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.dgvBookedClients = new System.Windows.Forms.DataGridView();
+            this.BookedClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.AllClientsBindingSource = new System.Windows.Forms.DataGridView();
+            this.allClientsBS = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -114,12 +119,14 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.dgvServiceTrucks = new System.Windows.Forms.DataGridView();
+            this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.dgvBookedTrucks = new System.Windows.Forms.DataGridView();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.dgvAllVehicles = new System.Windows.Forms.DataGridView();
+            this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.txtDriversCodeNeeded = new System.Windows.Forms.TextBox();
@@ -158,14 +165,7 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.BookedDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.AllStaffBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BookedClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.MostRecentClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.allClientsBS = new System.Windows.Forms.BindingSource(this.components);
-            this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.VehicleServiceDatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -175,6 +175,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedDrivers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableDrivers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AvailableDriversBindingSource)).BeginInit();
@@ -182,6 +183,7 @@
             this.tabControl3.SuspendLayout();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).BeginInit();
             this.tabPage10.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -191,12 +193,15 @@
             this.groupBox13.SuspendLayout();
             this.groupBox15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostRecentClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MostRecentClientsBindingSource)).BeginInit();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedClientsBindingSource)).BeginInit();
             this.groupBox8.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllClientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allClientsBS)).BeginInit();
             this.tabPage12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -208,26 +213,21 @@
             this.tabPage7.SuspendLayout();
             this.groupBox21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiceTrucks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).BeginInit();
             this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedTrucks)).BeginInit();
             this.groupBox16.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllVehicles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).BeginInit();
             this.tabPage14.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.menuStrip5.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedClientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MostRecentClientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allClientsBS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -354,9 +354,7 @@
             // 
             // dgvBookedDrivers
             // 
-            this.dgvBookedDrivers.AutoGenerateColumns = false;
             this.dgvBookedDrivers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookedDrivers.DataSource = this.BookedDriversBindingSource;
             this.dgvBookedDrivers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBookedDrivers.Location = new System.Drawing.Point(3, 16);
             this.dgvBookedDrivers.Name = "dgvBookedDrivers";
@@ -375,9 +373,7 @@
             // 
             // dgvAvailableDrivers
             // 
-            this.dgvAvailableDrivers.AutoGenerateColumns = false;
             this.dgvAvailableDrivers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvailableDrivers.DataSource = this.AvailableDriversBindingSource;
             this.dgvAvailableDrivers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAvailableDrivers.Location = new System.Drawing.Point(3, 16);
             this.dgvAvailableDrivers.Name = "dgvAvailableDrivers";
@@ -417,9 +413,7 @@
             // 
             // dgvAllStaff
             // 
-            this.dgvAllStaff.AutoGenerateColumns = false;
             this.dgvAllStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllStaff.DataSource = this.AllStaffBindingSource;
             this.dgvAllStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAllStaff.Location = new System.Drawing.Point(3, 3);
             this.dgvAllStaff.Name = "dgvAllStaff";
@@ -806,9 +800,7 @@
             // 
             // AllClientsBindingSource
             // 
-            this.AllClientsBindingSource.AutoGenerateColumns = false;
             this.AllClientsBindingSource.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AllClientsBindingSource.DataSource = this.allClientsBS;
             this.AllClientsBindingSource.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AllClientsBindingSource.Location = new System.Drawing.Point(3, 3);
             this.AllClientsBindingSource.Name = "AllClientsBindingSource";
@@ -1092,9 +1084,7 @@
             // 
             // dgvServiceTrucks
             // 
-            this.dgvServiceTrucks.AutoGenerateColumns = false;
             this.dgvServiceTrucks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServiceTrucks.DataSource = this.BookedVehiclesBindingSource;
             this.dgvServiceTrucks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvServiceTrucks.Location = new System.Drawing.Point(3, 16);
             this.dgvServiceTrucks.Name = "dgvServiceTrucks";
@@ -1113,9 +1103,7 @@
             // 
             // dgvBookedTrucks
             // 
-            this.dgvBookedTrucks.AutoGenerateColumns = false;
             this.dgvBookedTrucks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookedTrucks.DataSource = this.BookedVehiclesBindingSource;
             this.dgvBookedTrucks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBookedTrucks.Location = new System.Drawing.Point(3, 16);
             this.dgvBookedTrucks.Name = "dgvBookedTrucks";
@@ -1155,9 +1143,7 @@
             // 
             // dgvAllVehicles
             // 
-            this.dgvAllVehicles.AutoGenerateColumns = false;
             this.dgvAllVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllVehicles.DataSource = this.AllVehiclesBindingSource;
             this.dgvAllVehicles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAllVehicles.Location = new System.Drawing.Point(3, 3);
             this.dgvAllVehicles.Name = "dgvAllVehicles";
@@ -1568,6 +1554,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedDrivers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableDrivers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AvailableDriversBindingSource)).EndInit();
@@ -1575,6 +1562,7 @@
             this.tabControl3.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1590,12 +1578,15 @@
             this.groupBox13.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostRecentClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MostRecentClientsBindingSource)).EndInit();
             this.groupBox14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedClientsBindingSource)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AllClientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allClientsBS)).EndInit();
             this.tabPage12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
@@ -1613,12 +1604,14 @@
             this.tabPage7.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiceTrucks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).EndInit();
             this.groupBox20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedTrucks)).EndInit();
             this.groupBox16.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllVehicles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).EndInit();
             this.tabPage14.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
@@ -1629,14 +1622,7 @@
             this.menuStrip5.ResumeLayout(false);
             this.menuStrip5.PerformLayout();
             this.tabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedClientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MostRecentClientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allClientsBS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

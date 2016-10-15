@@ -30,6 +30,11 @@ namespace Project
         byte[] image;
         string fname, lname, busname, cellnum, addrStreet, addrNumber, addrArea, addrCity, email;
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void tabControl2_DrawItem(object sender, DrawItemEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -154,18 +159,13 @@ namespace Project
                 cmd.Connection = conn;
                 cmd.Parameters.AddWithValue("@clientid", client);
                 cmd.Parameters.AddWithValue("@currentDate", current);
-                cmd.CommandText = getTrucks;
-                conn.Open();
+                cmd.CommandText = getTrucks; 
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataTable ds = new DataTable();
+                adapt.Fill(ds);
+                dataGridActiveBook.DataSource = ds;
 
-                reader = cmd.ExecuteReader();
-
-                while(reader.Read())
-                {
-                    //Populate panel
-                    MessageBox.Show(reader.ToString());
-                    
-
-                }
+                
 
             }
             catch(Exception error)

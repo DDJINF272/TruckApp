@@ -67,6 +67,125 @@ namespace Project
         private void Form1_Load(object sender, EventArgs e)
         {
             getDriversActiveData();
+            //Bind Staff
+            try
+            {
+                
+                cmd.Connection = conn;
+                cmd.CommandText = getAllStaff;
+                //conn.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd); 
+                DataTable ds = new DataTable();
+                adapt.Fill(ds);
+                dgvAllStaff.DataSource = ds;
+
+
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+
+            //Bind Clients
+            try
+            {
+
+                cmd.Connection = conn;
+                cmd.CommandText = getAllClients;
+                //conn.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataTable ds = new DataTable();
+                adapt.Fill(ds);
+                AllClientsBindingSource.DataSource = ds;
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+            //Bind Clients with bookings
+
+            try
+            {
+
+                cmd.Connection = conn;
+                cmd.CommandText = getAllClientsWithBookings;
+                //conn.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataTable ds = new DataTable();
+                adapt.Fill(ds);
+                dgvBookedClients.DataSource = ds;
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+            //Bind Vehicles
+            try
+            {
+
+                cmd.Connection = conn;
+                cmd.CommandText = getAllVehicles;
+                //conn.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataTable ds = new DataTable();
+                adapt.Fill(ds);
+               dgvAllVehicles.DataSource = ds;
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+            //Bind Vehicle Service Dates
+            try
+            {
+
+                cmd.Connection = conn;
+                cmd.CommandText = getAllVehicleServiceDates;
+                //conn.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataTable ds = new DataTable();
+                adapt.Fill(ds);
+                dgvServiceTrucks.DataSource = ds;
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+            //Vehicle Booked
+            try
+            {
+
+                cmd.Connection = conn;
+                cmd.CommandText = getAllBookedVehicles;
+                //conn.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataTable ds = new DataTable();
+                adapt.Fill(ds);
+                dgvBookedTrucks.DataSource = ds;
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+
         }
         private void button6_Click_2(object sender, EventArgs e)
         {
@@ -154,6 +273,10 @@ namespace Project
             catch (Exception error)
             {
                 MessageBox.Show("Error:" + error.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
           
         }
