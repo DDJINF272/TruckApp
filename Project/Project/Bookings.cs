@@ -403,6 +403,7 @@ namespace Project
 
         private void cbxDeliveryID_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             resetDeliveryTab();
             if (cbxDeliveryID.SelectedItem.ToString() != "New...")
             {
@@ -460,6 +461,7 @@ namespace Project
                 }
 
             }
+
         }
         private string getDriverName(int id)
         {
@@ -661,12 +663,12 @@ namespace Project
 
         private void resetDeliveryTab()
         {
-            cbxBookingTruckID.SelectedItem = "";
-            cbxBookingStaffID.SelectedItem = "";
-            cbxBookingDriverID.SelectedItem = "";
-            cbxBookingClientID.SelectedItem = "";
-            tbxBookingDateMade.Text = "";
-            cbxBookingGoodsID.SelectedItem = "";
+            tbxBookingDateMade.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            cbxBookingTruckID.Text = "";
+            cbxBookingStaffID.Text = "";
+            cbxBookingDriverID.Text = "";
+            cbxBookingClientID.Text = "";
+            cbxBookingGoodsID.Text = "";
             tbxDeliveryDistance.Text = "";
             rtbBookingNotes.Text = "";
             tbxDepartureDate.Text = "";
