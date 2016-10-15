@@ -145,6 +145,38 @@ namespace Project
             lblCellNum.Text = cellnum;
             lblWelcome.Text = "Welcome, " + fname + " " + lname;
 
+            //Load All Values into truck
+
+            string getTrucks = "SELECT * FROM BookingTruck WHERE client_id = @clientid AND booking_arrival_date > @currentDate" ;
+            string current = DateTime.Today.ToString("yyyy-MM-dd");
+            try
+            {
+                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@clientid", client);
+                cmd.Parameters.AddWithValue("@currentDate", current);
+                cmd.CommandText = getTrucks;
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    //Populate panel
+                    MessageBox.Show(reader.ToString());
+                    
+
+                }
+
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
         public Image byteArrayToImage(byte[] byteArrayIn)

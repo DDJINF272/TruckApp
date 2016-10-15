@@ -30,9 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +40,7 @@
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,7 +57,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.dataGridSummary = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
@@ -69,6 +70,7 @@
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSummary)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,14 +94,6 @@
             this.tabPage1.Text = "Calander Planner";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // ProfilePicture
-            // 
-            this.ProfilePicture.Location = new System.Drawing.Point(65, 30);
-            this.ProfilePicture.Name = "ProfilePicture";
-            this.ProfilePicture.Size = new System.Drawing.Size(156, 137);
-            this.ProfilePicture.TabIndex = 7;
-            this.ProfilePicture.TabStop = false;
-            // 
             // monthCalendar1
             // 
             this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 5);
@@ -116,6 +110,14 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Events Coming Up";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ProfilePicture
+            // 
+            this.ProfilePicture.Location = new System.Drawing.Point(65, 30);
+            this.ProfilePicture.Name = "ProfilePicture";
+            this.ProfilePicture.Size = new System.Drawing.Size(156, 137);
+            this.ProfilePicture.TabIndex = 7;
+            this.ProfilePicture.TabStop = false;
             // 
             // tabPage7
             // 
@@ -190,9 +192,19 @@
             this.tabPage3.Text = "Dashboard";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Location = new System.Drawing.Point(62, 191);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(35, 13);
+            this.lblWelcome.TabIndex = 8;
+            this.lblWelcome.Text = "label3";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.dataGridSummary);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(6, 298);
             this.panel2.Name = "panel2";
@@ -354,14 +366,13 @@
             this.tabControl2.TabIndex = 10;
             this.tabControl2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl2_DrawItem);
             // 
-            // lblWelcome
+            // dataGridSummary
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(62, 191);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(35, 13);
-            this.lblWelcome.TabIndex = 8;
-            this.lblWelcome.Text = "label3";
+            this.dataGridSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridSummary.Location = new System.Drawing.Point(3, 67);
+            this.dataGridSummary.Name = "dataGridSummary";
+            this.dataGridSummary.Size = new System.Drawing.Size(632, 209);
+            this.dataGridSummary.TabIndex = 1;
             // 
             // ClientForm
             // 
@@ -393,6 +404,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridSummary)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,5 +440,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.DataGridView dataGridSummary;
     }
 }
