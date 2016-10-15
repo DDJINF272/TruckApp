@@ -66,6 +66,14 @@ namespace Project
         
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            Form booking = new Bookings();
+            booking.TopLevel = false;
+            booking.Visible = true;
+            booking.FormBorderStyle = FormBorderStyle.None;
+            booking.Dock = DockStyle.Top;
+ 
+            tabPage6.Controls.Add(booking);
             getDriversActiveData();
             //Bind Staff
             try

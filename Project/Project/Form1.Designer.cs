@@ -41,15 +41,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvBookedDrivers = new System.Windows.Forms.DataGridView();
-            this.BookedDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvAvailableDrivers = new System.Windows.Forms.DataGridView();
-            this.AvailableDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.dgvAllStaff = new System.Windows.Forms.DataGridView();
-            this.AllStaffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -90,7 +87,6 @@
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.AllClientsBindingSource = new System.Windows.Forms.DataGridView();
-            this.allClientsBS = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -115,18 +111,15 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.dgvServiceTrucks = new System.Windows.Forms.DataGridView();
-            this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.dgvBookedTrucks = new System.Windows.Forms.DataGridView();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.dgvAllVehicles = new System.Windows.Forms.DataGridView();
-            this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.txtDriversCodeNeeded = new System.Windows.Forms.TextBox();
@@ -165,6 +158,12 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
+            this.BookedDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AvailableDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AllStaffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allClientsBS = new System.Windows.Forms.BindingSource(this.components);
+            this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.VehicleServiceDatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -175,15 +174,12 @@
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedDrivers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableDrivers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AvailableDriversBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStaff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).BeginInit();
             this.tabPage10.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -201,7 +197,6 @@
             this.tabControl4.SuspendLayout();
             this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllClientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allClientsBS)).BeginInit();
             this.tabPage12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -209,24 +204,27 @@
             this.groupBox9.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.menuStrip4.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.groupBox21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiceTrucks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).BeginInit();
             this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedTrucks)).BeginInit();
             this.groupBox16.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllVehicles)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).BeginInit();
             this.tabPage14.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.menuStrip5.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvailableDriversBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allClientsBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1041,8 +1039,6 @@
             // 
             // menuStrip4
             // 
-            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3});
             this.menuStrip4.Location = new System.Drawing.Point(3, 3);
             this.menuStrip4.Name = "menuStrip4";
             this.menuStrip4.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -1050,13 +1046,6 @@
             this.menuStrip4.Size = new System.Drawing.Size(644, 24);
             this.menuStrip4.TabIndex = 10;
             this.menuStrip4.Text = "menuStrip4";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(114, 20);
-            this.toolStripMenuItem3.Text = "Manage Bookings";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // tabPage7
             // 
@@ -1554,15 +1543,12 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedDrivers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableDrivers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AvailableDriversBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStaff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1586,7 +1572,6 @@
             this.tabControl4.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AllClientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allClientsBS)).EndInit();
             this.tabPage12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
@@ -1598,20 +1583,16 @@
             this.menuStrip3.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.menuStrip4.ResumeLayout(false);
-            this.menuStrip4.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiceTrucks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).EndInit();
             this.groupBox20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookedTrucks)).EndInit();
             this.groupBox16.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllVehicles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).EndInit();
             this.tabPage14.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
@@ -1622,6 +1603,12 @@
             this.menuStrip5.ResumeLayout(false);
             this.menuStrip5.PerformLayout();
             this.tabPage8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AvailableDriversBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allClientsBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1647,7 +1634,6 @@
         private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.MenuStrip menuStrip4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.MenuStrip menuStrip5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.GroupBox groupBox2;

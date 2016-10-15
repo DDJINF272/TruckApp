@@ -18,6 +18,7 @@ namespace Project
         SqlCommand cmd = new SqlCommand();
         SqlDataReader reader;
         SqlDataAdapter adapter = new SqlDataAdapter();
+        
         public Bookings()
         {
             InitializeComponent();
@@ -257,12 +258,21 @@ namespace Project
 
 
 
-
+            
 
         }
 
         private void cbxGoodsID_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int var = Convert.ToInt32(cbxGoodsID.SelectedItem);
+            if (!(cmd.Parameters.Contains("@goods_id")))
+            {
+                cmd.Parameters.AddWithValue("@goods_id", var);
+            }
+            else
+            {
+                cmd.Parameters["@goods_id"].Value = var;
+            }
             if (cbxGoodsID.SelectedItem.ToString() == "New...")
             {
                 tbxGoodsType.Text = "";
@@ -276,8 +286,6 @@ namespace Project
                 {
 
                     cmd.Connection = conn;
-                    int var = Convert.ToInt32(cbxGoodsID.SelectedItem);
-                    cmd.Parameters.AddWithValue("@goods_id",var);
                     cmd.CommandText = populateFields;
 
 
@@ -893,6 +901,11 @@ namespace Project
                     this.Close();
                 }
             }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
