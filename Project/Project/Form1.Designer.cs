@@ -97,7 +97,6 @@
             this.txtStreetName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -109,6 +108,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -144,12 +144,8 @@
             this.txtLoadFreeWeight = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.txtTireLastChange = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txtDateNextService = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.txtxDateLastService = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtKMLastService = new System.Windows.Forms.TextBox();
@@ -178,7 +174,6 @@
             this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.VehicleServiceDatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.emailClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -436,6 +431,7 @@
             this.dgvAllStaff.Name = "dgvAllStaff";
             this.dgvAllStaff.Size = new System.Drawing.Size(295, 419);
             this.dgvAllStaff.TabIndex = 0;
+            this.dgvAllStaff.Click += new System.EventHandler(this.dgvAllStaff_Click);
             // 
             // tabPage10
             // 
@@ -823,6 +819,8 @@
             this.AllClientsBindingSource.Name = "AllClientsBindingSource";
             this.AllClientsBindingSource.Size = new System.Drawing.Size(442, 441);
             this.AllClientsBindingSource.TabIndex = 0;
+            this.AllClientsBindingSource.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllClientsBindingSource_CellClick);
+            this.AllClientsBindingSource.Click += new System.EventHandler(this.AllClientsBindingSource_Click);
             // 
             // tabPage12
             // 
@@ -847,7 +845,6 @@
             this.groupBox11.Controls.Add(this.txtStreetName);
             this.groupBox11.Controls.Add(this.label15);
             this.groupBox11.Controls.Add(this.label16);
-            this.groupBox11.Controls.Add(this.groupBox12);
             this.groupBox11.Location = new System.Drawing.Point(7, 134);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(435, 316);
@@ -926,15 +923,6 @@
             this.label16.Size = new System.Drawing.Size(75, 13);
             this.label16.TabIndex = 17;
             this.label16.Text = "Street Name  :";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Location = new System.Drawing.Point(6, 99);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(422, 211);
-            this.groupBox12.TabIndex = 0;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "INSERT GOOGLE MAP HERE ?";
             // 
             // groupBox10
             // 
@@ -1045,6 +1033,13 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(101, 20);
             this.toolStripMenuItem2.Text = "Manage Clients";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // emailClientToolStripMenuItem
+            // 
+            this.emailClientToolStripMenuItem.Name = "emailClientToolStripMenuItem";
+            this.emailClientToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.emailClientToolStripMenuItem.Text = "Email Client";
+            this.emailClientToolStripMenuItem.Click += new System.EventHandler(this.emailClientToolStripMenuItem_Click);
             // 
             // tabPage6
             // 
@@ -1158,6 +1153,8 @@
             this.dgvAllVehicles.Name = "dgvAllVehicles";
             this.dgvAllVehicles.Size = new System.Drawing.Size(612, 278);
             this.dgvAllVehicles.TabIndex = 0;
+            this.dgvAllVehicles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllVehicles_CellContentClick);
+            this.dgvAllVehicles.Click += new System.EventHandler(this.dgvAllVehicles_Click);
             // 
             // tabPage14
             // 
@@ -1393,12 +1390,8 @@
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.textBox11);
-            this.groupBox17.Controls.Add(this.label33);
             this.groupBox17.Controls.Add(this.txtTireLastChange);
             this.groupBox17.Controls.Add(this.label22);
-            this.groupBox17.Controls.Add(this.txtDateNextService);
-            this.groupBox17.Controls.Add(this.label21);
             this.groupBox17.Controls.Add(this.txtxDateLastService);
             this.groupBox17.Controls.Add(this.label20);
             this.groupBox17.Controls.Add(this.txtKMLastService);
@@ -1410,28 +1403,10 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Maintenance ";
             // 
-            // textBox11
-            // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(10, 177);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(181, 20);
-            this.textBox11.TabIndex = 22;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(7, 161);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(130, 13);
-            this.label33.TabIndex = 21;
-            this.label33.Text = "Days before next service :";
-            // 
             // txtTireLastChange
             // 
             this.txtTireLastChange.Enabled = false;
-            this.txtTireLastChange.Location = new System.Drawing.Point(10, 231);
+            this.txtTireLastChange.Location = new System.Drawing.Point(10, 123);
             this.txtTireLastChange.Name = "txtTireLastChange";
             this.txtTireLastChange.ReadOnly = true;
             this.txtTireLastChange.Size = new System.Drawing.Size(181, 20);
@@ -1440,29 +1415,11 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(7, 215);
+            this.label22.Location = new System.Drawing.Point(7, 107);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(94, 13);
             this.label22.TabIndex = 19;
             this.label22.Text = "Last Tire Change :";
-            // 
-            // txtDateNextService
-            // 
-            this.txtDateNextService.Enabled = false;
-            this.txtDateNextService.Location = new System.Drawing.Point(10, 125);
-            this.txtDateNextService.Name = "txtDateNextService";
-            this.txtDateNextService.ReadOnly = true;
-            this.txtDateNextService.Size = new System.Drawing.Size(181, 20);
-            this.txtDateNextService.TabIndex = 18;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(7, 109);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(112, 13);
-            this.label21.TabIndex = 17;
-            this.label21.Text = "Date of Next Service :";
             // 
             // txtxDateLastService
             // 
@@ -1646,13 +1603,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // emailClientToolStripMenuItem
-            // 
-            this.emailClientToolStripMenuItem.Name = "emailClientToolStripMenuItem";
-            this.emailClientToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.emailClientToolStripMenuItem.Text = "Email Client";
-            this.emailClientToolStripMenuItem.Click += new System.EventHandler(this.emailClientToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1833,7 +1783,6 @@
         private System.Windows.Forms.TextBox txtStreetName;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.DataGridView dgvBookedClients;
@@ -1849,8 +1798,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtTireLastChange;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtDateNextService;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtxDateLastService;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.GroupBox groupBox18;
@@ -1875,8 +1822,6 @@
         private System.Windows.Forms.TextBox txtLoadMaxWeight;
         private System.Windows.Forms.TextBox txtTotalKm;
         private System.Windows.Forms.TextBox txtHorsePower;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.DataGridView dgvServiceTrucks;
         private System.Windows.Forms.GroupBox groupBox20;
