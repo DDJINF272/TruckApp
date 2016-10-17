@@ -693,6 +693,9 @@ namespace Project
 
         private void btnAddDeliveryBooking_Click(object sender, EventArgs e)
         {
+            int clientlog = -1;
+            string emaill = "";
+            int deliveryid = -1;
             if (cbxDeliveryID.SelectedItem != null)
             {
                 if (cbxDeliveryID.SelectedItem.ToString() == "New...")
@@ -749,14 +752,15 @@ namespace Project
                         cmd.Parameters.AddWithValue("@ArrivalAdrAreab_id", tbxArrivalAdrArea.Text);
                         cmd.Parameters.AddWithValue("@ArrivalCityb_id", tbxArrivalCity.Text);
 
-                        string insertStr = "INSERT INTO BookingTruck (booking_date_made,booking_departure_date,booking_arrival_date,departure_street_number,departure_street_name,departure_street_area,departure_city,arrival_street_number,arrival_street_name,arrival_street_area,arrival_city,truck_id,staff_id,goods_id,booking_notes,client_id,driver_id,delivery_distance) VALUES(@dateb_id,@DepartDateb_id,@ArrivalDateb_id,@DepartAdrNumb_id,@DepartStreetNameb_id,@DepartAdrAreab_id,@Depart_cityb_id,@ArrivalAdrNumberb_id,@ArrivalStreetNameb_id,@ArrivalAdrAreab_id,@ArrivalCityb_id,@truckb_id,@staffb_id,@goodb_id,@Notesb_id,@clientb_id,@driverb_id,@delivDistb_id)";
-
+                        string insertStr = "INSERT INTO BookingTruck (booking_date_made,booking_departure_date,booking_arrival_date,departure_street_number,departure_street_name,departure_street_area,departure_city,arrival_street_number,arrival_street_name,arrival_street_area,arrival_city,truck_id,staff_id,goods_id,booking_notes,client_id,driver_id,delivery_distance) VALUES(@dateb_id,@DepartDateb_id,@ArrivalDateb_id,@DepartAdrNumb_id,@DepartStreetNameb_id,@DepartAdrAreab_id,@Depart_cityb_id,@ArrivalAdrNumberb_id,@ArrivalStreetNameb_id,@ArrivalAdrAreab_id,@ArrivalCityb_id,@truckb_id,@staffb_id,@goodb_id,@Notesb_id,@clientb_id,@driverb_id,@delivDistb_id); SELECT CAST(scope_identity() AS int)";
+                        
                         try
                         {
                             cmd.Connection = conn;
                             cmd.CommandText = insertStr;
                             conn.Open();
-                            cmd.ExecuteNonQuery();
+                            deliveryid = (int)cmd.ExecuteScalar();
+                            
                             MessageBox.Show("Successfully Added Booking");
                            
 
@@ -767,8 +771,60 @@ namespace Project
                         }
                         finally
                         {
-
                             conn.Close();
+                            string exec = "SELECT * FROM Clients WHERE client_id = @clientb_id";
+                            
+                            try
+                            {
+                                cmd.CommandText = exec;
+                                cmd.Connection = conn;
+                                conn.Open();
+                                reader = cmd.ExecuteReader();
+
+                                while(reader.Read())
+                                {
+                                    clientlog = (Int32)reader["client_login"];
+                                }
+
+                                conn.Close();
+
+                                string find = "SELECT * FROM ClientLogin WHERE clientLogin_id = @cliLog";
+
+                                if(cmd.Parameters.Contains("@cliLog"))
+                                {
+                                    cmd.Parameters["@cliLog"].Value = clientlog;
+                                }
+                                else
+                                {
+                                    cmd.Parameters.AddWithValue("@cliLog", clientlog);
+                                }
+                                cmd.Connection = conn;
+                                cmd.CommandText = find;
+                                conn.Open();
+                                reader = cmd.ExecuteReader();
+
+                                while(reader.Read())
+                                {
+                                    emaill = reader["clientMail"].ToString();
+                                }
+                            }
+                            catch(Exception error)
+                            {
+                                MessageBox.Show("Error: " + error.Message);
+                            }
+                        
+                            conn.Close();
+                            //Send XML Parsed Email
+                            if(emaill == "" || deliveryid == -1 || clientlog == -1)
+                            {
+                                MessageBox.Show("Something went wrong");
+
+                            }
+                            else
+                            {
+                                email.handleEmail("booking", emaill, "", deliveryid.ToString());
+
+                            }
                             this.Close();
                         }
 

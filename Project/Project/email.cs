@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.Xml;
 
 namespace Project
 {
@@ -28,7 +29,7 @@ namespace Project
                 msg.To.Add(email);
                 msg.From = new MailAddress("inf272truckapp@gmail.com");
                 msg.Subject = subject;
-                msg.Body = formatMessage(message);
+                msg.Body = message;
                 client.Send(msg);
 
                 MessageBox.Show("Email Successfully Sent!");
@@ -39,20 +40,122 @@ namespace Project
             }
         }
 
-        private static string formatMessage(string msg)
-        {
-            string toRet = "<h3>Attention Valued TruckApp customer</h3>";
-            toRet += "<h4>" + msg + "</h4><br><br>";
-            toRet += "<p>Thank you for your time, enjoy your day further</p>";
-            toRet += "<b>TruckApp Management team</p><p>Tel - xxx xxx xxx</p><p>Email - inf272truckapp@gmail.com</p>";
 
-            return toRet;
-                
-                
-                
+
+        public static void handleEmail(string type,string email,string message,string subj)
+        {
+            switch (type)
+            {
+                case "registration":
+                    sendRegistration(email);
+                    break;
+                case "normal":
+                    sendNormal(email, message,subj);
+                    break;
+                case "booking":
+                    sendBooking(email,subj);
+                    break;
+                default:
+                    MessageBox.Show("Something went wrong - handleEmail");
+                    break;
+            }
         }
 
-       
-        
+        private static void sendRegistration(string email)
+        {
+            string file = AppDomain.CurrentDomain.BaseDirectory + "emailBodies.xml";
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(file);
+
+                XmlNode node = doc.DocumentElement.SelectSingleNode("registration/body");
+                string message = "";
+                foreach(XmlNode nodes in node.ChildNodes)
+                {
+                    message += "<h4>" + nodes.InnerText + "</h4>";
+                }
+
+                string subject = "";
+                node = doc.DocumentElement.SelectSingleNode("registration/subject");
+                foreach (XmlNode nodes in node.ChildNodes)
+                {
+                    subject += nodes.InnerText;
+                }
+
+                sendMail(email, message, subject);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+        }
+
+        private static void sendBooking(string email,string code)
+        {
+            string file = AppDomain.CurrentDomain.BaseDirectory + "emailBodies.xml";
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(file);
+
+                XmlNode node = doc.DocumentElement.SelectSingleNode("booking/body");
+                string msg = "";
+                msg += "<h4>" + doc.DocumentElement.SelectSingleNode("booking/body/heading").InnerText + "</h4>";
+                msg += "<h4>" + doc.DocumentElement.SelectSingleNode("booking/body/Message").InnerText + "</h4>";
+                msg += "<h4> Your reference number is : BOOK" + code + "</h4>";
+                msg += "<h4>" + doc.DocumentElement.SelectSingleNode("booking/body/info").InnerText + "</h4>";
+                msg += "<h4>" + doc.DocumentElement.SelectSingleNode("booking/body/footer").InnerText + "</h4>";
+
+                string subject = "";
+                node = doc.DocumentElement.SelectSingleNode("booking/subject");
+                foreach (XmlNode nodes in node.ChildNodes)
+                {
+                    subject += nodes.InnerText;
+                }
+
+
+                sendMail(email, msg, subject);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+        }
+
+        private static void sendNormal(string email,string message,string subj)
+        {
+            string file = AppDomain.CurrentDomain.BaseDirectory + "emailBodies.xml";
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(file);
+
+                XmlNode node = doc.DocumentElement.SelectSingleNode("normal/body");
+                string msg = "";
+                msg += "<h4>" + subj + "</h4>";
+                msg += "<h4>" + doc.DocumentElement.SelectSingleNode("normal/body/heading").InnerText + "</h4>";
+                msg += "<h4>" + message + "</h4>";
+                msg += "<h4>" + doc.DocumentElement.SelectSingleNode("normal/body/info").InnerText + "</h4>";
+                msg += "<h4>" + doc.DocumentElement.SelectSingleNode("normal/body/footer").InnerText + "</h4>";
+
+                string subject = "";
+                node = doc.DocumentElement.SelectSingleNode("normal/subject");
+                foreach(XmlNode nodes in node.ChildNodes)
+                {
+                    subject += nodes.InnerText;
+                }
+                
+
+                sendMail(email, msg, subject);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+        }
+
+
+
     }
 }

@@ -1,15 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <emails>
-  <email>
+  <booking>
     <type>clientNotification</type>
     <subject>Trucker New Booking Notification</subject>
     <body>
       <heading>Good Day</heading>
-      <body>We have successfully created your booking and logged it on our system.</body>
-      <reference>Your reference number is : BOOK001</reference>
+      <Message>We have successfully created your booking and logged it on our system.</Message>
+      <reference></reference>
       <info>If you have any queries regarding the status of your booking please contact us at 044 548 0547 or send us an email at inf272truckapp@gmail.com.</info>
       <footer>Thank you for your time, enjoy your day further.</footer>
-      <contact></contact>
     </body>
-  </email>
+  </booking>
+  <registration>
+    <type>clientNotification</type>
+    <subject>New Client Notification</subject>
+    <body>
+      <heading>Good Day</heading>
+      <Message>Welcome new client. We strive to achieve excellence and quality in all that we do. Please enjoy our hassle-free services.</Message>
+      <info>If you have any queries regarding the status of your booking please contact us at 044 548 0547 or send us an email at inf272truckapp@gmail.com.</info>
+      <footer>Thank you for your time, enjoy your day further.</footer>
+    </body>
+  </registration>
+  <normal>
+    <type>clientNotification</type>
+    <subject>Message Notification</subject>
+    <body>
+      <heading>Good Day</heading>
+      <Message></Message>
+      <info>If you have any queries regarding the status of your booking please contact us at 044 548 0547 or send us an email at inf272truckapp@gmail.com.</info>
+      <footer>Thank you for your time, enjoy your day further.</footer>
+    </body>
+  </normal>
 </emails>

@@ -63,7 +63,7 @@ namespace Project
                 string message = txtBxMessage.Text;
 
                 
-                email.sendMail(toSend, message, subject);
+                email.handleEmail("normal",toSend, message,subject);
             }
         }
     }
