@@ -308,6 +308,11 @@ namespace Project
         {
 
         }
+
+        private void crystalReportViewer2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

@@ -157,6 +157,13 @@
             this.menuStrip5 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabControl6 = new System.Windows.Forms.TabControl();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.Staff1 = new Project.Staff();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.BookingsReport1 = new Project.BookingsReport();
             this.button1 = new System.Windows.Forms.Button();
             this.BookedDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AvailableDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -165,6 +172,12 @@
             this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.VehicleServiceDatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.crystalReportViewer3 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.Clients1 = new Project.Clients();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.crystalReportViewer4 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.AllVehicles1 = new Project.AllVehicles();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -219,6 +232,9 @@
             this.groupBox17.SuspendLayout();
             this.menuStrip5.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.tabControl6.SuspendLayout();
+            this.tabPage15.SuspendLayout();
+            this.tabPage16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AvailableDriversBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).BeginInit();
@@ -226,6 +242,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).BeginInit();
+            this.tabPage17.SuspendLayout();
+            this.tabPage18.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -1501,6 +1519,7 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.tabControl6);
             this.tabPage8.Controls.Add(this.button1);
             this.tabPage8.Location = new System.Drawing.Point(154, 4);
             this.tabPage8.Name = "tabPage8";
@@ -1509,6 +1528,65 @@
             this.tabPage8.TabIndex = 5;
             this.tabPage8.Text = "General Management";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // tabControl6
+            // 
+            this.tabControl6.Controls.Add(this.tabPage15);
+            this.tabControl6.Controls.Add(this.tabPage16);
+            this.tabControl6.Controls.Add(this.tabPage17);
+            this.tabControl6.Controls.Add(this.tabPage18);
+            this.tabControl6.Location = new System.Drawing.Point(6, 35);
+            this.tabControl6.Name = "tabControl6";
+            this.tabControl6.SelectedIndex = 0;
+            this.tabControl6.Size = new System.Drawing.Size(638, 588);
+            this.tabControl6.TabIndex = 2;
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.crystalReportViewer1);
+            this.tabPage15.Location = new System.Drawing.Point(4, 22);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(630, 562);
+            this.tabPage15.TabIndex = 0;
+            this.tabPage15.Text = "Staff Report";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 3);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.Staff1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(624, 556);
+            this.crystalReportViewer1.TabIndex = 0;
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.crystalReportViewer2);
+            this.tabPage16.Location = new System.Drawing.Point(4, 22);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage16.Size = new System.Drawing.Size(630, 562);
+            this.tabPage16.TabIndex = 1;
+            this.tabPage16.Text = "Bookings";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // crystalReportViewer2
+            // 
+            this.crystalReportViewer2.ActiveViewIndex = 0;
+            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer2.Location = new System.Drawing.Point(3, 3);
+            this.crystalReportViewer2.Name = "crystalReportViewer2";
+            this.crystalReportViewer2.ReportSource = this.BookingsReport1;
+            this.crystalReportViewer2.Size = new System.Drawing.Size(624, 556);
+            this.crystalReportViewer2.TabIndex = 0;
+            this.crystalReportViewer2.Load += new System.EventHandler(this.crystalReportViewer2_Load);
             // 
             // button1
             // 
@@ -1519,6 +1597,52 @@
             this.button1.Text = "AddDepartment";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.crystalReportViewer3);
+            this.tabPage17.Location = new System.Drawing.Point(4, 22);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage17.Size = new System.Drawing.Size(630, 562);
+            this.tabPage17.TabIndex = 2;
+            this.tabPage17.Text = "All Clients";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // crystalReportViewer3
+            // 
+            this.crystalReportViewer3.ActiveViewIndex = 0;
+            this.crystalReportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer3.Location = new System.Drawing.Point(3, 3);
+            this.crystalReportViewer3.Name = "crystalReportViewer3";
+            this.crystalReportViewer3.ReportSource = this.Clients1;
+            this.crystalReportViewer3.Size = new System.Drawing.Size(624, 556);
+            this.crystalReportViewer3.TabIndex = 0;
+            // 
+            // tabPage18
+            // 
+            this.tabPage18.Controls.Add(this.crystalReportViewer4);
+            this.tabPage18.Location = new System.Drawing.Point(4, 22);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage18.Size = new System.Drawing.Size(630, 562);
+            this.tabPage18.TabIndex = 3;
+            this.tabPage18.Text = "All Vehicles";
+            this.tabPage18.UseVisualStyleBackColor = true;
+            // 
+            // crystalReportViewer4
+            // 
+            this.crystalReportViewer4.ActiveViewIndex = 0;
+            this.crystalReportViewer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer4.Location = new System.Drawing.Point(3, 3);
+            this.crystalReportViewer4.Name = "crystalReportViewer4";
+            this.crystalReportViewer4.ReportSource = this.AllVehicles1;
+            this.crystalReportViewer4.Size = new System.Drawing.Size(624, 556);
+            this.crystalReportViewer4.TabIndex = 0;
             // 
             // Form1
             // 
@@ -1603,6 +1727,9 @@
             this.menuStrip5.ResumeLayout(false);
             this.menuStrip5.PerformLayout();
             this.tabPage8.ResumeLayout(false);
+            this.tabControl6.ResumeLayout(false);
+            this.tabPage15.ResumeLayout(false);
+            this.tabPage16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BookedDriversBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AvailableDriversBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllStaffBindingSource)).EndInit();
@@ -1610,6 +1737,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).EndInit();
+            this.tabPage17.ResumeLayout(false);
+            this.tabPage18.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1751,6 +1880,20 @@
         private System.Windows.Forms.BindingSource BookedVehiclesBindingSource;
         private System.Windows.Forms.BindingSource AllVehiclesBindingSource;
         private System.Windows.Forms.BindingSource VehicleServiceDatesBindingSource;
+        private System.Windows.Forms.TabControl tabControl6;
+        private System.Windows.Forms.TabPage tabPage15;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private System.Windows.Forms.TabPage tabPage16;
+
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
+        private BookingsReport BookingsReport1;
+        private Staff Staff1;
+        private System.Windows.Forms.TabPage tabPage17;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
+        private Clients Clients1;
+        private System.Windows.Forms.TabPage tabPage18;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer4;
+        private AllVehicles AllVehicles1;
     }
 }
 
