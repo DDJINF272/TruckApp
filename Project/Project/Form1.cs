@@ -509,8 +509,7 @@ namespace Project
                     }
 
 
-                    reader.Close();
-                    conn.Close();
+                    
                 }
                 catch (Exception error)
                 {
@@ -519,6 +518,7 @@ namespace Project
                 }
                 finally
                 {
+                    reader.Close();
                     conn.Close();
                 }
             }
@@ -533,8 +533,8 @@ namespace Project
                 int selectedRowIndex = AllClientsBindingSource.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = AllClientsBindingSource.Rows[selectedRowIndex];
                 id = Convert.ToString(selectedRow.Cells["ID"].Value);
-
-                String values = "SELECT Clients.client_firstname, Clients.client_lastname, Clients.client_landline, Clients.client_cellphone, Clients.client_address_street, Clients.client_address_number, Clients.client_address_area, Clients.client_address_areacode FROM Clients WHERE Clients.client_id = " + id;
+                int loginId = -1;
+                String values = "SELECT Clients.client_firstname, Clients.client_lastname, Clients.client_landline, Clients.client_cellphone, Clients.client_address_street, Clients.client_address_number, Clients.client_address_area, Clients.client_address_areacode,Clients.client_login FROM Clients WHERE Clients.client_id = " + id;
 
                 try
                 {
@@ -553,12 +553,11 @@ namespace Project
                         txtStreetNumber.Text = reader["client_address_number"].ToString();
                         txtSuburb.Text = reader["client_address_area"].ToString();
                         txtAreaCode.Text = reader["client_address_areacode"].ToString();
+                        loginId = (Int32)reader["client_login"];
 
                     }
 
 
-                    reader.Close();
-                    conn.Close();
                 }
                 catch (Exception error)
                 {
@@ -567,9 +566,53 @@ namespace Project
                 }
                 finally
                 {
+                    reader.Close();
                     conn.Close();
+
+                    //Get profile picture
+                    byte[] img = null;
+                    string exe = "SELECT * FROM ClientLogin WHERE clientLogin_id = " + loginId;
+
+                    try
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = exe;
+                        conn.Open();
+                        reader = cmd.ExecuteReader();
+
+                        while(reader.Read())
+                        {
+                            img = (byte[])reader["clientProfilePicture"];
+                        }
+
+                    }
+                    catch(Exception error)
+                    {
+                        MessageBox.Show("Error: " + error.Message);
+                    }
+                    finally
+                    {
+                        ProfilePicture.Image = byteArrayToImage(img);
+                        reader.Close();
+                        conn.Close();
+                    }
                 }
             }
+        }
+
+
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            Image returnImage = null;
+            try
+            {
+                MemoryStream ms = new MemoryStream(byteArrayIn, 0, byteArrayIn.Length);
+                ms.Write(byteArrayIn, 0, byteArrayIn.Length);
+                returnImage = Image.FromStream(ms, true);//Exception occurs here
+            }
+            catch { }
+
+            return returnImage;
         }
     }
     
