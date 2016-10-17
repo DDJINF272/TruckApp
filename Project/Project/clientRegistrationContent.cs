@@ -21,7 +21,7 @@ namespace Project
         SqlDataReader reader;
         SqlDataAdapter adapter = new SqlDataAdapter();
         public int currentTab = 0;
-        string fname, sname, busname, cellnum, landnum,streetname,streetnumber,city,suburb,province,username,password,email;
+        string fname, sname, busname, cellnum, landnum,streetname,streetnumber,city,suburb,province,username,password,cemail;
         Image thumbnail;
 
         private void btnFinish_Click(object sender, EventArgs e)
@@ -34,8 +34,9 @@ namespace Project
             }
             else
             {
-                int clientlogon = insertIntoClientLogon(username, password, email, image);
+                int clientlogon = insertIntoClientLogon(username, password, cemail, image);
                 insertIntoClients(fname, sname, busname, landnum, cellnum, streetname, streetnumber, city, suburb, province, clientlogon);
+                email.sendMail(cemail, "You have been successfully entered into our database!", "Welcome new client!");
                 
             }
 
@@ -185,7 +186,7 @@ namespace Project
             {
                 username = txtbxUsername.Text;
                 password = txtbxPassword.Text;
-                email = txtbxEmail.Text;
+                cemail = txtbxEmail.Text;
 
                 currentTab++;
 

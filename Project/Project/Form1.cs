@@ -313,6 +313,12 @@ namespace Project
         {
 
         }
+
+        private void emailClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form sendMail = new emailClient();
+            sendMail.ShowDialog();
+        }
     }
     
 }
