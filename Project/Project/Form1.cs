@@ -367,6 +367,10 @@ namespace Project
 
                 MessageBox.Show("Error: " + error.Message);
             }
+            finally
+            {
+                conn.Close();
+            }
 
 
         }
@@ -513,6 +517,10 @@ namespace Project
 
                     MessageBox.Show("Error: " + error.Message);
                 }
+                finally
+                {
+                    conn.Close();
+                }
             }
         }
 
@@ -556,6 +564,10 @@ namespace Project
                 {
 
                     MessageBox.Show("Error: " + error.Message);
+                }
+                finally
+                {
+                    conn.Close();
                 }
             }
         }
