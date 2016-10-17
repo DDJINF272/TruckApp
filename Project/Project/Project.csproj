@@ -121,6 +121,13 @@
     </Compile>
     <Compile Include="ComboBoxItems.cs" />
     <Compile Include="Departments.cs" />
+    <Compile Include="email.cs" />
+    <Compile Include="emailClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emailClient.Designer.cs">
+      <DependentUpon>emailClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="firstContact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +201,9 @@
     <EmbeddedResource Include="Clients.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Clients.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emailClient.resx">
+      <DependentUpon>emailClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="firstContact.resx">
       <DependentUpon>firstContact.cs</DependentUpon>
