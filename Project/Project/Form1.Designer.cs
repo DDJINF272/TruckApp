@@ -315,6 +315,7 @@
             // 
             // rtbChat
             // 
+            this.rtbChat.BackColor = System.Drawing.SystemColors.Window;
             this.rtbChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbChat.Location = new System.Drawing.Point(-1, 0);
             this.rtbChat.Name = "rtbChat";
