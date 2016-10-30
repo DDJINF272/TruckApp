@@ -494,6 +494,7 @@
             this.dgvAllStaff.Name = "dgvAllStaff";
             this.dgvAllStaff.Size = new System.Drawing.Size(295, 419);
             this.dgvAllStaff.TabIndex = 0;
+            this.dgvAllStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllStaff_CellClick);
             // 
             // tabPage10
             // 
@@ -881,6 +882,7 @@
             this.AllClientsBindingSource.Name = "AllClientsBindingSource";
             this.AllClientsBindingSource.Size = new System.Drawing.Size(442, 441);
             this.AllClientsBindingSource.TabIndex = 0;
+            this.AllClientsBindingSource.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllClientsBindingSource_CellClick);
             // 
             // tabPage12
             // 
