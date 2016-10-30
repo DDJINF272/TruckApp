@@ -36,7 +36,8 @@ namespace Project
             {
                 int clientlogon = insertIntoClientLogon(username, password, cemail, image);
                 insertIntoClients(fname, sname, busname, landnum, cellnum, streetname, streetnumber, city, suburb, province, clientlogon);
-                email.sendMail(cemail, "You have been successfully entered into our database!", "Welcome new client!");
+                email.handleEmail("registration", cemail, "", "");
+
                 
             }
 

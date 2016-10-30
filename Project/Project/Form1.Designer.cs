@@ -32,11 +32,6 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.tbSend = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rtbChat = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -102,7 +97,6 @@
             this.txtStreetName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -150,12 +144,8 @@
             this.txtLoadFreeWeight = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.txtTireLastChange = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txtDateNextService = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.txtxDateLastService = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtKMLastService = new System.Windows.Forms.TextBox();
@@ -184,9 +174,11 @@
             this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.VehicleServiceDatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rtbChat = new System.Windows.Forms.RichTextBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.tbSend = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -272,11 +264,10 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnSend);
             this.tabPage1.Controls.Add(this.tbSend);
-            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.btnSend);
+            this.tabPage1.Controls.Add(this.rtbChat);
             this.tabPage1.Controls.Add(this.monthCalendar1);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -284,53 +275,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Calander Planner";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btnSend
-            // 
-            this.btnSend.Location = new System.Drawing.Point(3, 567);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(61, 30);
-            this.btnSend.TabIndex = 9;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            // 
-            // tbSend
-            // 
-            this.tbSend.Location = new System.Drawing.Point(70, 570);
-            this.tbSend.MaxLength = 900;
-            this.tbSend.Name = "tbSend";
-            this.tbSend.Size = new System.Drawing.Size(164, 24);
-            this.tbSend.TabIndex = 8;
-            this.tbSend.TabStop = false;
-            this.tbSend.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSend_KeyPress);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.rtbChat);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(7, 306);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(227, 255);
-            this.panel1.TabIndex = 7;
-            // 
-            // rtbChat
-            // 
-            this.rtbChat.BackColor = System.Drawing.SystemColors.Window;
-            this.rtbChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbChat.Location = new System.Drawing.Point(-1, 0);
-            this.rtbChat.Name = "rtbChat";
-            this.rtbChat.ReadOnly = true;
-            this.rtbChat.Size = new System.Drawing.Size(228, 252);
-            this.rtbChat.TabIndex = 2;
-            this.rtbChat.TabStop = false;
-            this.rtbChat.Text = "";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 259);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 24);
-            this.textBox1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -494,6 +438,7 @@
             this.dgvAllStaff.Name = "dgvAllStaff";
             this.dgvAllStaff.Size = new System.Drawing.Size(295, 419);
             this.dgvAllStaff.TabIndex = 0;
+            this.dgvAllStaff.Click += new System.EventHandler(this.dgvAllStaff_Click);
             // 
             // tabPage10
             // 
@@ -881,6 +826,7 @@
             this.AllClientsBindingSource.Name = "AllClientsBindingSource";
             this.AllClientsBindingSource.Size = new System.Drawing.Size(442, 441);
             this.AllClientsBindingSource.TabIndex = 0;
+            this.AllClientsBindingSource.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllClientsBindingSource_CellClick);
             this.AllClientsBindingSource.Click += new System.EventHandler(this.AllClientsBindingSource_Click);
             // 
             // tabPage12
@@ -906,7 +852,6 @@
             this.groupBox11.Controls.Add(this.txtStreetName);
             this.groupBox11.Controls.Add(this.label15);
             this.groupBox11.Controls.Add(this.label16);
-            this.groupBox11.Controls.Add(this.groupBox12);
             this.groupBox11.Location = new System.Drawing.Point(7, 134);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(435, 316);
@@ -985,15 +930,6 @@
             this.label16.Size = new System.Drawing.Size(75, 13);
             this.label16.TabIndex = 17;
             this.label16.Text = "Street Name  :";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Location = new System.Drawing.Point(6, 99);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(422, 211);
-            this.groupBox12.TabIndex = 0;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "INSERT GOOGLE MAP HERE ?";
             // 
             // groupBox10
             // 
@@ -1224,6 +1160,8 @@
             this.dgvAllVehicles.Name = "dgvAllVehicles";
             this.dgvAllVehicles.Size = new System.Drawing.Size(612, 278);
             this.dgvAllVehicles.TabIndex = 0;
+            this.dgvAllVehicles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllVehicles_CellContentClick);
+            this.dgvAllVehicles.Click += new System.EventHandler(this.dgvAllVehicles_Click);
             // 
             // tabPage14
             // 
@@ -1459,12 +1397,8 @@
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.textBox11);
-            this.groupBox17.Controls.Add(this.label33);
             this.groupBox17.Controls.Add(this.txtTireLastChange);
             this.groupBox17.Controls.Add(this.label22);
-            this.groupBox17.Controls.Add(this.txtDateNextService);
-            this.groupBox17.Controls.Add(this.label21);
             this.groupBox17.Controls.Add(this.txtxDateLastService);
             this.groupBox17.Controls.Add(this.label20);
             this.groupBox17.Controls.Add(this.txtKMLastService);
@@ -1476,28 +1410,10 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Maintenance ";
             // 
-            // textBox11
-            // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(10, 177);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(181, 20);
-            this.textBox11.TabIndex = 22;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(7, 161);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(130, 13);
-            this.label33.TabIndex = 21;
-            this.label33.Text = "Days before next service :";
-            // 
             // txtTireLastChange
             // 
             this.txtTireLastChange.Enabled = false;
-            this.txtTireLastChange.Location = new System.Drawing.Point(10, 231);
+            this.txtTireLastChange.Location = new System.Drawing.Point(10, 123);
             this.txtTireLastChange.Name = "txtTireLastChange";
             this.txtTireLastChange.ReadOnly = true;
             this.txtTireLastChange.Size = new System.Drawing.Size(181, 20);
@@ -1506,29 +1422,11 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(7, 215);
+            this.label22.Location = new System.Drawing.Point(7, 107);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(94, 13);
             this.label22.TabIndex = 19;
             this.label22.Text = "Last Tire Change :";
-            // 
-            // txtDateNextService
-            // 
-            this.txtDateNextService.Enabled = false;
-            this.txtDateNextService.Location = new System.Drawing.Point(10, 125);
-            this.txtDateNextService.Name = "txtDateNextService";
-            this.txtDateNextService.ReadOnly = true;
-            this.txtDateNextService.Size = new System.Drawing.Size(181, 20);
-            this.txtDateNextService.TabIndex = 18;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(7, 109);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(112, 13);
-            this.label21.TabIndex = 17;
-            this.label21.Text = "Date of Next Service :";
             // 
             // txtxDateLastService
             // 
@@ -1712,6 +1610,35 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // rtbChat
+            // 
+            this.rtbChat.BackColor = System.Drawing.Color.White;
+            this.rtbChat.Location = new System.Drawing.Point(7, 313);
+            this.rtbChat.Name = "rtbChat";
+            this.rtbChat.ReadOnly = true;
+            this.rtbChat.Size = new System.Drawing.Size(229, 241);
+            this.rtbChat.TabIndex = 7;
+            this.rtbChat.Text = "";
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(159, 560);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(75, 42);
+            this.btnSend.TabIndex = 8;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // tbSend
+            // 
+            this.tbSend.Location = new System.Drawing.Point(7, 572);
+            this.tbSend.MaxLength = 900;
+            this.tbSend.Name = "tbSend";
+            this.tbSend.Size = new System.Drawing.Size(146, 20);
+            this.tbSend.TabIndex = 9;
+            this.tbSend.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSend_KeyPress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1722,13 +1649,10 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = " ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -1896,7 +1820,6 @@
         private System.Windows.Forms.TextBox txtStreetName;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.DataGridView dgvBookedClients;
@@ -1912,8 +1835,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtTireLastChange;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtDateNextService;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtxDateLastService;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.GroupBox groupBox18;
@@ -1938,8 +1859,6 @@
         private System.Windows.Forms.TextBox txtLoadMaxWeight;
         private System.Windows.Forms.TextBox txtTotalKm;
         private System.Windows.Forms.TextBox txtHorsePower;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.DataGridView dgvServiceTrucks;
         private System.Windows.Forms.GroupBox groupBox20;
@@ -1967,10 +1886,8 @@
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer4;
         private AllVehicles AllVehicles1;
         private System.Windows.Forms.ToolStripMenuItem emailClientToolStripMenuItem;
-        private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox tbSend;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.RichTextBox rtbChat;
     }
 }

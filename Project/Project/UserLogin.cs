@@ -64,9 +64,8 @@ namespace Project
                 }
                 else
                 {
-                    Form main = new Form1(this.txtUsername.Text);
+                    Form main = new Form1(txtUsername.Text);
                     main.ShowDialog();
-                    this.Hide();
 
                 }
 

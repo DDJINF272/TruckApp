@@ -32,11 +32,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HUMBUG|AnyCPU'">
-    <OutputPath>bin\HUMBUG\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Humbug|AnyCPU'">
+    <OutputPath>bin\Humbug\</OutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Penis|AnyCPU'">
-    <OutputPath>bin\Penis\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NoMAN!|AnyCPU'">
+    <OutputPath>bin\NoMAN!\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -262,6 +262,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\emailBodies.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
