@@ -8,11 +8,17 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		HUMBUG|Any CPU = HUMBUG|Any CPU
+		Penis|Any CPU = Penis|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{44080E21-82A6-445D-B06D-0ECB69E1DA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{44080E21-82A6-445D-B06D-0ECB69E1DA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44080E21-82A6-445D-B06D-0ECB69E1DA8B}.HUMBUG|Any CPU.ActiveCfg = HUMBUG|Any CPU
+		{44080E21-82A6-445D-B06D-0ECB69E1DA8B}.HUMBUG|Any CPU.Build.0 = HUMBUG|Any CPU
+		{44080E21-82A6-445D-B06D-0ECB69E1DA8B}.Penis|Any CPU.ActiveCfg = Penis|Any CPU
+		{44080E21-82A6-445D-B06D-0ECB69E1DA8B}.Penis|Any CPU.Build.0 = Penis|Any CPU
 		{44080E21-82A6-445D-B06D-0ECB69E1DA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44080E21-82A6-445D-B06D-0ECB69E1DA8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

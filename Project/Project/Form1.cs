@@ -458,71 +458,72 @@ namespace Project
             this.Close();
         }
 
-        private void dgvAllStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvAllVehicles_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            String id = "";
+            String truckID = "";
 
-            if (dgvAllStaff.SelectedCells.Count > 0)
+            if (dgvAllVehicles.SelectedCells.Count > 0)
             {
-                int selectedRowIndex = dgvAllStaff.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dgvAllStaff.Rows[selectedRowIndex];
-                id = Convert.ToString(selectedRow.Cells["ID"].Value);
-
-                String values = "SELECT Staff.firstname, Staff.lastname, Staff.id_number, Staff.cellphone_number, Staff.street_name, Staff.street_number, Staff.street_area, Staff.address_city, Staff.address_province, StaffBankingDetails.bank_name, StaffBankingDetails.branch_name, StaffBankingDetails.account_type, StaffBankingDetails.account_number, StaffBankingDetails.branch_code, StaffDepartments.department_description, StaffDepartments.department_name FROM Staff, StaffBankingDetails, StaffDepartments WHERE Staff.staff_id = " + id + " AND Staff.department_id = StaffDepartments.department_id AND StaffBankingDetails.banking_id = Staff.banking_id";
-
-                try
-                {
-                    cmd.Connection = conn;
-                    cmd.CommandText = values;
-                    conn.Open();
-
-                    reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        txtFullname.Text = reader["firstname"].ToString() + " " + reader["lastname"].ToString();
-                        txtID.Text = reader["id_number"].ToString();
-                        txtCellphone.Text = reader["cellphone_number"].ToString();
-                        txtAddress.Text = reader["street_number"].ToString() + " " + reader["street_name"].ToString() + "       " + reader["street_area"].ToString() + "     " + reader["address_city"].ToString() + ", " + reader["address_province"].ToString();
-                        txtBankName.Text = reader["bank_name"].ToString();
-                        txtBranchName.Text = reader["branch_name"].ToString();
-                        txtAccountType.Text = reader["account_type"].ToString();
-                        txtAccountNumber.Text = reader["account_number"].ToString();
-                        txtBranchCode.Text = reader["branch_code"].ToString();
-                        txtDepartment.Text = reader["department_name"].ToString();
-                        txtDepartmentDescription.Text = reader["department_description"].ToString();
-
-
-                    }
-
-
-
-                }
-                catch (Exception error)
-                {
-
-                    MessageBox.Show("Error: " + error.Message);
-                }
-                finally
-                {
-                    reader.Close();
-                    conn.Close();
-                }
+                int selectedRowIndex = dgvAllVehicles.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvAllVehicles.Rows[selectedRowIndex];
+                truckID = Convert.ToString(selectedRow.Cells["ID"].Value);
             }
+
+            String values = "SELECT Trucks.mode_type, Trucks.truck_type, Trucks.truck_registration, DriversLiscenceCodes.code_type,  Trucks.truck_weight, Trucks.truck_capacity, Trucks.truck_kilos, Trucks.horse_power, Trucks.fuel_tank_litre, Trucks.fuel_usage_kilo, TruckMaintenance.kilos_serviced, TruckMaintenance.date_last_service, TruckMaintenance.date_tires_renewed FROM Trucks, DriversLiscenceCodes, TruckMaintenance WHERE Trucks.truck_id = " + truckID + " AND DriversLiscenceCodes.licence_code_id = Trucks.licence_code_id AND Trucks.maintenance_id =  TruckMaintenance.maintenance_id";
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = values;
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txtVehicleMake.Text = reader["mode_type"].ToString();
+                    txtVehicleType.Text = reader["truck_type"].ToString();
+                    txtRegistrationNumber.Text = reader["truck_registration"].ToString();
+                    txtDriversCodeNeeded.Text = reader["code_type"].ToString();
+                    txtLoadFreeWeight.Text = reader["truck_weight"].ToString();
+                    txtLoadMaxWeight.Text = reader["truck_capacity"].ToString();
+                    txtTotalKm.Text = reader["truck_kilos"].ToString();
+                    txtHorsePower.Text = reader["horse_power"].ToString();
+                    txtFuelTankSize.Text = reader["fuel_tank_litre"].ToString();
+                    txtLiterPer100Km.Text = reader["fuel_usage_kilo"].ToString();
+                    txtKMLastService.Text = reader["kilos_serviced"].ToString();
+                    txtxDateLastService.Text = reader["date_last_service"].ToString();
+                    txtTireLastChange.Text = reader["date_tires_renewed"].ToString();
+                }
+
+
+                reader.Close();
+                conn.Close();
+            }
+            catch (Exception error)
+            {
+
+                MessageBox.Show("Error: " + error.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
 
         }
 
-        private void AllClientsBindingSource_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void AllClientsBindingSource_Click(object sender, EventArgs e)
         {
             String id = "";
 
-            if (AllClientsBindingSource.SelectedCells.Count > 0)
+            if (dgvAllVehicles.SelectedCells.Count > 0)
             {
-                int selectedRowIndex = AllClientsBindingSource.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = AllClientsBindingSource.Rows[selectedRowIndex];
+                int selectedRowIndex = dgvAllVehicles.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvAllVehicles.Rows[selectedRowIndex];
                 id = Convert.ToString(selectedRow.Cells["ID"].Value);
-                int loginId = -1;
-                String values = "SELECT Clients.client_firstname, Clients.client_lastname, Clients.client_landline, Clients.client_cellphone, Clients.client_address_street, Clients.client_address_number, Clients.client_address_area, Clients.client_address_areacode,Clients.client_login FROM Clients WHERE Clients.client_id = " + id;
+
+                String values = "SELECT Clients.client_firstname, Clients.client_lastname, Clients.client_landline, Clients.client_cellphone, Clients.client_address_street, Clients.client_address_number, Clients.client_address_area, Clients.client_address_areacode FROM Clients WHERE Clients.client_id = " + id;
 
                 try
                 {
@@ -541,49 +542,17 @@ namespace Project
                         txtStreetNumber.Text = reader["client_address_number"].ToString();
                         txtSuburb.Text = reader["client_address_area"].ToString();
                         txtAreaCode.Text = reader["client_address_areacode"].ToString();
-                        loginId = (Int32)reader["client_login"];
 
                     }
 
 
+                    reader.Close();
+                    conn.Close();
                 }
                 catch (Exception error)
                 {
 
                     MessageBox.Show("Error: " + error.Message);
-                }
-                finally
-                {
-                    reader.Close();
-                    conn.Close();
-
-                    //Get profile picture
-                    byte[] img = null;
-                    string exe = "SELECT * FROM ClientLogin WHERE clientLogin_id = " + loginId;
-
-                    try
-                    {
-                        cmd.Connection = conn;
-                        cmd.CommandText = exe;
-                        conn.Open();
-                        reader = cmd.ExecuteReader();
-
-                        while (reader.Read())
-                        {
-                            img = (byte[])reader["clientProfilePicture"];
-                        }
-
-                    }
-                    catch (Exception error)
-                    {
-                        MessageBox.Show("Error: " + error.Message);
-                    }
-                    finally
-                    {
-                        ProfilePicture.Image = byteArrayToImage(img);
-                        reader.Close();
-                        conn.Close();
-                    }
                 }
             }
 
