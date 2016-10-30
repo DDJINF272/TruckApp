@@ -174,6 +174,9 @@
             this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.VehicleServiceDatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rtbChat = new System.Windows.Forms.RichTextBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.tbSend = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -244,7 +247,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 4);
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
             this.monthCalendar1.Location = new System.Drawing.Point(7, 0);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 6;
@@ -261,6 +264,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tbSend);
+            this.tabPage1.Controls.Add(this.btnSend);
+            this.tabPage1.Controls.Add(this.rtbChat);
             this.tabPage1.Controls.Add(this.monthCalendar1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -329,6 +335,7 @@
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // tabPage4
             // 
@@ -1603,6 +1610,35 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // rtbChat
+            // 
+            this.rtbChat.BackColor = System.Drawing.Color.White;
+            this.rtbChat.Location = new System.Drawing.Point(7, 313);
+            this.rtbChat.Name = "rtbChat";
+            this.rtbChat.ReadOnly = true;
+            this.rtbChat.Size = new System.Drawing.Size(229, 241);
+            this.rtbChat.TabIndex = 7;
+            this.rtbChat.Text = "";
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(159, 560);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(75, 42);
+            this.btnSend.TabIndex = 8;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // tbSend
+            // 
+            this.tbSend.Location = new System.Drawing.Point(7, 572);
+            this.tbSend.MaxLength = 900;
+            this.tbSend.Name = "tbSend";
+            this.tbSend.Size = new System.Drawing.Size(146, 20);
+            this.tbSend.TabIndex = 9;
+            this.tbSend.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSend_KeyPress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1616,6 +1652,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -1849,6 +1886,9 @@
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer4;
         private AllVehicles AllVehicles1;
         private System.Windows.Forms.ToolStripMenuItem emailClientToolStripMenuItem;
+        private System.Windows.Forms.TextBox tbSend;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.RichTextBox rtbChat;
     }
 }
 

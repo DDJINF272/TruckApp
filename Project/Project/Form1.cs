@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
 
 namespace Project
 {
@@ -16,6 +19,19 @@ namespace Project
 
     public partial class Form1 : Form
     {
+        string userName;
+        private StreamWriter streamWriterSender;
+        private StreamReader streamReaderRecieve;
+        private TcpClient tcpServer;
+
+        // Needed to update the form with messages from another thread
+        private delegate void UpdateLogCallback(string strMessage);
+
+        // Needed to set the form to a "disconnected" state from another thread
+        private delegate void CloseConnectionCallback(string strReason);
+        private Thread threadMessenger;
+        private IPAddress ipAddr;
+        private bool Connected;
 
         String getAllStaff = "SELECT Staff.staff_id AS ID , Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.id_number AS ID_Number, StaffDepartments.department_name AS Working_Department FROM Staff, StaffDepartments WHERE Staff.department_id = StaffDepartments.department_id";
         String getAllDrivers = "SELECT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.cellphone_number AS Contact_Number FROM Staff, StaffDepartments WHERE Staff.department_id = StaffDepartments.department_id AND StaffDepartments.department_name = 'Driver'";
@@ -33,10 +49,11 @@ namespace Project
         SqlDataReader reader;
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        public Form1()
+        public Form1(string usr)
         {
             InitializeComponent();
             tabControl2.DrawItem += new DrawItemEventHandler(tabControl2_DrawItem);
+            userName = usr;
         }
 
         private void tabControl2_DrawItem(Object sender, System.Windows.Forms.DrawItemEventArgs e)
@@ -193,8 +210,96 @@ namespace Project
                 MessageBox.Show("Error: " + error.Message);
             }
 
+            //Initialize Chat
+            InitializeConnection();
 
         }
+        private void InitializeConnection()
+        {
+            // Parse the IP address from the TextBox into an IPAddress object
+            ipAddr = IPAddress.Parse("127.0.0.1");
+            // Start a new TCP connections to the chat server
+            tcpServer = new TcpClient();
+            tcpServer.Connect(ipAddr, 1986);
+
+            Connected = true;
+
+            // Send the desired username to the server
+            streamWriterSender = new StreamWriter(tcpServer.GetStream());
+            streamWriterSender.WriteLine(userName);
+            streamWriterSender.Flush();
+
+            threadMessenger = new Thread(new ThreadStart(ReceiveMessages));
+            threadMessenger.Start();
+        }
+
+        private void ReceiveMessages()
+        {
+
+            streamReaderRecieve = new StreamReader(tcpServer.GetStream());
+
+            //response is 1,successful
+            string ConResponse = streamReaderRecieve.ReadLine();
+
+            // If the first character is a 1, connection was successful
+            if (ConResponse[0] == '1')
+            {
+                // Update the form to tell it we are now connected
+                this.Invoke(new UpdateLogCallback(this.sendToRichtextbox), new object[] { "Connected Successfully!" });
+            }
+            else
+            {
+                string infoReason = "Not Connected: ";
+
+                // Extract the reason out of the response message. The reason starts at the 3rd character
+                infoReason += ConResponse.Substring(2, ConResponse.Length - 2);
+
+                // Update the form with the reason why we couldn't connect
+                this.Invoke(new CloseConnectionCallback(this.CloseConnection), new object[] { infoReason });
+
+                return;
+            }
+            // While we are successfully connected, read incoming lines from the server
+            while (Connected)
+            {
+                // Show the messages in the richtextbox
+                this.Invoke(new UpdateLogCallback(this.sendToRichtextbox), new object[] { streamReaderRecieve.ReadLine() });
+            }
+        }
+
+        private void sendToRichtextbox(string strMessage)
+        {
+
+            rtbChat.AppendText(strMessage + "\r\n");
+        }
+
+        private void SendMessage()
+        {
+            if (tbSend.Lines.Length >= 1)
+            {
+                streamWriterSender.WriteLine(tbSend.Text);
+                streamWriterSender.Flush();
+                tbSend.Lines = null;
+            }
+            tbSend.Text = "";
+        }
+
+
+        private void CloseConnection(string Reason)
+        {
+
+            rtbChat.AppendText(Reason + "\r\n");
+
+            // Close the objects
+            Connected = false;
+            streamWriterSender.Close();
+            streamReaderRecieve.Close();
+            tcpServer.Close();
+
+            //End thread
+            threadMessenger.Abort();
+        }
+
         private void button6_Click_2(object sender, EventArgs e)
         {
            
@@ -613,6 +718,25 @@ namespace Project
             catch { }
 
             return returnImage;
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            SendMessage();
+        }
+
+        private void tbSend_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                SendMessage();
+            }
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseConnection("User Disconnect");
+            this.Close();
         }
     }
     
