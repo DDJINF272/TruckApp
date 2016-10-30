@@ -32,6 +32,9 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbSend = new System.Windows.Forms.TextBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.rtbChat = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -76,12 +79,7 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.dgvMostRecentClients = new System.Windows.Forms.DataGridView();
             this.MostRecentClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.dgvBookedClients = new System.Windows.Forms.DataGridView();
             this.BookedClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.tabControl4 = new System.Windows.Forms.TabControl();
@@ -174,9 +172,9 @@
             this.BookedVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AllVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.VehicleServiceDatesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rtbChat = new System.Windows.Forms.RichTextBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.tbSend = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.dgvBookedClients = new System.Windows.Forms.DataGridView();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -198,12 +196,7 @@
             this.groupBox5.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostRecentClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MostRecentClientsBindingSource)).BeginInit();
-            this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBookedClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookedClientsBindingSource)).BeginInit();
             this.groupBox8.SuspendLayout();
             this.tabControl4.SuspendLayout();
@@ -243,6 +236,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).BeginInit();
+            this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookedClients)).BeginInit();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -275,6 +271,35 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Calander Planner";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tbSend
+            // 
+            this.tbSend.Location = new System.Drawing.Point(7, 572);
+            this.tbSend.MaxLength = 900;
+            this.tbSend.Name = "tbSend";
+            this.tbSend.Size = new System.Drawing.Size(146, 20);
+            this.tbSend.TabIndex = 9;
+            this.tbSend.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSend_KeyPress);
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(159, 560);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(75, 42);
+            this.btnSend.TabIndex = 8;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // rtbChat
+            // 
+            this.rtbChat.BackColor = System.Drawing.Color.White;
+            this.rtbChat.Location = new System.Drawing.Point(6, 313);
+            this.rtbChat.Name = "rtbChat";
+            this.rtbChat.ReadOnly = true;
+            this.rtbChat.Size = new System.Drawing.Size(227, 241);
+            this.rtbChat.TabIndex = 7;
+            this.rtbChat.Text = "";
             // 
             // tabPage2
             // 
@@ -734,65 +759,12 @@
             this.tabPage5.Text = "Manage Clients";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.groupBox15);
-            this.groupBox13.Controls.Add(this.groupBox14);
-            this.groupBox13.Location = new System.Drawing.Point(475, 122);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(168, 498);
-            this.groupBox13.TabIndex = 12;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Client Statistics";
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.dgvMostRecentClients);
-            this.groupBox15.Location = new System.Drawing.Point(7, 261);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(155, 231);
-            this.groupBox15.TabIndex = 1;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Most Recent Clients";
-            // 
-            // dgvMostRecentClients
-            // 
-            this.dgvMostRecentClients.AutoGenerateColumns = false;
-            this.dgvMostRecentClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostRecentClients.DataSource = this.MostRecentClientsBindingSource;
-            this.dgvMostRecentClients.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMostRecentClients.Location = new System.Drawing.Point(3, 16);
-            this.dgvMostRecentClients.Name = "dgvMostRecentClients";
-            this.dgvMostRecentClients.Size = new System.Drawing.Size(149, 212);
-            this.dgvMostRecentClients.TabIndex = 0;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.dgvBookedClients);
-            this.groupBox14.Location = new System.Drawing.Point(7, 20);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(155, 238);
-            this.groupBox14.TabIndex = 0;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Booked Clients";
-            // 
-            // dgvBookedClients
-            // 
-            this.dgvBookedClients.AutoGenerateColumns = false;
-            this.dgvBookedClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookedClients.DataSource = this.BookedClientsBindingSource;
-            this.dgvBookedClients.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBookedClients.Location = new System.Drawing.Point(3, 16);
-            this.dgvBookedClients.Name = "dgvBookedClients";
-            this.dgvBookedClients.Size = new System.Drawing.Size(149, 219);
-            this.dgvBookedClients.TabIndex = 0;
-            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.tabControl4);
-            this.groupBox8.Location = new System.Drawing.Point(6, 122);
+            this.groupBox8.Location = new System.Drawing.Point(3, 30);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(463, 498);
+            this.groupBox8.Size = new System.Drawing.Size(641, 345);
             this.groupBox8.TabIndex = 11;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "All Clients ";
@@ -804,7 +776,7 @@
             this.tabControl4.Location = new System.Drawing.Point(1, 19);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(456, 473);
+            this.tabControl4.Size = new System.Drawing.Size(637, 324);
             this.tabControl4.TabIndex = 0;
             // 
             // tabPage11
@@ -813,7 +785,7 @@
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(448, 447);
+            this.tabPage11.Size = new System.Drawing.Size(629, 298);
             this.tabPage11.TabIndex = 0;
             this.tabPage11.Text = "Clients";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -824,7 +796,7 @@
             this.AllClientsBindingSource.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AllClientsBindingSource.Location = new System.Drawing.Point(3, 3);
             this.AllClientsBindingSource.Name = "AllClientsBindingSource";
-            this.AllClientsBindingSource.Size = new System.Drawing.Size(442, 441);
+            this.AllClientsBindingSource.Size = new System.Drawing.Size(623, 292);
             this.AllClientsBindingSource.TabIndex = 0;
             this.AllClientsBindingSource.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllClientsBindingSource_CellClick);
             this.AllClientsBindingSource.Click += new System.EventHandler(this.AllClientsBindingSource_Click);
@@ -837,7 +809,7 @@
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(448, 447);
+            this.tabPage12.Size = new System.Drawing.Size(448, 343);
             this.tabPage12.TabIndex = 1;
             this.tabPage12.Text = "Current Client ";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -1610,34 +1582,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // rtbChat
+            // groupBox14
             // 
-            this.rtbChat.BackColor = System.Drawing.Color.White;
-            this.rtbChat.Location = new System.Drawing.Point(7, 313);
-            this.rtbChat.Name = "rtbChat";
-            this.rtbChat.ReadOnly = true;
-            this.rtbChat.Size = new System.Drawing.Size(229, 241);
-            this.rtbChat.TabIndex = 7;
-            this.rtbChat.Text = "";
+            this.groupBox14.Controls.Add(this.dgvBookedClients);
+            this.groupBox14.Location = new System.Drawing.Point(7, 20);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(619, 203);
+            this.groupBox14.TabIndex = 0;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Booked Clients";
             // 
-            // btnSend
+            // dgvBookedClients
             // 
-            this.btnSend.Location = new System.Drawing.Point(159, 560);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 42);
-            this.btnSend.TabIndex = 8;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            this.dgvBookedClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBookedClients.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBookedClients.Location = new System.Drawing.Point(3, 16);
+            this.dgvBookedClients.Name = "dgvBookedClients";
+            this.dgvBookedClients.Size = new System.Drawing.Size(613, 184);
+            this.dgvBookedClients.TabIndex = 0;
             // 
-            // tbSend
+            // groupBox13
             // 
-            this.tbSend.Location = new System.Drawing.Point(7, 572);
-            this.tbSend.MaxLength = 900;
-            this.tbSend.Name = "tbSend";
-            this.tbSend.Size = new System.Drawing.Size(146, 20);
-            this.tbSend.TabIndex = 9;
-            this.tbSend.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSend_KeyPress);
+            this.groupBox13.Controls.Add(this.groupBox14);
+            this.groupBox13.Location = new System.Drawing.Point(8, 381);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(636, 229);
+            this.groupBox13.TabIndex = 12;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Client Statistics";
             // 
             // Form1
             // 
@@ -1681,12 +1653,7 @@
             this.menuStrip2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostRecentClients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MostRecentClientsBindingSource)).EndInit();
-            this.groupBox14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBookedClients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BookedClientsBindingSource)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
@@ -1735,6 +1702,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BookedVehiclesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllVehiclesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).EndInit();
+            this.groupBox14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookedClients)).EndInit();
+            this.groupBox13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1820,11 +1790,6 @@
         private System.Windows.Forms.TextBox txtStreetName;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.DataGridView dgvBookedClients;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.DataGridView dgvMostRecentClients;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage13;
@@ -1889,6 +1854,9 @@
         private System.Windows.Forms.TextBox tbSend;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.RichTextBox rtbChat;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.DataGridView dgvBookedClients;
     }
 }
 
