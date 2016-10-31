@@ -174,8 +174,6 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.truckAppDataSet1 = new Project.TruckAppDataSet();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -240,7 +238,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.VehicleServiceDatesBindingSource)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.truckAppDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl2
@@ -251,7 +248,6 @@
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
-            this.tabControl2.Controls.Add(this.tabPage2);
             this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl2.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tabControl2.ItemSize = new System.Drawing.Size(100, 150);
@@ -1608,21 +1604,6 @@
             this.tabControl1.Size = new System.Drawing.Size(251, 637);
             this.tabControl1.TabIndex = 7;
             // 
-            // truckAppDataSet1
-            // 
-            this.truckAppDataSet1.DataSetName = "TruckAppDataSet";
-            this.truckAppDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(154, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(650, 629);
-            this.tabPage2.TabIndex = 6;
-            this.tabPage2.Text = "Search";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1714,7 +1695,6 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.truckAppDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1866,8 +1846,6 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.DataGridView dgvPastBook;
-        private TruckAppDataSet truckAppDataSet1;
-        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 

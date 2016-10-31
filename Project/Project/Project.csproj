@@ -166,6 +166,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TruckAppDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TruckAppDataSet11.cs">
+      <DependentUpon>TruckAppDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TruckAppDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TruckAppDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Trucks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +272,17 @@
     </None>
     <None Include="TruckAppDataSet1.xss">
       <DependentUpon>TruckAppDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TruckAppDataSet11.xsc">
+      <DependentUpon>TruckAppDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="TruckAppDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TruckAppDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TruckAppDataSet11.xss">
+      <DependentUpon>TruckAppDataSet11.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

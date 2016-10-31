@@ -83,7 +83,7 @@ namespace Project
         
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
             Form booking = new Bookings();
             booking.TopLevel = false;
             booking.Visible = true;
@@ -824,6 +824,16 @@ namespace Project
         {
 
         }
+
+
+
+  
+
+
+
+       
+
+       
     }
     
 }
