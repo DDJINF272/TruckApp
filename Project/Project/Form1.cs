@@ -32,15 +32,14 @@ namespace Project
         private Thread threadMessenger;
         private IPAddress ipAddr;
         private bool Connected;
-
-        String getAllStaff = "SELECT Staff.staff_id AS ID , Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.id_number AS ID_Number, StaffDepartments.department_name AS Working_Department FROM Staff, StaffDepartments WHERE Staff.department_id = StaffDepartments.department_id";
-        String getBookedDrivers = "SELECT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.cellphone_number AS Contact_Number , BookingTruck.booking_id AS Booking_Number FROM Staff,BookingTruck ,TruckDrivers WHERE BookingTruck.driver_id = TruckDrivers.driver_id AND Staff.staff_id = TruckDrivers.staff_id";
-        String getAvailableDrivers = "SELECT DISTINCT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.cellphone_number AS Contact_Number FROM Staff,BookingTruck ,TruckDrivers WHERE Staff.staff_id = TruckDrivers.staff_id EXCEPT SELECT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.cellphone_number AS Contact_Number FROM Staff,BookingTruck ,TruckDrivers WHERE BookingTruck.driver_id = TruckDrivers.driver_id AND Staff.staff_id = TruckDrivers.staff_id";
-        String getAllClients = "SELECT Clients.client_id AS ID, Clients.business_name AS Business_Name, Clients.client_firstname + ' ' + Clients.client_lastname AS Name, Clients.client_cellphone AS Contact_Number FROM Clients";
-        String getAllClientsWithBookings = "SELECT Clients.business_name AS Business_Name, Clients.client_firstname + ' ' + Clients.client_lastname AS Name, Clients.client_cellphone AS Contact_Number ,BookingTruck.booking_id AS Booking_ID, BookingTruck.booking_arrival_date AS Booking_Arrival FROM Clients, BookingTruck WHERE Clients.client_id = BookingTruck.client_id";
-        String getAllVehicles = "SELECT Trucks.truck_id AS ID,  Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, Trucks.truck_type AS Vehicle_Type, TruckSleepTypes.type_name AS Vehicle_Cab FROM Trucks, TruckSleepTypes WHERE Trucks.sleeping_type_id = TruckSleepTypes.sleeping_type_id";
-        String getAllVehicleServiceDates = "SELECT Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, TruckMaintenance.date_last_service AS Date_Serviced, TruckMaintenance.date_tires_renewed AS Tires_Serviced FROM Trucks, TruckMaintenance  WHERE Trucks.maintenance_id = TruckMaintenance.maintenance_id";
-        String getAllBookedVehicles = "SELECT Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, BookingTruck.booking_departure_date AS Departure_Date, BookingTruck.booking_arrival_date AS Arrival_Date FROM Trucks, BookingTruck WHERE Trucks.truck_id = BookingTruck.truck_id";
+        string current = DateTime.Today.ToString("yyyy-MM-dd");
+        string getAllStaff = "SELECT Staff.staff_id AS ID , Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.id_number AS ID_Number, StaffDepartments.department_name AS Working_Department FROM Staff, StaffDepartments WHERE Staff.department_id = StaffDepartments.department_id";
+        string getBookedDrivers = "SELECT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.cellphone_number AS Contact_Number , BookingTruck.booking_id AS Booking_Number FROM Staff,BookingTruck ,TruckDrivers WHERE BookingTruck.driver_id = TruckDrivers.driver_id AND Staff.staff_id = TruckDrivers.staff_id";
+        string getAvailableDrivers = "SELECT DISTINCT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.cellphone_number AS Contact_Number FROM Staff,BookingTruck ,TruckDrivers WHERE Staff.staff_id = TruckDrivers.staff_id EXCEPT SELECT Staff.firstname + ' ' +  Staff.lastname AS Name, Staff.cellphone_number AS Contact_Number FROM Staff,BookingTruck ,TruckDrivers WHERE BookingTruck.driver_id = TruckDrivers.driver_id AND Staff.staff_id = TruckDrivers.staff_id";
+        string getAllClients = "SELECT Clients.client_id AS ID, Clients.business_name AS Business_Name, Clients.client_firstname + ' ' + Clients.client_lastname AS Name, Clients.client_cellphone AS Contact_Number FROM Clients";
+        string getAllVehicles = "SELECT Trucks.truck_id AS ID,  Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, Trucks.truck_type AS Vehicle_Type, TruckSleepTypes.type_name AS Vehicle_Cab FROM Trucks, TruckSleepTypes WHERE Trucks.sleeping_type_id = TruckSleepTypes.sleeping_type_id";
+        string getAllVehicleServiceDates = "SELECT Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, TruckMaintenance.date_last_service AS Date_Serviced, TruckMaintenance.date_tires_renewed AS Tires_Serviced FROM Trucks, TruckMaintenance  WHERE Trucks.maintenance_id = TruckMaintenance.maintenance_id";
+        string getAllBookedVehicles = "SELECT Trucks.mode_type + '(' + Trucks.truck_registration + ')' AS Vehicle, BookingTruck.booking_departure_date AS Departure_Date, BookingTruck.booking_arrival_date AS Arrival_Date FROM Trucks, BookingTruck WHERE Trucks.truck_id = BookingTruck.truck_id";
 
 
 
@@ -140,12 +139,32 @@ namespace Project
             {
 
                 cmd.Connection = conn;
-                cmd.CommandText = getAllClientsWithBookings;
+                string getAllClientsWithBookingsActive = "SELECT Clients.business_name AS Business_Name, Clients.client_firstname + ' ' + Clients.client_lastname AS Name, Clients.client_cellphone AS Contact_Number ,BookingTruck.booking_id AS Booking_ID, BookingTruck.booking_arrival_date AS Booking_Arrival FROM Clients, BookingTruck WHERE Clients.client_id = BookingTruck.client_id AND BookingTruck.booking_arrival_date >= '" + current + "'";
+                cmd.CommandText = getAllClientsWithBookingsActive;
                 //conn.Open();
                 SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                 DataTable ds = new DataTable();
                 adapt.Fill(ds);
                 dgvBookedClients.DataSource = ds;
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+
+            try
+            {
+
+                cmd.Connection = conn;
+                string getAllClientsWithBookingsInactive = "SELECT Clients.business_name AS Business_Name, Clients.client_firstname + ' ' + Clients.client_lastname AS Name, Clients.client_cellphone AS Contact_Number ,BookingTruck.booking_id AS Booking_ID, BookingTruck.booking_arrival_date AS Booking_Arrival FROM Clients, BookingTruck WHERE Clients.client_id = BookingTruck.client_id AND BookingTruck.booking_arrival_date <'" + current + "'";
+                cmd.CommandText = getAllClientsWithBookingsInactive;
+                //conn.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataTable ds = new DataTable();
+                adapt.Fill(ds);
+                dgvPastBook.DataSource = ds;
 
 
             }
@@ -253,7 +272,14 @@ namespace Project
 
 
             //Initialize Chat
-            InitializeConnection();
+            try
+            {
+                InitializeConnection();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error: " + err.Message);
+            }
 
         }
         private void InitializeConnection()
@@ -775,10 +801,28 @@ namespace Project
             }
         }
 
-        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+       
+
+        private void logoutToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            CloseConnection("User Disconnect");
-            this.Close();
+            try
+            {
+                CloseConnection("User Disconnect");
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error: " + err.Message);
+            }
+            finally
+            {
+                this.Close();
+            }
+        }
+
+        private void groupBox12_Enter(object sender, EventArgs e)
+        {
+
         }
     }
     

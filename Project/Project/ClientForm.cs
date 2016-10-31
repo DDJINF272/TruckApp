@@ -35,6 +35,18 @@ namespace Project
 
         }
 
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You have been successfully logged out!");
+            this.Close();
+        }
+
+        private void contactSupportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form supportMail = new emailSupport(fname + " " + lname);
+            supportMail.ShowDialog();
+        }
+
         private void tabControl2_DrawItem(object sender, DrawItemEventArgs e)
         {
             Graphics g = e.Graphics;

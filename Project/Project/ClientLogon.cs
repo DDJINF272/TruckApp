@@ -46,8 +46,16 @@ namespace Project
 
             try
             {
-                cmd.Parameters.AddWithValue("@user", user);
-                cmd.Parameters.AddWithValue("@pass", pass);
+                if (cmd.Parameters.Contains("@user") || cmd.Parameters.Contains("@pass"))
+                {
+                    cmd.Parameters["@user"].Value = user;
+                    cmd.Parameters["@pass"].Value = pass;
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@user", user);
+                    cmd.Parameters.AddWithValue("@pass", pass);
+                }
                 cmd.Connection = conn;
                 cmd.CommandText = query;
                 conn.Open();

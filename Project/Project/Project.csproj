@@ -134,6 +134,12 @@
     <Compile Include="emailClient.Designer.cs">
       <DependentUpon>emailClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="emailSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emailSupport.Designer.cs">
+      <DependentUpon>emailSupport.cs</DependentUpon>
+    </Compile>
     <Compile Include="firstContact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="emailClient.resx">
       <DependentUpon>emailClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emailSupport.resx">
+      <DependentUpon>emailSupport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="firstContact.resx">
       <DependentUpon>firstContact.cs</DependentUpon>

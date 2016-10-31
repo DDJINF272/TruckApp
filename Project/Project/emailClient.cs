@@ -66,5 +66,10 @@ namespace Project
                 email.handleEmail("normal",toSend, message,subject);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

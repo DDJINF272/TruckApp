@@ -60,10 +60,20 @@ namespace Project
         {
             int toRet = -1;
             string insert = "INSERT INTO ClientLogin (clientUser,clientPass,clientMail,clientProfilePicture) VALUES(@user,@pass,@email,@image) SELECT CAST(SCOPE_IDENTITY() AS int)";
-            cmd.Parameters.AddWithValue("@user", user);
-            cmd.Parameters.AddWithValue("@pass", pass);
-            cmd.Parameters.AddWithValue("@email", email);
-            cmd.Parameters.AddWithValue("@image", img);
+            if (cmd.Parameters.Contains("@user") || cmd.Parameters.Contains("@pass") || cmd.Parameters.Contains("@email") || cmd.Parameters.Contains("@image"))
+            {
+                cmd.Parameters["@user"].Value = user;
+                cmd.Parameters["@pass"].Value = pass;
+                cmd.Parameters["@email"].Value = email;
+                cmd.Parameters["@image"].Value = img;
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@user", user);
+                cmd.Parameters.AddWithValue("@pass", pass);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@image", img);
+            }
             try
             {
                 cmd.Connection = conn;
@@ -91,7 +101,15 @@ namespace Project
             string test = "SELECT * FROM ClientLogin WHERE clientUser = @username";
             try
             {
-                cmd.Parameters.AddWithValue("@username", username);
+                if (cmd.Parameters.Contains("@username"))
+                {
+                    cmd.Parameters["@username"].Value = username;
+
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                }
                 cmd.Connection = conn;
                 cmd.CommandText = test;
                 conn.Open();
@@ -126,20 +144,39 @@ namespace Project
 
         private void insertIntoClients(string fname, string sname, string busname, string landnum, string cellnum, string streetname, string streetnumber, string city, string suburb, string province, int clientlogon)
         {
+
+
             string insert = "INSERT INTO Clients(client_firstname,client_lastname,business_name,client_landline,client_cellphone,client_address_street,client_address_number,client_address_area,client_address_areacode,client_city,client_login) VALUES(@fname, @sname, @busname, @landnum, @cellnum, @streetname, @streetnumber, @city, @suburb, @province,@clientlogon)";
             try
             {
-                cmd.Parameters.AddWithValue("@fname", fname);
-                cmd.Parameters.AddWithValue("@sname", sname);
-                cmd.Parameters.AddWithValue("@busname", busname);
-                cmd.Parameters.AddWithValue("@landnum", landnum);
-                cmd.Parameters.AddWithValue("@cellnum", cellnum);
-                cmd.Parameters.AddWithValue("@streetname", streetname);
-                cmd.Parameters.AddWithValue("@streetnumber", streetnumber);
-                cmd.Parameters.AddWithValue("@city", city);
-                cmd.Parameters.AddWithValue("@suburb", suburb);
-                cmd.Parameters.AddWithValue("@province", province);
-                cmd.Parameters.AddWithValue("@clientLogon", clientlogon);
+                if (cmd.Parameters.Contains("@fname") || cmd.Parameters.Contains("@sname") || cmd.Parameters.Contains("@busname") || cmd.Parameters.Contains("@landnum") || cmd.Parameters.Contains("@cellnum") ||cmd.Parameters.Contains("@streetname") || cmd.Parameters.Contains("@streetnumber") ||cmd.Parameters.Contains("@city") ||cmd.Parameters.Contains("@suburb") ||cmd.Parameters.Contains("@province") || cmd.Parameters.Contains("@clientLogon"))
+                {
+                    cmd.Parameters["@fname"].Value = fname;
+                    cmd.Parameters["@sname"].Value = sname;
+                    cmd.Parameters["@busname"].Value = busname;
+                    cmd.Parameters["@landnum"].Value =  landnum;
+                    cmd.Parameters["@cellnum"].Value =  cellnum;
+                    cmd.Parameters["@streetname"].Value = streetname;
+                    cmd.Parameters["@streetnumber"].Value = streetnumber;
+                    cmd.Parameters["@city"].Value =  city;
+                    cmd.Parameters["@suburb"].Value =  suburb;
+                    cmd.Parameters["@province"].Value =  province;
+                    cmd.Parameters["@clientLogon"].Value =  clientlogon;
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@fname", fname);
+                    cmd.Parameters.AddWithValue("@sname", sname);
+                    cmd.Parameters.AddWithValue("@busname", busname);
+                    cmd.Parameters.AddWithValue("@landnum", landnum);
+                    cmd.Parameters.AddWithValue("@cellnum", cellnum);
+                    cmd.Parameters.AddWithValue("@streetname", streetname);
+                    cmd.Parameters.AddWithValue("@streetnumber", streetnumber);
+                    cmd.Parameters.AddWithValue("@city", city);
+                    cmd.Parameters.AddWithValue("@suburb", suburb);
+                    cmd.Parameters.AddWithValue("@province", province);
+                    cmd.Parameters.AddWithValue("@clientLogon", clientlogon);
+                }
 
                 cmd.Connection = conn;
                 cmd.CommandText = insert;
@@ -244,15 +281,12 @@ namespace Project
                 lblPhase3.ForeColor = Color.Blue;
                 tabControl1.SelectTab(currentTab);
 
-
-
-
-
             }
         }
    
         private void clientRegistrationContent_Load(object sender, EventArgs e)
         {
+            disableTabs(0);
             rbtnPhase1.Checked = true;
             rbtnPhase1.ForeColor = Color.Blue;
         }

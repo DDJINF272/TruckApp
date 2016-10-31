@@ -31,12 +31,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ProfilePicture = new System.Windows.Forms.PictureBox();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridInactiveBook = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridActiveBook = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCellNum = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
@@ -50,29 +52,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactSupportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridActiveBook = new System.Windows.Forms.DataGridView();
-            this.dataGridInactiveBook = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             this.tabPage6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridInactiveBook)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridActiveBook)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridActiveBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridInactiveBook)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(809, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -97,34 +95,6 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 6;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 611);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Events Coming Up";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // ProfilePicture
-            // 
-            this.ProfilePicture.Location = new System.Drawing.Point(252, 119);
-            this.ProfilePicture.Name = "ProfilePicture";
-            this.ProfilePicture.Size = new System.Drawing.Size(156, 137);
-            this.ProfilePicture.TabIndex = 7;
-            this.ProfilePicture.TabStop = false;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(154, 4);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(650, 639);
-            this.tabPage7.TabIndex = 4;
-            this.tabPage7.Text = "Fleet Management";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.groupBox2);
@@ -136,6 +106,45 @@
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Bookings";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridInactiveBook);
+            this.groupBox2.Location = new System.Drawing.Point(6, 308);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(638, 270);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Inactive Bookings";
+            // 
+            // dataGridInactiveBook
+            // 
+            this.dataGridInactiveBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridInactiveBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridInactiveBook.Location = new System.Drawing.Point(6, 19);
+            this.dataGridInactiveBook.Name = "dataGridInactiveBook";
+            this.dataGridInactiveBook.Size = new System.Drawing.Size(632, 245);
+            this.dataGridInactiveBook.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridActiveBook);
+            this.groupBox1.Location = new System.Drawing.Point(3, 8);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(647, 294);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Currently Active Bookings";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // dataGridActiveBook
+            // 
+            this.dataGridActiveBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridActiveBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridActiveBook.Location = new System.Drawing.Point(9, 19);
+            this.dataGridActiveBook.Name = "dataGridActiveBook";
+            this.dataGridActiveBook.Size = new System.Drawing.Size(632, 269);
+            this.dataGridActiveBook.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -159,6 +168,14 @@
             this.lblWelcome.Size = new System.Drawing.Size(35, 13);
             this.lblWelcome.TabIndex = 8;
             this.lblWelcome.Text = "label3";
+            // 
+            // ProfilePicture
+            // 
+            this.ProfilePicture.Location = new System.Drawing.Point(252, 119);
+            this.ProfilePicture.Name = "ProfilePicture";
+            this.ProfilePicture.Size = new System.Drawing.Size(156, 137);
+            this.ProfilePicture.TabIndex = 7;
+            this.ProfilePicture.TabStop = false;
             // 
             // panel1
             // 
@@ -272,7 +289,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logOutToolStripMenuItem});
+            this.logOutToolStripMenuItem,
+            this.contactSupportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -286,13 +304,20 @@
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // contactSupportToolStripMenuItem
+            // 
+            this.contactSupportToolStripMenuItem.Name = "contactSupportToolStripMenuItem";
+            this.contactSupportToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.contactSupportToolStripMenuItem.Text = "Contact Support";
+            this.contactSupportToolStripMenuItem.Click += new System.EventHandler(this.contactSupportToolStripMenuItem_Click);
             // 
             // tabControl2
             // 
             this.tabControl2.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl2.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tabControl2.ItemSize = new System.Drawing.Size(100, 150);
@@ -304,43 +329,6 @@
             this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl2.TabIndex = 10;
             this.tabControl2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl2_DrawItem);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dataGridActiveBook);
-            this.groupBox1.Location = new System.Drawing.Point(3, 8);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(647, 294);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Currently Active Bookings";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridInactiveBook);
-            this.groupBox2.Location = new System.Drawing.Point(6, 308);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(638, 270);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Inactive Bookings";
-            // 
-            // dataGridActiveBook
-            // 
-            this.dataGridActiveBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridActiveBook.Location = new System.Drawing.Point(9, 19);
-            this.dataGridActiveBook.Name = "dataGridActiveBook";
-            this.dataGridActiveBook.Size = new System.Drawing.Size(632, 269);
-            this.dataGridActiveBook.TabIndex = 0;
-            // 
-            // dataGridInactiveBook
-            // 
-            this.dataGridInactiveBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridInactiveBook.Location = new System.Drawing.Point(6, 19);
-            this.dataGridInactiveBook.Name = "dataGridInactiveBook";
-            this.dataGridInactiveBook.Size = new System.Drawing.Size(632, 245);
-            this.dataGridInactiveBook.TabIndex = 0;
             // 
             // ClientForm
             // 
@@ -354,19 +342,19 @@
             this.Load += new System.EventHandler(this.ClientForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
             this.tabPage6.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridInactiveBook)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridActiveBook)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridActiveBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridInactiveBook)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,15 +364,16 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridInactiveBook;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridActiveBook;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.PictureBox ProfilePicture;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCellNum;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.Label lblStreetName;
@@ -394,11 +383,9 @@
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblCellNum;
-        private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridInactiveBook;
-        private System.Windows.Forms.DataGridView dataGridActiveBook;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contactSupportToolStripMenuItem;
+        private System.Windows.Forms.TabControl tabControl2;
     }
 }

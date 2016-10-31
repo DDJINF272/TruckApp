@@ -579,6 +579,7 @@
             // 
             this.txtbxPassword.Location = new System.Drawing.Point(223, 189);
             this.txtbxPassword.Name = "txtbxPassword";
+            this.txtbxPassword.PasswordChar = '*';
             this.txtbxPassword.Size = new System.Drawing.Size(240, 20);
             this.txtbxPassword.TabIndex = 1;
             // 
